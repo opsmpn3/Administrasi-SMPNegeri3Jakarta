@@ -1,0 +1,29 @@
+/* ===================================================================
+   TABLES
+   =================================================================== */
+   .table {
+    margin-top: 20px;
+}
+
+.table th {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(233, 236, 239, 0.5);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(211, 218, 227, 0.5);
+}
+

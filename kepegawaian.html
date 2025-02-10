@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Kesiswaan">
+    <title>Kepegawaian - Administrasi SMP Negeri 3 Jakarta</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/kepegawaian.min.css">
+</head>
+<body>
+    <!-- Navbar (PC) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link active" href="kepegawaian.html">Kepegawaian</a></li>
+                <li class="nav-item"><a class="nav-link" href="kesiswaan.html">Kesiswaan</a></li>
+                <li class="nav-item"><a class="nav-link" href="inventaris.html">Inventaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="sarpras.html">Sarpras</a></li>
+                <li class="nav-item"><a class="nav-link" href="persuratan.html">Persuratan</a></li>
+                <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="kepegawaian.html">Kepegawaian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kesiswaan.html">Kesiswaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="inventaris.html">Inventaris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sarpras.html">Sarpras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="persuratan.html">Persuratan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero d-flex align-items-center text-center">
+        <div class="container">
+            <h2>Kepegawaian</h2>
+            <p>Merencanakan, mengorganisasikan, mengarahkan, dan mengendalikan pegawai untuk berbagai tujuan. Atau dapat pula dikatakan bahwa administrasi kepegawaian mempunyai dua fungsi, yaitu fungsi manajerial dan fungsi operatif (yang bersifat teknis).</p>
+        </div>
+    </header>
+
+    <!-- Program Kepegawaian -->
+    <div class="container my-5">
+    
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#programModal">
+            <i class="bi bi-box-arrow-in-right me-2"></i> Login Kepegawaian
+        </button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adminModal">
+            <i class="bi bi-person-lock me-2"></i> Login Admin
+        </button>
+
+        <!-- Modal Program Kepegawaian -->
+        <div class="modal fade" id="programModal" tabindex="-1" aria-labelledby="programModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="programModalLabel">Login Kepegawaian</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                        <div id="loginMessage" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Admin Login -->
+        <div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="adminModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="adminModalLabel">Login Admin</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="adminLoginForm">
+                            <div class="mb-3">
+                                <label for="adminUsername" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="adminUsername" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="adminPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="adminPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-secondary">Login</button>
+                        </form>
+                        <div id="adminLoginMessage" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Section Program Kepegawaian -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Program Kepegawaian</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Kartu Pegawai -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-card-checklist display-3 text-primary"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Kartu Pegawai</h5>
+                    <p class="card-text">Informasi kartu pegawai.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalKartu">Detail</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tunjangan -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-cash-coin display-3 text-success"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Tunjangan</h5>
+                    <p class="card-text">Detail tunjangan pegawai.</p>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalTunjangan">Detail</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kenaikan Pangkat -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-bar-chart-line display-3 text-warning"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Kenaikan Pangkat</h5>
+                    <p class="card-text">Informasi kenaikan pangkat.</p>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalPangkat">Detail</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuti -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-calendar-check display-3 text-danger"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Cuti</h5>
+                    <p class="card-text">Pengelolaan cuti pegawai.</p>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalCuti">Detail</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mutasi -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-arrow-left-right display-3 text-secondary"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Mutasi</h5>
+                    <p class="card-text">Proses mutasi pegawai.</p>
+                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalMutasi">Detail</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pensiun -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-person-x display-3 text-dark"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Pensiun</h5>
+                    <p class="card-text">Persiapan masa pensiun.</p>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalPensiun">Detail</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Penghargaan -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-award display-3 text-info"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Penghargaan</h5>
+                    <p class="card-text">Penghargaan bagi pegawai berprestasi.</p>
+                    <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPenghargaan">Detail</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL SECTION -->
+<!-- Modal Kartu Pegawai -->
+<div class="modal fade" id="modalKartu" tabindex="-1" aria-labelledby="modalKartuLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalKartuLabel">Kartu Pegawai</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Kartu pegawai adalah identitas resmi pegawai yang berisi informasi dasar pegawai.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tunjangan -->
+<div class="modal fade" id="modalTunjangan" tabindex="-1" aria-labelledby="modalTunjanganLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTunjanganLabel">Tunjangan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Tunjangan pegawai mencakup berbagai jenis, seperti tunjangan keluarga, tunjangan jabatan, dan lainnya.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Kenaikan Pangkat -->
+<div class="modal fade" id="modalPangkat" tabindex="-1" aria-labelledby="modalPangkatLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalPangkatLabel">Kenaikan Pangkat</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Informasi kenaikan pangkat mencakup syarat dan prosedur untuk naik pangkat.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Cuti -->
+<div class="modal fade" id="modalCuti" tabindex="-1" aria-labelledby="modalCutiLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCutiLabel">Cuti</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Pengelolaan cuti pegawai mencakup jenis cuti, prosedur pengajuan, dan persyaratan.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Mutasi -->
+<div class="modal fade" id="modalMutasi" tabindex="-1" aria-labelledby="modalMutasiLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMutasiLabel">Mutasi Pegawai</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Mutasi adalah pemindahan pegawai dari satu unit kerja ke unit lain sesuai dengan kebijakan instansi.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Pensiun -->
+<div class="modal fade" id="modalPensiun" tabindex="-1" aria-labelledby="modalPensiunLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalPensiunLabel">Pensiun</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Persiapan masa pensiun mencakup administrasi dan pelatihan menjelang pensiun.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Penghargaan -->
+<div class="modal fade" id="modalPenghargaan" tabindex="-1" aria-labelledby="modalPenghargaanLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalPenghargaanLabel">Penghargaan Pegawai</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Pegawai yang memiliki kinerja baik akan mendapatkan penghargaan dari instansi.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tabel Data Pendidik -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Data Pendidik</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>NIP/NIKI</th>
+                    <th>Jabatan</th>
+                    <th>Detail</th>
+                </tr>
+            </thead>
+            <tbody id="pendidikTableBody">
+                <!-- Data akan dimasukkan melalui JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Tabel Data Tendik -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Data Tendik</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>NIP/NIKI</th>
+                    <th>Jabatan</th>
+                    <th>Detail</th>
+                </tr>
+            </thead>
+            <tbody id="tendikTableBody">
+                <!-- Data akan dimasukkan melalui JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Detail Pegawai -->
+<div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detailModalLabel">Detail Pegawai</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <img id="modalFoto" src="" alt="Foto Pegawai" class="mb-3 img-fluid rounded">
+                </div>
+                <h5 id="modalNama"></h5>
+                <p><strong>NIP/NIKI:</strong> <span id="modalNip"></span></p>
+                <p><strong>Jabatan:</strong> <span id="modalJabatan"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer class="text-dark py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2025 Administrasi SMP Negeri 3 Jakarta. All rights reserved.</p>
+            <p>Created by Riyan Heriyanto</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/kepegawaian.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Kesiswaan">
+    <title>Kesiswaan - Administrasi SMP Negeri 3 Jakarta</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/kesiswaan.min.css">
+</head>
+<body>
+    <!-- Navbar (PC) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="kepegawaian.html">Kepegawaian</a></li>
+                <li class="nav-item"><a class="nav-link active" href="kesiswaan.html">Kesiswaan</a></li>
+                <li class="nav-item"><a class="nav-link" href="inventaris.html">Inventaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="sarpras.html">Sarpras</a></li>
+                <li class="nav-item"><a class="nav-link" href="persuratan.html">Persuratan</a></li>
+                <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kepegawaian.html">Kepegawaian</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="kesiswaan.html">Kesiswaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="inventaris.html">Inventaris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sarpras.html">Sarpras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="persuratan.html">Persuratan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero d-flex align-items-center text-center">
+        <div class="container">
+            <h2>Kesiswaan</h2>
+            <p>Informasi tentang kesiswaan</p>
+        </div>
+    </header>
+
+ <!-- Data Siswa -->
+<section id="data-siswa" class="container mt-5">
+    <h3>Data Siswa</h3>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Kelas</th>
+                    <th>Laki-Laki</th>
+                    <th>Perempuan</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="data-siswa-tbody">
+                <!-- Data akan diisi oleh JavaScript -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th id="total-laki-laki">0</th>
+                    <th id="total-perempuan">0</th>
+                    <th id="total-siswa">0</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</section>
+
+<!-- Forum PPDB -->
+<section id="forum-ppdb" class="container mt-5">
+    <h3>Forum PPDB</h3>
+    <p>Informasi PPDB, Riwayat PPDB</p>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Surat</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="ppdb-tbody">
+                <!-- Data akan diisi oleh JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Forum KJP -->
+<section id="forum-kjp" class="container mt-5">
+    <h3>Forum KJP</h3>
+    <p>Informasi KJP</p>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Surat</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="kjp-tbody">
+                <!-- Data akan diisi oleh JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Forum PIP -->
+<section id="forum-pip" class="container mt-5">
+    <h3>Forum PIP</h3>
+    <p>Informasi PIP</p>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Surat</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="pip-tbody">
+                <!-- Data akan diisi oleh JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Kelulusan -->
+<section id="kelulusan" class="container mt-5">
+    <h3>Kelulusan</h3>
+    <p>Informasi Kelulusan</p>
+    <a id="kelulusan-link" href="#" class="btn btn-primary">Lihat Informasi Kelulusan</a>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="text-dark py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2025 Administrasi SMP Negeri 3 Jakarta. All rights reserved.</p>
+            <p>Created by Riyan Heriyanto</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/kesiswaan.js"></script>
+</body>
+</html>

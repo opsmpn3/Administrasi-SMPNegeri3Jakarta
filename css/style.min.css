@@ -1,0 +1,440 @@
+/* ===================================================================
+   RESET AND BASIC STYLES
+   =================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333D4B; /* Dark Gray */
+    background: #F4F7FC; /* Soft Grayish Blue */
+}
+
+/* ===================================================================
+   TYPOGRAPHY
+   =================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #1E4B9B; /* Deep Blue */
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* ===================================================================
+   NAVBAR & OFFCANVAS
+   =================================================================== */
+.navbar, .offcanvas {
+    background-color: #FFFFFF; /* Pure White */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #4A90E2 !important; /* Soft Royal Blue */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-logo {
+    width: 40px;
+    height: auto;
+}
+
+.navbar-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.navbar-title {
+    font-weight: bold;
+    color: #4A90E2;
+    font-size: 18px;
+}
+
+.navbar-subtitle {
+    font-size: 14px;
+    color: #67758D;
+}
+
+/* Ensure the navbar is fixed at the top */
+.navbar-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Add padding to the body to prevent content from being hidden under the fixed navbar */
+body {
+    padding-top: 60px; /* Adjust this value based on the height of your navbar */
+}
+
+/* NAVBAR MENU HOVER EFFECT */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-nav .nav-link {
+    color: #67758D !important; /* Cool Gray */
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #4A90E2;
+    transition: width 0.3s ease-in-out;
+    margin: auto;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1E4B9B !important; /* Deep Blue */
+}
+
+/* --- OFFCANVAS STYLING (Agar tetap rapi di mode ponsel) --- */
+.offcanvas-header .navbar-brand {
+    flex-direction: row;
+    align-items: center;
+}
+
+.offcanvas-header .navbar-text {
+    flex-direction: column;
+    text-align: left; /* Pastikan teks tetap rapi */
+}
+
+/* RESPONSIVE: Saat layar kecil (ponsel), buat logo dan teks lebih kecil */
+@media (max-width: 768px) {
+    .navbar-brand {
+        gap: 8px;
+    }
+
+    .navbar-logo {
+        width: 35px;
+    }
+
+    .navbar-title {
+        font-size: 16px;
+    }
+
+    .navbar-subtitle {
+        font-size: 12px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center;
+    }
+}
+
+/* ===================================================================
+   HERO SECTION
+   =================================================================== */
+.hero {
+    background: linear-gradient(120deg, #E8EFFB, #FFFFFF);
+    color: #1E4B9B;
+    padding: 100px 20px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #4A90E2;
+}
+
+.index-page .hero {
+    padding-top: 60px; /* Atur padding khusus hanya untuk index.html */
+}
+
+/* ===================================================================
+   CAROUSEL
+   =================================================================== */
+.carousel {
+    padding: 10px 2Opx;
+}
+.carousel-item img {
+    object-fit: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* ===================================================================
+   CARD DESIGN
+   =================================================================== */
+.card {
+    border: none;
+    background: #FFFFFF; /* White */
+    color: #333D4B;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Menambahkan radius sudut */
+    padding: 20px; /* Menambahkan padding */
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #4A90E2; /* Soft Royal Blue */
+    margin-bottom: 10px; /* Menambahkan margin bawah */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #67758D; /* Cool Gray */
+    margin-bottom: 20px; /* Menambahkan margin bawah */
+}
+
+/* ===================================================================
+   BUTTONS
+   =================================================================== */
+.btn {
+    background-color: #4A90E2;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: none; /* Menghilangkan border */
+    padding: 10px 20px; /* Menambahkan padding */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #1E4B9B;
+    color: #fff;
+}
+
+/* ===================================================================
+   BUTTONS VARIATIONS
+   =================================================================== */
+.btn-primary {
+    background-color: #4A90E2;
+}
+
+.btn-primary:hover {
+    background-color: #1E4B9B;
+}
+
+.btn-success {
+    background-color: #28A745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-warning {
+    background-color: #FFC107;
+}
+
+.btn-warning:hover {
+    background-color: #E0A800;
+}
+
+.btn-danger {
+    background-color: #DC3545;
+}
+
+.btn-danger:hover {
+    background-color: #C82333;
+}
+
+.btn-secondary {
+    background-color: #6C757D;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+}
+
+.btn-dark {
+    background-color: #343A40;
+}
+
+.btn-dark:hover {
+    background-color: #23272B;
+}
+
+.btn-info {
+    background-color: #17A2B8;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+/* ===================================================================
+   FOOTER
+   =================================================================== */
+footer {
+    background-color: #FFFFFF; /* Pure White */
+    color: #67758D;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* FOOTER TEXT HOVER */
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: #4A90E2; /* Soft Royal Blue */
+    cursor: pointer;
+}
+
+/* ===================================================================
+   RESPONSIVE DESIGN
+   =================================================================== */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 400px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .card-text {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .index-page .hero {
+        padding-top: 60px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 8px 12px;
+    }
+}
+
+/* ===================================================================
+   LIGHTBOX EFFECT
+   =================================================================== */
+.gallery-item {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================================================
+   FADE-IN ANIMATION
+   =================================================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===================================================================
+   VIDEO RESPONSIF
+   =================================================================== */
+.video-embed {
+    max-width: 100%;
+    height: auto;
+}
