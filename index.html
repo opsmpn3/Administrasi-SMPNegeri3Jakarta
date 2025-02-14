@@ -1,54 +1,31 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kami Akan Segera Kembali</title>
     <style>
         body {
+            background-color: #f0f0f0;
             font-family: sans-serif;
             text-align: center;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
             color: #333;
         }
 
-        p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .countdown {
+        #countdown {
             font-size: 2em;
             color: #007bff;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Kami Akan Segera Kembali</h1>
-        <p>Kami sedang melakukan pemeliharaan. Situs web ini akan segera online kembali.</p>
-        <div class="countdown" id="countdown">
-            </div>
-    </div>
+    <h1>Kami Akan Segera Kembali</h1>
+    <p>Kami sedang melakukan pemeliharaan. Situs web ini akan segera online kembali.</p>
+    <div id="countdown"></div>
 
     <script>
-        // Atur tanggal target kembali (misalnya, 1 Januari 2024)
-        const targetDate = new Date("2024-01-01T00:00:00");
+        const targetDate = new Date("2024-03-15T00:00:00"); // Ganti dengan tanggal Anda
 
         function updateCountdown() {
             const now = new Date().getTime();
@@ -64,10 +41,12 @@
             if (distance < 0) {
                 clearInterval(countdownInterval);
                 document.getElementById("countdown").innerHTML = "Situs web sudah online!";
+                // Atau, alihkan pengguna ke halaman lain:
+                // window.location.href = "https://www.example.com";
             }
         }
 
-        updateCountdown(); // Panggil pertama kali untuk menampilkan hitungan mundur awal
+        updateCountdown();
         const countdownInterval = setInterval(updateCountdown, 1000);
     </script>
 </body>
