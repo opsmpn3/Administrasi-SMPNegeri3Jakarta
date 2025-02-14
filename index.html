@@ -31,18 +31,15 @@
             const now = new Date().getTime();
             const distance = targetDate.getTime() - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown").innerHTML = `${days} hari, ${hours} jam, ${minutes} menit, ${seconds} detik`;
-
             if (distance < 0) {
                 clearInterval(countdownInterval);
                 document.getElementById("countdown").innerHTML = "Situs web sudah online!";
                 // Atau, alihkan pengguna ke halaman lain:
                 // window.location.href = "https://www.example.com";
+            } else {
+                document.getElementById("countdown").innerHTML = "Situs web akan segera kembali.";
+                // Anda bisa menambahkan informasi lain di sini, misalnya:
+                // document.getElementById("countdown").innerHTML += "<br>Kami sedang melakukan pemeliharaan.";
             }
         }
 
