@@ -4,47 +4,41 @@
     <title>Kami Akan Segera Kembali</title>
     <style>
         body {
-            background-color: #f0f0f0;
-            font-family: sans-serif;
+            background-color: #008080; /* Warna latar belakang khas Windows */
+            font-family: "MS Sans Serif", sans-serif; /* Font khas Windows */
             text-align: center;
         }
 
-        h1 {
-            color: #333;
+        .window {
+            background-color: #c0c0c0; /* Warna jendela khas Windows */
+            border: 2px solid #808080;
+            padding: 20px;
+            margin: 100px auto;
+            width: 400px;
         }
 
-        #countdown {
-            font-size: 2em;
-            color: #007bff;
+        .title-bar {
+            background-color: #000080; /* Warna title bar khas Windows */
+            color: white;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .content {
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Sabar bosku</h1>
-    <p>Kami sedang melakukan pemeliharaan. Situs web ini akan segera online kembali.</p>
-    <div id="countdown"></div>
-
-    <script>
-        const targetDate = new Date("2024-03-15T00:00:00"); // Ganti dengan tanggal Anda
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = targetDate.getTime() - now;
-
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById("countdown").innerHTML = "Situs web sudah online!";
-                // Atau, alihkan pengguna ke halaman lain:
-                // window.location.href = "https://www.example.com";
-            } else {
-                document.getElementById("countdown").innerHTML = "Situs web akan segera kembali.";
-                // Anda bisa menambahkan informasi lain di sini, misalnya:
-                // document.getElementById("countdown").innerHTML += "<br>Kami sedang melakukan pemeliharaan.";
-            }
-        }
-
-        updateCountdown();
-        const countdownInterval = setInterval(updateCountdown, 1000);
-    </script>
+    <div class="window">
+        <div class="title-bar">
+            <span>Kami Akan Segera Kembali</span>
+        </div>
+        <div class="content">
+            <h1>Situs Web Sedang dalam Pemeliharaan</h1>
+            <p>Kami sedang melakukan pemeliharaan rutin. Situs web ini akan segera online kembali.</p>
+            <button>OK</button>
+        </div>
+    </div>
 </body>
 </html>
