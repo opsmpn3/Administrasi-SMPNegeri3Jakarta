@@ -3,81 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pemeliharaan Website</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            text-align: center;
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        img {
-            max-width: 150px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .countdown {
-            font-size: 1.5em;
-            color: #007bff;
-            font-weight: bold;
-        }
-    </style>
+    <title>Petualangan Offline</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <img src="robot.png" alt="Robot Pemeliharaan">
-        <h1>Sedang Kami Perbaiki!</h1>
-        <p>Kami sedang melakukan pemeliharaan untuk meningkatkan performa website.</p>
-        <p>Mohon kembali lagi dalam beberapa saat.</p>
-        <div class="countdown" id="countdown"></div>
+    <div class="game-container">
+        <div class="player"></div>
+        <div class="obstacle"></div>
+        <div class="score">Skor: 0</div>
     </div>
-
-    <script>
-        // Atur waktu akhir pemeliharaan (contoh: 1 jam dari sekarang)
-        const maintenanceEndTime = new Date().getTime() + (60 * 60 * 1000);
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const timeLeft = maintenanceEndTime - now;
-
-            if (timeLeft > 0) {
-                const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                document.getElementById('countdown').innerHTML = `${hours}j ${minutes}m ${seconds}d`;
-            } else {
-                document.getElementById('countdown').innerHTML = 'Selesai!';
-            }
-        }
-
-        // Perbarui hitungan mundur setiap detik
-        setInterval(updateCountdown, 1000);
-
-        // Panggil fungsi untuk pertama kali
-        updateCountdown();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
