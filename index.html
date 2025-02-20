@@ -58,64 +58,67 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const gameContainer = document.getElementById('game-container');
-            const keranjang = document.getElementById('keranjang');
-            const scoreDisplay = document.getElementById('score');
-            let score = 0;
-            let keranjangX = gameContainer.offsetWidth / 2 - keranjang.offsetWidth / 2;
+       document.addEventListener('DOMContentLoaded', () => {
+    const gameContainer = document.getElementById('game-container');
+    const keranjang = document.getElementById('keranjang');
+    const scoreDisplay = document.getElementById('score');
+    let score = 0;
+    let keranjangX = gameContainer.offsetWidth / 2 - keranjang.offsetWidth / 2;
 
-            function buatBuah() {
-                const buah = document.createElement('div');
-                buah.classList.add('buah');
-                buah.style.left = Math.random() * (gameContainer.offsetWidth - 30) + 'px';
-                buah.style.top = '0px';
-                buah.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
-                gameContainer.appendChild(buah);
+    function buatBuah() {
+        const buah = document.createElement('div');
+        buah.classList.add('buah');
+        buah.style.left = Math.random() * (gameContainer.offsetWidth - 30) + 'px';
+        buah.style.top = '0px';
+        buah.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+        gameContainer.appendChild(buah);
 
-                let buahY = 0;
-                const kecepatanBuah = Math.random() * 3 + 1;
+        let buahY = 0;
+        const kecepatanBuah = Math.random() * 3 + 1;
 
-                function jatuh() {
-                    buahY += kecepatanBuah;
-                    buah.style.top = buahY + 'px';
+        function jatuh() {
+            buahY += kecepatanBuah;
+            buah.style.top = buahY + 'px';
 
-                    if (buahY > gameContainer.offsetHeight) {
-                        buah.remove();
-                    } else if (tabrakan(keranjang, buah)) {
-                        score++;
-                        scoreDisplay.textContent = 'Skor: ' + score;
-                        buah.remove();
-                    } else {
-                        requestAnimationFrame(jatuh);
-                    }
-                }
-
-                jatuh();
+            if (buahY > gameContainer.offsetHeight) {
+                buah.remove();
+            } else if (tabrakan(keranjang, buah)) {
+                score++;
+                scoreDisplay.textContent = 'Skor: ' + score;
+                buah.remove();
+            } else {
+                requestAnimationFrame(jatuh);
             }
+        }
 
-            function tabrakan(elemen1, elemen2) {
-                const rect1 = elemen1.getBoundingClientRect();
-                const rect2 = elemen2.getBoundingClientRect();
-                return !(
-                    rect1.top > rect2.bottom ||
-                    rect1.bottom < rect2.top ||
-                    rect1.left > rect2.right ||
-                    rect1.right < rect2.left
-                );
-            }
+        jatuh();
+    }
 
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft' && keranjangX > 0) {
-                    keranjangX -= 20;
-                } else if (e.key === 'ArrowRight' && keranjangX < gameContainer.offsetWidth - keranjang.offsetWidth) {
-                    keranjangX += 20;
-                }
-                keranjang.style.left = keranjangX + 'px';
-            });
+    function tabrakan(elemen1, elemen2) {
+        const rect1 = elemen1.getBoundingClientRect();
+        const rect2 = elemen2.getBoundingClientRect();
+        return !(
+            rect1.top > rect2.bottom ||
+            rect1.bottom < rect2.top ||
+            rect1.left > rect2.right ||
+            rect1.right < rect2.left
+        );
+    }
 
-            setInterval(buatBuah, 1000);
-        });
+    function gerakkanKeranjang(e) {
+        if (e.key === 'ArrowLeft' && keranjangX > 0) {
+            keranjangX -= 20;
+        } else if (e.key === 'ArrowRight' && keranjangX < gameContainer.offsetWidth - keranjang.offsetWidth) {
+            keranjangX += 20;
+        }
+        keranjang.style.left = keranjangX + 'px';
+    }
+
+    document.addEventListener('keydown', gerakkanKeranjang);
+
+    setInterval(buatBuah, 1000);
+});
+
     </script>
 </body>
 </html>
