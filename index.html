@@ -3,130 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petualangan Offline</title>
+    <title>Game Sederhana</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin: 0;
-            overflow: hidden;
-            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
         }
 
-        .game-container {
-            width: 100vw;
-            height: 100vh;
-            position: relative;
-            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-        }
-
-        .player {
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            bottom: 20px;
-            left: 50px;
-            background-image: url('assets/player.png');
-            background-size: contain;
-        }
-
-        .obstacle {
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            bottom: 20px;
-            right: -30px;
-            background-image: url('assets/obstacle.png');
-            background-size: contain;
-        }
-
-        .score {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 20px;
-            color: #333;
-        }
-
-        .game-over {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.8);
+        .container {
+            text-align: center;
+            background-color: #fff;
             padding: 20px;
-            border-radius: 10px;
-            font-size: 24px;
-            display: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+            margin: 20px 0;
+        }
+
+        input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #pesan {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Responsif */
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="game-container">
-        <div class="player"></div>
-        <div class="obstacle"></div>
-        <div class="score">Skor: 0</div>
-        <div class="game-over">Game Over! Skor Anda: <span id="final-score">0</span></div>
+    <div class="container">
+        <h1>Tebak Angka</h1>
+        <p>Saya memilih angka acak antara 1 dan 100. Coba tebak!</p>
+        <input type="number" id="tebakan" placeholder="Masukkan tebakan Anda">
+        <button id="cek">Cek</button>
+        <p id="pesan"></p>
+    </div>
+
+    <div class="container">
+        <h1>Batu, Kertas, Gunting</h1>
+        <p>Pilih salah satu:</p>
+        <button id="batu">Batu</button>
+        <button id="kertas">Kertas</button>
+        <button id="gunting">Gunting</button>
+        <p id="hasil"></p>
     </div>
 
     <script>
+        // Game Tebak Angka
         document.addEventListener('DOMContentLoaded', () => {
-            const player = document.querySelector('.player');
-            const obstacle = document.querySelector('.obstacle');
-            const scoreDisplay = document.querySelector('.score');
-            const gameOverScreen = document.querySelector('.game-over');
-            const finalScoreDisplay = document.getElementById('final-score');
-            let score = 0;
-            let isGameOver = false;
+            // ... (Kode Tebak Angka dari sebelumnya)
+        });
 
-            function jump() {
-                if (player.classList.contains('animate') || isGameOver) return;
-                player.classList.add('animate');
-                setTimeout(() => {
-                    player.classList.remove('animate');
-                }, 500);
-            }
+        // Game Batu, Kertas, Gunting
+        document.addEventListener('DOMContentLoaded', () => {
+            const batuButton = document.getElementById('batu');
+            const kertasButton = document.getElementById('kertas');
+            const guntingButton = document.getElementById('gunting');
+            const hasilArea = document.getElementById('hasil');
 
-            document.addEventListener('keydown', (event) => {
-                if (event.code === 'Space') {
-                    jump();
-                }
-            });
+            const pilihan = ['batu', 'kertas', 'gunting'];
 
-            function checkCollision() {
-                const playerRect = player.getBoundingClientRect();
-                const obstacleRect = obstacle.getBoundingClientRect();
+            function mainkan(pilihanPemain) {
+                const pilihanKomputer = pilihan[Math.floor(Math.random() * 3)];
+                let hasil;
 
-                if (
-                    playerRect.left < obstacleRect.right &&
-                    playerRect.right > obstacleRect.left &&
-                    playerRect.bottom > obstacleRect.top
+                if (pilihanPemain === pilihanKomputer) {
+                    hasil = 'Seri!';
+                } else if (
+                    (pilihanPemain === 'batu' && pilihanKomputer === 'gunting') ||
+                    (pilihanPemain === 'kertas' && pilihanKomputer === 'batu') ||
+                    (pilihanPemain === 'gunting' && pilihanKomputer === 'kertas')
                 ) {
-                    gameOver();
-                }
-            }
-
-            function updateGame() {
-                if (isGameOver) return;
-                score++;
-                scoreDisplay.textContent = 'Skor: ' + score;
-
-                const obstaclePosition = parseInt(window.getComputedStyle(obstacle).getPropertyValue('right'));
-                if (obstaclePosition > window.innerWidth) {
-                    obstacle.style.right = '-30px';
+                    hasil = 'Anda menang!';
                 } else {
-                    obstacle.style.right = obstaclePosition + 5 + 'px';
+                    hasil = 'Anda kalah!';
                 }
 
-                checkCollision();
-                requestAnimationFrame(updateGame);
+                hasilArea.textContent = `Anda memilih ${pilihanPemain}. Komputer memilih ${pilihanKomputer}. ${hasil}`;
             }
 
-            function gameOver() {
-                isGameOver = true;
-                finalScoreDisplay.textContent = score;
-                gameOverScreen.style.display = 'block';
-            }
-
-            updateGame();
+            batuButton.addEventListener('click', () => mainkan('batu'));
+            kertasButton.addEventListener('click', () => mainkan('kertas'));
+            guntingButton.addEventListener('click', () => mainkan('gunting'));
         });
     </script>
 </body>
