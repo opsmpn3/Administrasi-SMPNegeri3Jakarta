@@ -3,122 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penangkap Buah</title>
+    <title>Pemeliharaan Website</title>
     <style>
         body {
-            margin: 0;
-            overflow: hidden;
-            background-color: #87ceeb;
+            font-family: sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            text-align: center; /* Menengahkan teks */
         }
 
-        #game-container {
-            position: relative;
-            width: 80%;
-            max-width: 600px;
-            height: 80vh;
-            background-color: #f0e68c;
-            overflow: hidden;
+        .container {
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%; /* Lebar kontainer 80% dari viewport */
+            max-width: 600px; /* Lebar maksimum kontainer */
         }
 
-        #keranjang {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 40px;
-            background-color: #8b4513;
-        }
-
-        .buah {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background-color: red;
-            border-radius: 50%;
-        }
-
-        #score {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 20px;
+        h1 {
             color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Responsif */
+        @media (max-width: 600px) {
+            .container {
+                width: 95%; /* Lebar kontainer 95% di layar kecil */
+                padding: 20px; /* Padding lebih kecil di layar kecil */
+            }
         }
     </style>
 </head>
 <body>
-    <div id="game-container">
-        <div id="keranjang"></div>
-        <div id="score">Skor: 0</div>
+    <div class="container">
+        <h1>Mohon Maaf, Kami Sedang Melakukan Pemeliharaan</h1>
+        <p>Website kami sedang dalam perbaikan untuk meningkatkan performa dan layanan kami.</p>
+        <p>Kami akan segera kembali online. Terima kasih atas kesabaran Anda.</p>
+        <p>Perkiraan waktu pemeliharaan: [Waktu perkiraan jika ada]</p>
+        <p>Jika ada pertanyaan mendesak, silakan hubungi kami di [alamat email atau nomor telepon].</p>
     </div>
-
-    <script>
-       document.addEventListener('DOMContentLoaded', () => {
-    const gameContainer = document.getElementById('game-container');
-    const keranjang = document.getElementById('keranjang');
-    const scoreDisplay = document.getElementById('score');
-    let score = 0;
-    let keranjangX = gameContainer.offsetWidth / 2 - keranjang.offsetWidth / 2;
-
-    function buatBuah() {
-        const buah = document.createElement('div');
-        buah.classList.add('buah');
-        buah.style.left = Math.random() * (gameContainer.offsetWidth - 30) + 'px';
-        buah.style.top = '0px';
-        buah.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
-        gameContainer.appendChild(buah);
-
-        let buahY = 0;
-        const kecepatanBuah = Math.random() * 3 + 1;
-
-        function jatuh() {
-            buahY += kecepatanBuah;
-            buah.style.top = buahY + 'px';
-
-            if (buahY > gameContainer.offsetHeight) {
-                buah.remove();
-            } else if (tabrakan(keranjang, buah)) {
-                score++;
-                scoreDisplay.textContent = 'Skor: ' + score;
-                buah.remove();
-            } else {
-                requestAnimationFrame(jatuh);
-            }
-        }
-
-        jatuh();
-    }
-
-    function tabrakan(elemen1, elemen2) {
-        const rect1 = elemen1.getBoundingClientRect();
-        const rect2 = elemen2.getBoundingClientRect();
-        return !(
-            rect1.top > rect2.bottom ||
-            rect1.bottom < rect2.top ||
-            rect1.left > rect2.right ||
-            rect1.right < rect2.left
-        );
-    }
-
-    function gerakkanKeranjang(e) {
-        if (e.key === 'ArrowLeft' && keranjangX > 0) {
-            keranjangX -= 20;
-        } else if (e.key === 'ArrowRight' && keranjangX < gameContainer.offsetWidth - keranjang.offsetWidth) {
-            keranjangX += 20;
-        }
-        keranjang.style.left = keranjangX + 'px';
-    }
-
-    document.addEventListener('keydown', gerakkanKeranjang);
-
-    setInterval(buatBuah, 1000);
-});
-
-    </script>
 </body>
 </html>
