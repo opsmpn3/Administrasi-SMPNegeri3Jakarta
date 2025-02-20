@@ -4,14 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petualangan Offline</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .game-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+        }
+
+        .player {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 20px;
+            left: 50px;
+            background-image: url('assets/player.png');
+            background-size: contain;
+        }
+
+        .obstacle {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            bottom: 20px;
+            right: -30px;
+            background-image: url('assets/obstacle.png');
+            background-size: contain;
+        }
+
+        .score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 24px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="game-container">
         <div class="player"></div>
         <div class="obstacle"></div>
         <div class="score">Skor: 0</div>
+        <div class="game-over">Game Over! Skor Anda: <span id="final-score">0</span></div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = document.querySelector('.player');
+            const obstacle = document.querySelector('.obstacle');
+            const scoreDisplay = document.querySelector('.score');
+            const gameOverScreen = document.querySelector('.game-over');
+            const finalScoreDisplay = document.getElementById('final-score');
+            let score = 0;
+            let isGameOver = false;
+
+            function jump() {
+                if (player.classList.contains('animate') || isGameOver) return;
+                player.classList.add('animate');
+                setTimeout(() => {
+                    player.classList.remove('animate');
+                }, 500);
+            }
+
+            document.addEventListener('keydown', (event) => {
+                if (event.code === 'Space') {
+                    jump();
+                }
+            });
+
+            function checkCollision() {
+                const playerRect = player.getBoundingClientRect();
+                const obstacleRect = obstacle.getBoundingClientRect();
+
+                if (
+                    playerRect.left < obstacleRect.right &&
+                    playerRect.right > obstacleRect.left &&
+                    playerRect.bottom > obstacleRect.top
+                ) {
+                    gameOver();
+                }
+            }
+
+            function updateGame() {
+                if (isGameOver) return;
+                score++;
+                scoreDisplay.textContent = 'Skor: ' + score;
+
+                const obstaclePosition = parseInt(window.getComputedStyle(obstacle).getPropertyValue('right'));
+                if (obstaclePosition > window.innerWidth) {
+                    obstacle.style.right = '-30px';
+                } else {
+                    obstacle.style.right = obstaclePosition + 5 + 'px';
+                }
+
+                checkCollision();
+                requestAnimationFrame(updateGame);
+            }
+
+            function gameOver() {
+                isGameOver = true;
+                finalScoreDisplay.textContent = score;
+                gameOverScreen.style.display = 'block';
+            }
+
+            updateGame();
+        });
+    </script>
 </body>
 </html>
