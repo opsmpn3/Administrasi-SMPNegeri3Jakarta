@@ -3,118 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Sederhana</title>
+    <title>Penangkap Buah</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             margin: 0;
-            background-color: #f4f4f4;
+            overflow: hidden;
+            background-color: #87ceeb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        .container {
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        #game-container {
+            position: relative;
             width: 80%;
-            max-width: 400px;
-            margin: 20px 0;
+            max-width: 600px;
+            height: 80vh;
+            background-color: #f0e68c;
+            overflow: hidden;
         }
 
-        input[type="number"] {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
+        #keranjang {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 40px;
+            background-color: #8b4513;
         }
 
-        button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+        .buah {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 50%;
         }
 
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        #pesan {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        /* Responsif */
-        @media (max-width: 600px) {
-            .container {
-                width: 95%;
-            }
+        #score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Tebak Angka</h1>
-        <p>Saya memilih angka acak antara 1 dan 100. Coba tebak!</p>
-        <input type="number" id="tebakan" placeholder="Masukkan tebakan Anda">
-        <button id="cek">Cek</button>
-        <p id="pesan"></p>
-    </div>
-
-    <div class="container">
-        <h1>Batu, Kertas, Gunting</h1>
-        <p>Pilih salah satu:</p>
-        <button id="batu">Batu</button>
-        <button id="kertas">Kertas</button>
-        <button id="gunting">Gunting</button>
-        <p id="hasil"></p>
+    <div id="game-container">
+        <div id="keranjang"></div>
+        <div id="score">Skor: 0</div>
     </div>
 
     <script>
-        // Game Tebak Angka
         document.addEventListener('DOMContentLoaded', () => {
-            // ... (Kode Tebak Angka dari sebelumnya)
-        });
+            const gameContainer = document.getElementById('game-container');
+            const keranjang = document.getElementById('keranjang');
+            const scoreDisplay = document.getElementById('score');
+            let score = 0;
+            let keranjangX = gameContainer.offsetWidth / 2 - keranjang.offsetWidth / 2;
 
-        // Game Batu, Kertas, Gunting
-        document.addEventListener('DOMContentLoaded', () => {
-            const batuButton = document.getElementById('batu');
-            const kertasButton = document.getElementById('kertas');
-            const guntingButton = document.getElementById('gunting');
-            const hasilArea = document.getElementById('hasil');
+            function buatBuah() {
+                const buah = document.createElement('div');
+                buah.classList.add('buah');
+                buah.style.left = Math.random() * (gameContainer.offsetWidth - 30) + 'px';
+                buah.style.top = '0px';
+                buah.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+                gameContainer.appendChild(buah);
 
-            const pilihan = ['batu', 'kertas', 'gunting'];
+                let buahY = 0;
+                const kecepatanBuah = Math.random() * 3 + 1;
 
-            function mainkan(pilihanPemain) {
-                const pilihanKomputer = pilihan[Math.floor(Math.random() * 3)];
-                let hasil;
+                function jatuh() {
+                    buahY += kecepatanBuah;
+                    buah.style.top = buahY + 'px';
 
-                if (pilihanPemain === pilihanKomputer) {
-                    hasil = 'Seri!';
-                } else if (
-                    (pilihanPemain === 'batu' && pilihanKomputer === 'gunting') ||
-                    (pilihanPemain === 'kertas' && pilihanKomputer === 'batu') ||
-                    (pilihanPemain === 'gunting' && pilihanKomputer === 'kertas')
-                ) {
-                    hasil = 'Anda menang!';
-                } else {
-                    hasil = 'Anda kalah!';
+                    if (buahY > gameContainer.offsetHeight) {
+                        buah.remove();
+                    } else if (tabrakan(keranjang, buah)) {
+                        score++;
+                        scoreDisplay.textContent = 'Skor: ' + score;
+                        buah.remove();
+                    } else {
+                        requestAnimationFrame(jatuh);
+                    }
                 }
 
-                hasilArea.textContent = `Anda memilih ${pilihanPemain}. Komputer memilih ${pilihanKomputer}. ${hasil}`;
+                jatuh();
             }
 
-            batuButton.addEventListener('click', () => mainkan('batu'));
-            kertasButton.addEventListener('click', () => mainkan('kertas'));
-            guntingButton.addEventListener('click', () => mainkan('gunting'));
+            function tabrakan(elemen1, elemen2) {
+                const rect1 = elemen1.getBoundingClientRect();
+                const rect2 = elemen2.getBoundingClientRect();
+                return !(
+                    rect1.top > rect2.bottom ||
+                    rect1.bottom < rect2.top ||
+                    rect1.left > rect2.right ||
+                    rect1.right < rect2.left
+                );
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft' && keranjangX > 0) {
+                    keranjangX -= 20;
+                } else if (e.key === 'ArrowRight' && keranjangX < gameContainer.offsetWidth - keranjang.offsetWidth) {
+                    keranjangX += 20;
+                }
+                keranjang.style.left = keranjangX + 'px';
+            });
+
+            setInterval(buatBuah, 1000);
         });
     </script>
 </body>
