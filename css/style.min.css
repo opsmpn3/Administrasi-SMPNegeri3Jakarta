@@ -1,0 +1,537 @@
+/* ===================================================================
+   RESET AND BASIC STYLES
+   Mengatur gaya dasar untuk semua elemen HTML, termasuk menghilangkan margin dan padding default serta mengatur box-sizing menjadi border-box untuk memudahkan pengaturan lebar dan tinggi elemen.
+   =================================================================== */
+   html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur jarak antara navbar dan hero section untuk halaman non-index */
+.hero-section {
+    margin-top: 60px; /* Sesuaikan nilai margin sesuai kebutuhan */
+}
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333D4B; /* Dark Gray */
+    background: #F4F7FC; /* Soft Grayish Blue */
+    padding-top: 10px; /* Sesuaikan dengan tinggi navbar */
+}
+
+/* ===================================================================
+   TYPOGRAPHY
+   Mengatur gaya teks untuk berbagai elemen seperti heading (h1 hingga h6), paragraf (p), dan lainnya.
+   =================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #1E4B9B; /* Deep Blue */
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* ===================================================================
+   NAVBAR & OFFCANVAS
+   Mengatur gaya dan perilaku navbar dan offcanvas, termasuk efek hover dan responsifitas di layar kecil.
+   =================================================================== */
+.navbar, .offcanvas {
+    background-color: #FFFFFF; /* Pure White */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    font-size: large;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #4A90E2 !important; /* Soft Royal Blue */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-logo {
+    width: 60px;
+    height: auto;
+}
+
+.navbar-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.navbar-title {
+    font-weight: bold;
+    color: #4A90E2;
+    font-size: 18px;
+}
+
+.navbar-subtitle {
+    font-size: 14px;
+    color: #67758D;
+}
+
+/* Ensure the navbar is fixed at the top */
+.navbar-fixed {
+    position: fixed;
+    width: 100%;
+    padding: 20px 10px;
+    top: 0;
+    z-index: 1000;
+}
+
+/* NAVBAR MENU HOVER EFFECT */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-nav .nav-link {
+    color: #67758D !important; /* Cool Gray */
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #4A90E2;
+    transition: width 0.3s ease-in-out;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-link:hover::after {
+        width: 0; /* Hindari efek hover di ponsel */
+    }
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1E4B9B !important; /* Deep Blue */
+}
+
+/* --- OFFCANVAS STYLING (Agar tetap rapi di mode ponsel) --- */
+.offcanvas-header .navbar-brand {
+    flex-direction: row;
+    align-items: center;
+}
+
+.offcanvas-header .navbar-text {
+    flex-direction: column;
+    text-align: left; /* Pastikan teks tetap rapi */
+}
+
+/* RESPONSIVE: Saat layar kecil (ponsel), buat logo dan teks lebih kecil */
+@media (max-width: 768px) {
+    .navbar-brand {
+        gap: 8px;
+    }
+
+    .navbar-logo {
+        width: 35px;
+    }
+
+    .navbar-title {
+        font-size: 16px;
+    }
+
+    .navbar-subtitle {
+        font-size: 15px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center;
+    }
+}
+
+/* ===================================================================
+   HERO SECTION
+   Mengatur gaya bagian hero, termasuk latar belakang, warna teks, padding, dan efek bayangan.
+   =================================================================== */
+.hero {
+    background: linear-gradient(120deg, #E8EFFB, #FFFFFF);
+    color: #1E4B9B;
+    padding: 80px 10px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #4A90E2;
+}
+
+/* ===================================================================
+   HERO INDEX
+   Mengatur gaya bagian hero khusus untuk halaman index.
+   =================================================================== */
+.index-page .hero {
+    padding: 80px 10px; /* Atur padding sesuai kebutuhan */
+    padding-bottom: 10px;
+}
+
+.index-page .container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* ===================================================================
+   CAROUSEL
+   Mengatur gaya dan perilaku carousel, termasuk gambar dan caption.
+   =================================================================== */
+.carousel {
+    padding: 10px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 500px; /* Atau gunakan `min-height: 300px` untuk ponsel */
+    width: 100%; 
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 350px; /* Tinggi lebih kecil di layar mobile */
+    }
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 30% lebih gelap */
+}
+
+/* ===================================================================
+   CARD DESIGN
+   Mengatur gaya dan perilaku card, termasuk efek hover.
+   =================================================================== */
+.card {
+    border: none;
+    background: #FFFFFF; /* White */
+    color: #333D4B;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Menambahkan radius sudut */
+    padding: 20px; /* Menambahkan padding */
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #4A90E2; /* Soft Royal Blue */
+    margin-bottom: 10px; /* Menambahkan margin bawah */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #67758D; /* Cool Gray */
+    margin-bottom: 20px; /* Menambahkan margin bawah */
+}
+
+/* ===================================================================
+   BUTTONS
+   Mengatur gaya dan perilaku tombol, termasuk efek hover.
+   =================================================================== */
+.btn {
+    background-color: #4A90E2;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: none; /* Menghilangkan border */
+    padding: 10px 20px; /* Menambahkan padding */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #1E4B9B;
+    color: #fff;
+}
+
+/* ===================================================================
+   BUTTONS VARIATIONS
+   Mengatur variasi gaya tombol dengan warna latar belakang dan efek hover yang berbeda.
+   =================================================================== */
+.btn-primary {
+    background-color: #4A90E2;
+}
+
+.btn-primary:hover {
+    background-color: #1E4B9B;
+}
+
+.btn-success {
+    background-color: #28A745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-warning {
+    background-color: #FFC107;
+}
+
+.btn-warning:hover {
+    background-color: #E0A800;
+}
+
+.btn-danger {
+    background-color: #DC3545;
+}
+
+.btn-danger:hover {
+    background-color: #C82333;
+}
+
+.btn-secondary {
+    background-color: #6C757D;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+}
+
+.btn-dark {
+    background-color: #343A40;
+}
+
+.btn-dark:hover {
+    background-color: #23272B;
+}
+
+.btn-info {
+    background-color: #17A2B8;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+
+
+/* FOOTER STYLING */
+footer {
+    background-color: #FFFFFF;
+    color: #67758D;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/* FLEXBOX - Pastikan teks tetap sejajar di layar besar */
+footer .d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Agar teks tidak turun terlalu cepat di layar kecil */
+footer p {
+    margin: 0;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* RESPONSIVE: Pastikan tetap rapi di layar kecil */
+@media (max-width: 576px) {
+    footer .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer span {
+        display: none; /* Hilangkan garis pemisah di layar kecil */
+    }
+}
+
+
+
+/* ===================================================================
+   RESPONSIVE DESIGN
+   Mengatur perubahan gaya untuk layar kecil dan sangat kecil.
+   =================================================================== */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 400px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .card-text {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .index-page .hero {
+        padding-top: 60px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 8px 12px;
+    }
+}
+
+/* ===================================================================
+   LIGHTBOX EFFECT
+   Mengatur efek lightbox untuk item galeri.
+   =================================================================== */
+   .gallery-item {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================================================
+   FADE-IN ANIMATION
+   Mengatur animasi fade-in untuk elemen tertentu.
+   =================================================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* SEARCH CONTAINER */
+.search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* SEARCH INPUT */
+.search-container input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 40px 10px 12px; /* Ruang untuk ikon di kanan */
+    font-size: 14px;
+}
+
+/* ICON SEARCH DI DALAM INPUT */
+.search-container i {
+    position: absolute;
+    right: 12px; /* Pojok kanan */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* RESPONSIF: TETAP RAPI DI MOBILE */
+@media (max-width: 576px) {
+    .search-container {
+        width: 100%;
+    }
+}
+

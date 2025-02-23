@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Kesiswaan">
+    <title>Ruang UKS - Sarpras - Administrasi SMP Negeri 3 Jakarta</title>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.min.css">
+    <link rel="stylesheet" href="../../css/sarpras.min.css">
+    <style>
+        .breadcrumb-container {
+            margin-top: 120px;
+        }
+        .content-container {
+            margin-top: 20px;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+        .table td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (PC) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                <li class="nav-item ms-auto">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar (Mobile) -->
+    <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                        <!-- Login Button -->
+                    <a href="login.html" class="btn btn-primary w-100 mt-3">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../../sarpras.html">Sarpras</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Ruang UKS</li>
+            </ol>
+        </div>
+    </nav>
+    </div>
+    <div class="container my-5">
+        <!-- Deskripsi Ruang UKS -->
+        <div class="mb-4">
+            <h4>Fungsi & Standar Ruang UKS</h4>
+            <ul>
+                <li>Digunakan sebagai tempat penanganan dini bagi peserta didik yang mengalami gangguan kesehatan di sekolah.</li>
+                <li>Dapat dimanfaatkan sebagai ruang konseling bagi siswa yang membutuhkan.</li>
+                <li>Luas minimum **12 m²**.</li>
+                <li>Dilengkapi sarana sebagaimana tercantum dalam tabel berikut.</li>
+            </ul>
+        </div>
+    
+        <!-- Tabel Fasilitas Ruang UKS -->
+        <h4 class="mb-3">Tabel 2.11: Jenis, Rasio, dan Deskripsi Sarana Ruang UKS</h4>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>No</th>
+                        <th>Jenis</th>
+                        <th>Rasio</th>
+                        <th>Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Perabot -->
+                    <tr class="table-primary">
+                        <td colspan="4"><strong>1. Perabot</strong></td>
+                    </tr>
+                    <tr>
+                        <td>1.1</td>
+                        <td>Tempat tidur</td>
+                        <td>1 set/ruang</td>
+                        <td>Kuat dan stabil.</td>
+                    </tr>
+                    <tr>
+                        <td>1.2</td>
+                        <td>Lemari</td>
+                        <td>1 buah/ruang</td>
+                        <td>Dapat dikunci untuk keamanan penyimpanan alat kesehatan.</td>
+                    </tr>
+                    <tr>
+                        <td>1.3</td>
+                        <td>Meja</td>
+                        <td>1 buah/ruang</td>
+                        <td>Kuat dan stabil untuk keperluan administrasi kesehatan.</td>
+                    </tr>
+                    <tr>
+                        <td>1.4</td>
+                        <td>Kursi</td>
+                        <td>2 buah/ruang</td>
+                        <td>Kuat dan stabil untuk pasien dan petugas kesehatan.</td>
+                    </tr>
+    
+                    <!-- Perlengkapan Lain -->
+                    <tr class="table-primary">
+                        <td colspan="4"><strong>2. Perlengkapan Lain</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2.1</td>
+                        <td>Catatan kesehatan peserta didik</td>
+                        <td>1 set/ruang</td>
+                        <td>Dokumentasi riwayat kesehatan siswa.</td>
+                    </tr>
+                    <tr>
+                        <td>2.2</td>
+                        <td>Perlengkapan P3K</td>
+                        <td>1 set/ruang</td>
+                        <td>Berisi obat-obatan dasar dan harus dalam kondisi tidak kadaluarsa.</td>
+                    </tr>
+                    <tr>
+                        <td>2.3</td>
+                        <td>Tandu</td>
+                        <td>1 buah/ruang</td>
+                        <td>Digunakan untuk membawa pasien dalam keadaan darurat.</td>
+                    </tr>
+                    <tr>
+                        <td>2.4</td>
+                        <td>Selimut</td>
+                        <td>1 buah/ruang</td>
+                        <td>Untuk memberikan kenyamanan bagi pasien yang dirawat.</td>
+                    </tr>
+                    <tr>
+                        <td>2.5</td>
+                        <td>Tensimeter</td>
+                        <td>1 buah/ruang</td>
+                        <td>Digunakan untuk mengukur tekanan darah.</td>
+                    </tr>
+                    <tr>
+                        <td>2.6</td>
+                        <td>Termometer badan</td>
+                        <td>1 buah/ruang</td>
+                        <td>Untuk mengukur suhu tubuh pasien.</td>
+                    </tr>
+                    <tr>
+                        <td>2.7</td>
+                        <td>Timbangan badan</td>
+                        <td>1 buah/ruang</td>
+                        <td>Digunakan untuk mengukur berat badan siswa.</td>
+                    </tr>
+                    <tr>
+                        <td>2.8</td>
+                        <td>Pengukur tinggi badan</td>
+                        <td>1 buah/ruang</td>
+                        <td>Digunakan untuk mengukur tinggi badan siswa.</td>
+                    </tr>
+                    <tr>
+                        <td>2.9</td>
+                        <td>Tempat sampah</td>
+                        <td>1 buah/ruang</td>
+                        <td>Untuk membuang sampah medis atau non-medis.</td>
+                    </tr>
+                    <tr>
+                        <td>2.10</td>
+                        <td>Tempat cuci tangan</td>
+                        <td>1 buah/ruang</td>
+                        <td>Dilengkapi sabun untuk menjaga kebersihan.</td>
+                    </tr>
+                    <tr>
+                        <td>2.11</td>
+                        <td>Jam dinding</td>
+                        <td>1 buah/ruang</td>
+                        <td>Untuk memantau waktu pemeriksaan dan observasi pasien.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+<footer class="text-dark py-4 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-center flex-wrap">
+            <p class="mb-0">&copy; 2025 SMPN 3 Jakarta</p>
+            <span class="mx-2">|</span>
+            <p class="mb-0">Developed by Riyan Heriyanto</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap & Kepegawaian JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sarpras.js"></script>
+</body>
+</html>

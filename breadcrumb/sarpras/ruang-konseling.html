@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Kesiswaan">
+    <title>Toilet - Sarpras - Administrasi SMP Negeri 3 Jakarta</title>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.min.css">
+    <link rel="stylesheet" href="../../css/sarpras.min.css">
+    <style>
+        .breadcrumb-container {
+            margin-top: 120px;
+        }
+        .content-container {
+            margin-top: 20px;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+        .table td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (PC) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                <li class="nav-item ms-auto">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar (Mobile) -->
+    <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                        <!-- Login Button -->
+                    <a href="login.html" class="btn btn-primary w-100 mt-3">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../../sarpras.html">Sarpras</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Toilet</li>
+            </ol>
+        </div>
+    </nav>
+    </div>
+    <!-- Main Container -->
+<div class="container my-5">
+    <h3 class="text-center">Ruang Konseling</h3>
+    
+    <!-- Deskripsi Ruang Konseling -->
+    <p class="mt-3">
+        Ruang konseling berfungsi sebagai tempat peserta didik mendapatkan layanan konseling dari konselor 
+        berkaitan dengan pengembangan pribadi, sosial, belajar, dan karir.  
+    </p>
+    <p>
+        Ruang ini harus mampu memberikan kenyamanan suasana dan menjamin privasi peserta didik. 
+        Luas minimum ruang konseling adalah <strong>9 m²</strong>.
+    </p>
+
+    <!-- Tabel Sarana Ruang Konseling -->
+    <h4 class="mt-4">Sarana Ruang Konseling</h4>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>No</th>
+                    <th>Jenis</th>
+                    <th>Rasio</th>
+                    <th>Deskripsi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Perabot -->
+                <tr>
+                    <td rowspan="5">1</td>
+                    <td colspan="3"><strong>Perabot</strong></td>
+                </tr>
+                <tr>
+                    <td>Meja Kerja</td>
+                    <td>1 buah/ruang</td>
+                    <td>Ukuran memadai untuk bekerja dengan nyaman.</td>
+                </tr>
+                <tr>
+                    <td>Kursi Kerja</td>
+                    <td>1 buah/ruang</td>
+                    <td>Ukuran memadai untuk duduk dengan nyaman.</td>
+                </tr>
+                <tr>
+                    <td>Kursi Tamu</td>
+                    <td>2 buah/ruang</td>
+                    <td>Ukuran memadai untuk duduk dengan nyaman.</td>
+                </tr>
+                <tr>
+                    <td>Lemari</td>
+                    <td>1 buah/ruang</td>
+                    <td>Tertutup dan dapat dikunci.</td>
+                </tr>
+
+                <!-- Peralatan Konseling -->
+                <tr>
+                    <td rowspan="3">2</td>
+                    <td colspan="3"><strong>Peralatan Konseling</strong></td>
+                </tr>
+                <tr>
+                    <td>Instrumen Konseling</td>
+                    <td>1 set/ruang</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Buku Sumber</td>
+                    <td>1 set/ruang</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Media Pengembangan Kepribadian</td>
+                    <td>1 set/ruang</td>
+                    <td>Menunjang pengembangan kognisi, emosi, dan motivasi peserta didik.</td>
+                </tr>
+
+                <!-- Perlengkapan Lain -->
+                <tr>
+                    <td>3</td>
+                    <td>Jam Dinding</td>
+                    <td>1 buah/ruang</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    
+    <!-- Footer -->
+<footer class="text-dark py-4 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-center flex-wrap">
+            <p class="mb-0">&copy; 2025 SMPN 3 Jakarta</p>
+            <span class="mx-2">|</span>
+            <p class="mb-0">Developed by Riyan Heriyanto</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap & Kepegawaian JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sarpras.js"></script>
+</body>
+</html>

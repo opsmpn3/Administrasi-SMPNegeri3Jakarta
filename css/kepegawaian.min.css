@@ -1,0 +1,160 @@
+/* ==========================================================
+   KEPEGAWAIAN PAGE STYLING
+   Mengatur gaya khusus untuk halaman kepegawaian, termasuk hero section, efek fade-in, tabel data pegawai, dan modal detail pegawai.
+   ========================================================== */
+/* ===================================================================
+   RESET AND BASIC STYLES
+   Mengatur gaya dasar untuk semua elemen HTML, termasuk menghilangkan margin dan padding default serta mengatur box-sizing menjadi border-box untuk memudahkan pengaturan lebar dan tinggi elemen.
+   =================================================================== */
+   /* Mengatur jarak antara navbar dan hero section untuk halaman non-index */
+
+
+/* 📌 Pastikan hero section rapi & tidak bertabrakan dengan navbar */
+.hero {
+    background: linear-gradient(120deg, #E8EFFB, #FFFFFF);
+    color: #1E4B9B;
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section {
+    margin-top: 60px; /* Sesuaikan nilai margin sesuai kebutuhan */
+}
+/* 📌 Efek Fade-in untuk Tabel */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 📌 Style untuk Tabel Data Pegawai */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background: #4A90E2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+}
+
+.table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 📌 Hover Effect untuk Row */
+.table tbody tr:hover {
+    background: #F4F7FC;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 📌 Tombol "Detail" di tabel */
+.btn-info {
+    background-color: #4A90E2;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-info:hover {
+    background-color: #1E4B9B;
+}
+
+/* 📌 Style Modal Detail Pegawai */
+.modal-content {
+    border-radius: 8px;
+}
+
+#modalFoto {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #4A90E2;
+}
+
+/* 📌 Responsif: Atur ukuran tabel & modal di layar kecil */
+@media (max-width: 768px) {
+    .table th, .table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #modalFoto {
+        max-height: 250px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .table th, .table td {
+        font-size: 12px;
+    }
+
+    #modalFoto {
+        max-height: 200px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+
+.app-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.app-icon {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.app-link {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.app-link:hover {
+    color: #007bff;
+}

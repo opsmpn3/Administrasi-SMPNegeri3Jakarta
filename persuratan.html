@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Persuratan">
+    <title>Persuratan - Administrasi SMP Negeri 3 Jakarta</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/persuratan.min.css">
+</head>
+<body>
+    <!-- Navbar (PC) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="kepegawaian.html">Kepegawaian</a></li>
+                <li class="nav-item"><a class="nav-link active" href="kesiswaan.html">Kesiswaan</a></li>
+                <li class="nav-item"><a class="nav-link" href="inventaris.html">Inventaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="sarpras.html">Sarpras</a></li>
+                <li class="nav-item"><a class="nav-link active" href="persuratan.html">Persuratan</a></li>
+                <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                <!-- Login Button -->
+                <li class="nav-item ms-auto">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kepegawaian.html">Kepegawaian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kesiswaan.html">Kesiswaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="inventaris.html">Inventaris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sarpras.html">Sarpras</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="persuratan.html">Persuratan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                        <!-- Login Button -->
+                    <a href="login.html" class="btn btn-primary w-100 mt-3">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero d-flex align-items-center text-center hero-section">
+        <div class="container">
+            <h2>Persuratan</h2>
+            <p>Informasi dan layanan persuratan untuk siswa, orang tua, dan pegawai SMP Negeri 3 Jakarta.</p>
+        </div>
+    </header>
+
+<!-- Section Jenis Persuratan -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Jenis Persuratan</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <!-- Surat Keterangan Aktif -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-file-earmark-text display-3 text-success"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Surat Keterangan Aktif</h5>
+                    <p class="card-text">Surat keterangan aktif adalah surat yang menyatakan bahwa siswa masih aktif di sekolah. Surat ini biasanya diperlukan untuk keperluan administrasi seperti pendaftaran kembali atau verifikasi status siswa.</p>
+                    <a href="breadcrumb/persuratan/surat-keterangan-aktif.html" class="btn btn-success">Detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Surat Keterangan Lulus -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-file-earmark-check display-3 text-warning"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Surat Keterangan Lulus</h5>
+                    <p class="card-text">Surat keterangan lulus adalah surat yang menyatakan bahwa siswa telah lulus dari sekolah. Surat ini diperlukan untuk berbagai keperluan seperti pendaftaran perguruan tinggi atau bekerja.</p>
+                    <a href="breadcrumb/persuratan/surat-keterangan-lulus.html" class="btn btn-warning">Detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Surat Keterangan Kehilangan -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-file-earmark-x display-3 text-dark"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Surat Keterangan Kehilangan</h5>
+                    <p class="card-text">Surat keterangan kehilangan adalah surat yang menyatakan bahwa barang milik siswa hilang. Surat ini diperlukan untuk proses penggantian barang hilang.</p>
+                    <a href="breadcrumb/persuratan/surat-keterangan-kehilangan.html" class="btn btn-dark">Detail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+<footer class="text-dark py-4 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-center flex-wrap">
+            <p class="mb-0">&copy; 2025 SMPN 3 Jakarta</p>
+            <span class="mx-2">|</span>
+            <p class="mb-0">Developed by Riyan Heriyanto</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap & Persuratan JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/persuratan.js"></script> <!-- Pindahkan ke sini -->
+</body>
+</html>

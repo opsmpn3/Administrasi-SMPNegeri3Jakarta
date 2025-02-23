@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Kesiswaan">
+    <title>Mutasi - Kepegawaian - Administrasi SMP Negeri 3 Jakarta</title>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.min.css">
+    <link rel="stylesheet" href="../../css/kepegawaian.min.css">
+    <style>
+        .breadcrumb-container {
+            margin-top: 120px;
+        }
+        .content-container {
+            margin-top: 20px;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+        .table td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (PC) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                <li class="nav-item ms-auto">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar (Mobile) -->
+    <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                        <!-- Login Button -->
+                    <a href="login.html" class="btn btn-primary w-100 mt-3">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../../kepegawaian.html">Kepegawaian</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Mutasi</li>
+            </ol>
+        </div>
+    </nav>
+    </div>
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Dasar Hukum Mutasi Pegawai Negeri Sipil</h2>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>No</th>
+                    <th>Peraturan</th>
+                    <th>Tentang</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Peraturan Daerah No. 10 Tahun 2008</td>
+                    <td>Organisasi Perangkat Daerah</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Peraturan Daerah DKI No. 1 Tahun 2009</td>
+                    <td>APBD Tahun Anggaran 2009</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Keputusan Gubernur No. 82 Tahun 2009</td>
+                    <td>Organisasi dan Tata Kerja Badan Kepegawaian Daerah</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Peraturan Gubernur No. 90 Tahun 2006</td>
+                    <td>Pendelegasian Wewenang Pengangkatan, Pemindahan, dan Pemberhentian PNS dan CPNS</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Peraturan Gubernur No. 163 Tahun 2010</td>
+                    <td>Pendelegasian Wewenang Pengangkatan, Pemindahan, dan Pemberhentian PNS</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Keputusan Gubernur No. 178 Tahun 2009</td>
+                    <td>Penerimaan dan Penugasan PNS dari dan ke Instansi di Luar Pemprov DKI Jakarta</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Keputusan Kepala BKD No. 99 Tahun 2010</td>
+                    <td>Protap Mutasi PNS dari Instansi Luar ke Pemprov DKI Jakarta</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="mt-4">
+            <h4>Mutasi sebagai Penghargaan</h4>
+            <p>Mutasi sebagai penghargaan merupakan kegiatan mutasi yang dilakukan untuk menempatkan guru yang berprestasi ke tempat atau jabatan yang lebih baik daripada sebelumnya sesuai dengan prestasinya.</p>
+        </div>
+    </div>                    
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Enam Jenis Mutasi PNS dan Syarat Pengajuannya</h2>
+        
+        <p class="text-justify">
+            Perpindahan tugas Pegawai Negeri Sipil (PNS) dari satu Instansi ke Instansi lainnya atau perpindahan dalam Instansi baik di lingkup Pemerintah Pusat maupun Pemerintah Daerah merupakan bagian dari proses mutasi kepegawaian. 
+            Direktur Pengadaan dan Kepangkatan BKN, Ibtri Rejeki menyampaikan bahwa mekanisme teknis pengajuan mutasi, mulai dari perencanaan, persyaratan/ketentuan pengajuan mutasi, sampai dengan batas kewenangan persetujuan mutasi telah diakomodasi melalui Peraturan BKN Nomor 5 Tahun 2019 tentang Tata Cara Pelaksanaan Mutasi.
+        </p>
+    
+        <h4 class="mt-4">Jenis-jenis Mutasi PNS</h4>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">1. Mutasi PNS dalam satu Instansi Pusat atau Daerah</li>
+            <li class="list-group-item">2. Mutasi PNS antar-Kabupaten/Kota dalam satu Provinsi</li>
+            <li class="list-group-item">3. Mutasi PNS antar-Kabupaten/Kota antar-Provinsi dan antar-Provinsi</li>
+            <li class="list-group-item">4. Mutasi PNS Provinsi/Kabupaten/Kota ke Instansi Pusat atau sebaliknya</li>
+            <li class="list-group-item">5. Mutasi PNS antar-Instansi Pusat</li>
+            <li class="list-group-item">6. Mutasi PNS ke perwakilan Negara Kesatuan Republik Indonesia di luar negeri</li>
+        </ul>
+    
+        <p class="text-justify">
+            Selain proses mutasi kepegawaian berdasarkan jenis-jenis mutasi, mutasi juga dapat dilakukan atas dasar pengajuan PNS sendiri. “Jadi selain mutasi karena tugas dan/atau lokasi sesuai 6 (enam) jenis mutasi tersebut, PNS juga dapat mengajukan mutasi tugas dan/atau lokasi sesuai permintaan sendiri,” terangnya pada Senin, (16/8/2021) di Jakarta.
+        </p>
+    
+        <h4 class="mt-4">Persyaratan Teknis Pengajuan Mutasi</h4>
+        <ul class="list-group">
+            <li class="list-group-item">✔ Surat permohonan mutasi dari PNS</li>
+            <li class="list-group-item">✔ Surat usul mutasi dari Pejabat Pembina Kepegawaian (PPK) Instansi penerima</li>
+            <li class="list-group-item">✔ Surat persetujuan mutasi dari PPK Instansi asal</li>
+            <li class="list-group-item">✔ Surat pernyataan dari instansi asal bahwa PNS yang diusulkan tidak sedang menjalani hukuman disiplin dan/atau proses peradilan</li>
+            <li class="list-group-item">✔ Dokumen Analisis Jabatan dan Analisis Beban Kerja</li>
+            <li class="list-group-item">✔ Salinan sah keputusan dalam pangkat dan/atau jabatan terakhir</li>
+            <li class="list-group-item">✔ Salinan sah penilaian prestasi kerja bernilai baik dalam 2 tahun terakhir</li>
+            <li class="list-group-item">✔ Surat keterangan tidak sedang menjalani tugas belajar</li>
+            <li class="list-group-item">✔ Surat keterangan bebas temuan dari Inspektorat Instansi asal</li>
+        </ul>
+    </div>
+    
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Syarat Mutasi di Lingkungan Provinsi DKI Jakarta</h2>
+        <div class="accordion" id="mutasiAccordion">
+    
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Persyaratan Mutasi
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#mutasiAccordion">
+                    <div class="accordion-body">
+                        <p>Berikut adalah persyaratan mutasi bagi PNS di lingkungan Provinsi DKI Jakarta:</p>
+                        <ul>
+                            <li>Permohonan mutasi dari sekolah asal mengetahui Kasatlakdikcam</li>
+                            <li>Fotokopi SK 80%, SK 100%, dan SK mutasi serta SK kepangkatan terakhir (LEGALISIR)</li>
+                            <li>Fotokopi ijazah dan transkrip nilai terakhir yang tercantum pada SIMPEG (LEGALISIR)</li>
+                            <li>Asli surat keterangan lolos butuh dari sekolah asal yang ditandatangani oleh Kepala Sekolah</li>
+                            <li>Asli surat keterangan lolos butuh dari sekolah tujuan yang ditandatangani oleh Kepala Sekolah</li>
+                            <li>Fotokopi SK PPJG (LEGALISIR)</li>
+                            <li>Permohonan mutasi ditujukan kepada Kepala Sekolah asal dan tujuan</li>
+                            <li>Fotokopi KTP (LEGALISIR)</li>
+                            <li>Fotokopi SKP 1 tahun terakhir (LEGALISIR)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <!-- Footer -->
+<footer class="text-dark py-4 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-center flex-wrap">
+            <p class="mb-0">&copy; 2025 SMPN 3 Jakarta</p>
+            <span class="mx-2">|</span>
+            <p class="mb-0">Developed by Riyan Heriyanto</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap & Kepegawaian JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/kepegawaian.js"></script>
+</body>
+</html>

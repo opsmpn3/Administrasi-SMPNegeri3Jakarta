@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Kesiswaan">
+    <title>Kepegawaian - Administrasi SMP Negeri 3 Jakarta</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/kepegawaian.min.css">
+</head>
+<body>
+    <!-- Navbar (PC) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link active" href="kepegawaian.html">Kepegawaian</a></li>
+                <li class="nav-item"><a class="nav-link" href="kesiswaan.html">Kesiswaan</a></li>
+                <li class="nav-item"><a class="nav-link" href="inventaris.html">Inventaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="sarpras.html">Sarpras</a></li>
+                <li class="nav-item"><a class="nav-link" href="persuratan.html">Persuratan</a></li>
+                <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                <!-- Login Button -->
+                <li class="nav-item ms-auto">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar (Mobile) -->
+    <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="kepegawaian.html">Kepegawaian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kesiswaan.html">Kesiswaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="inventaris.html">Inventaris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sarpras.html">Sarpras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="persuratan.html">Persuratan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                        <!-- Login Button -->
+                    <a href="login.html" class="btn btn-primary w-100 mt-3">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<header class="hero d-flex align-items-center text-center hero-section">
+    <div class="container">
+        <h2>Kepegawaian</h2>
+        <p>Merencanakan, mengorganisasikan, mengarahkan, dan mengendalikan pegawai untuk berbagai tujuan. Atau dapat pula dikatakan bahwa administrasi kepegawaian mempunyai dua fungsi, yaitu fungsi manajerial dan fungsi operatif (yang bersifat teknis).</p>
+    </div>
+</header>
+
+ <!-- Program Kepegawaian -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Program Kepegawaian</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        
+        <!-- Kartu Pegawai -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-person-vcard display-3 text-primary"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Kartu Pegawai</h5>
+                    <p class="card-text">Informasi kartu pegawai.</p>
+                    <a href="breadcrumb/kepegawaian/kartu-pegawai.html" class="btn btn-primary">Detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tunjangan -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-cash-stack display-3 text-success"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Tunjangan</h5>
+                    <p class="card-text">Detail tunjangan pegawai.</p>
+                    <a href="breadcrumb/kepegawaian/tunjangan.html" class="btn btn-success">Detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kenaikan Pangkat -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-arrow-up-circle display-3 text-warning"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Kenaikan Pangkat</h5>
+                    <p class="card-text">Informasi kenaikan pangkat.</p>
+                    <a href="breadcrumb/kepegawaian/kenaikan-pangkat.html" class="btn btn-warning">Detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuti -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-calendar-event display-3 text-danger"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Cuti</h5>
+                    <p class="card-text">Pengelolaan cuti pegawai.</p>
+                    <a href="breadcrumb/kepegawaian/cuti.html" class="btn btn-danger">Detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mutasi -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi-people display-3 text-secondary"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Mutasi</h5>
+                    <p class="card-text">Proses mutasi pegawai.</p>
+                    <a href="breadcrumb/kepegawaian/mutasi.html" class="btn btn-secondary">Detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pensiun -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-person-fill-x display-3 text-dark"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Pensiun</h5>
+                    <p class="card-text">Persiapan masa pensiun.</p>
+                    <a href="breadcrumb/kepegawaian/pensiun.html" class="btn btn-dark">Detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Penghargaan -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-trophy-fill display-3 text-info"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Penghargaan</h5>
+                    <p class="card-text">Penghargaan bagi pegawai berprestasi.</p>
+                    <a href="breadcrumb/kepegawaian/penghargaan.html" class="btn btn-info">Detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Presensi -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-clipboard-check display-3 text-success"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Presensi</h5>
+                    <p class="card-text">Rekap kehadiran pegawai secara real-time.</p>
+                    <a href="breadcrumb/kepegawaian/presensi.html" class="btn btn-success">Detail</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Daftar Aplikasi -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Daftar Aplikasi</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        
+        <!-- SIASN -->
+        <div class="col">
+            <div class="app-card">
+                <i class="bi bi-clipboard-data app-icon"></i>
+                <div>
+                    <a href="https://etpp.jakarta.go.id/" target="_blank" class="app-link">Siasn</a>
+                    <p class="mb-0 text-muted">Pelaporan dan Analisis</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIMPEG -->
+        <div class="col">
+            <div class="app-card">
+                <i class="bi bi-people-fill app-icon"></i>
+                <div>
+                    <a href="https://etpp.jakarta.go.id/" target="_blank" class="app-link">Simpeg</a>
+                    <p class="mb-0 text-muted">Sistem Informasi Kepegawaian</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- e-TTP -->
+        <div class="col">
+            <div class="app-card">
+                <i class="bi bi-clipboard-check app-icon"></i>
+                <div>
+                    <a href="https://etpp.jakarta.go.id/" target="_blank" class="app-link">e-TTP</a>
+                    <p class="mb-0 text-muted">Aktivitas dan Kinerja</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Simdiklat -->
+        <div class="col">
+            <div class="app-card">
+                <i class="bi bi-mortarboard app-icon"></i>
+                <div>
+                    <a href="https://simdiklat-bpsdm.jakarta.go.id/" target="_blank" class="app-link">Simdiklat</a>
+                    <p class="mb-0 text-muted">Sistem Informasi Kediklatan</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kierun -->
+        <div class="col">
+            <div class="app-card">
+                <i class="bi bi-person-workspace app-icon"></i>
+                <div>
+                    <a href="https://kierun.pusdatinpendidikan.id/" target="_blank" class="app-link">Kierun</a>
+                    <p class="mb-0 text-muted">Transformasi Kepegawaian Dinas Pendidikan DKI Jakarta</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lhkpn -->
+        <div class="col">
+            <div class="app-card">
+                <i class="bi bi-file-earmark-bar-graph app-icon"></i>
+                <div>
+                    <a href="https://elhkpn.kpk.go.id/" target="_blank" class="app-link">Lhkpn</a>
+                    <p class="mb-0 text-muted">Laporan Harta Kekayaan Penyelenggara Negara</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- DJP Online -->
+        <div class="col">
+            <div class="app-card">
+                <i class="bi bi-globe2 app-icon"></i>
+                <div>
+                    <a href="https://djponline.pajak.go.id/" target="_blank" class="app-link">DJP Online</a>
+                    <p class="mb-0 text-muted">Pelaporan dan Pembayaran Pajak Online</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sijule -->
+        <div class="col">
+            <div class="app-card">
+                <i class="bi bi-laptop app-icon"></i>
+                <div>
+                    <a href="https://sijule-bpsdm.jakarta.go.id/" target="_blank" class="app-link">Sijule</a>
+                    <p class="mb-0 text-muted">Sistem Jakarta U-learning</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- e-Absensi -->
+        <div class="col">
+            <div class="app-card">
+                <i class="bi bi-clock-history app-icon"></i>
+                <div>
+                    <a href="https://absensimobile.jakarta.go.id/" target="_blank" class="app-link">e-Absensi Mobile</a>
+                    <p class="mb-0 text-muted">Sistem Absensi Elektronik</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">Data Kepegawaian</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+        <!-- Statistik Tabel Pegawai -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-bar-chart-line display-3 text-primary"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Statistik Tabel Pegawai</h5>
+                    <p class="card-text">Visualisasi statistik kepegawaian dalam bentuk grafik dan diagram.</p>
+                    <a href="breadcrumb/kepegawaian/statistik-pegawai.html" class="btn btn-primary">Detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabel Data Pendidik -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-person-badge display-3 text-success"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Tabel Data Pendidik</h5>
+                    <p class="card-text">Informasi lengkap mengenai tenaga pendidik berdasarkan kategori tertentu.</p>
+                    <a href="breadcrumb/kepegawaian/data-pendidik.html" class="btn btn-success">Detail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabel Data Tendik -->
+        <div class="col">
+            <div class="card h-100 shadow text-center p-4">
+                <i class="bi bi-people-fill display-3 text-warning"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Tabel Data Tendik</h5>
+                    <p class="card-text">Daftar tenaga kependidikan berdasarkan jabatan dan status kepegawaian.</p>
+                    <a href="breadcrumb/kepegawaian/data-tendik.html" class="btn btn-warning">Detail</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <!-- Footer -->
+<footer class="text-dark py-4 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-center flex-wrap">
+            <p class="mb-0">&copy; 2025 SMPN 3 Jakarta</p>
+            <span class="mx-2">|</span>
+            <p class="mb-0">Developed by Riyan Heriyanto</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap & Kepegawaian JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/kepegawaian.js"></script>
+</body>
+</html>

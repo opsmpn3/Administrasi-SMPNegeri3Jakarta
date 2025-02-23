@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Login">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Login - SMP Negeri 3 Jakarta</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <style>
+        /* Styling Umum */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333D4B;
+    background: url('assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Overlay gelap agar form lebih jelas */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 50% transparan */
+    z-index: 1;
+}
+
+/* Tombol Back to Home */
+.back-home-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.back-home-btn:hover {
+    background-color: #357ABD;
+    text-decoration: none;
+    color: white;
+}
+
+/* Box Form Login */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo dan Teks */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.navbar-logo {
+    width: 50px;
+}
+
+.navbar-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.navbar-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+.navbar-subtitle {
+    font-size: 14px;
+    color: #67758D;
+}
+
+/* Input Form */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group-text {
+    background-color: #fff;
+    border-right: none;
+    color: #4A90E2;
+}
+
+.form-control {
+    border-left: none;
+    box-shadow: none;
+    padding: 12px;
+}
+
+/* Tombol Login */
+.btn-primary {
+    background-color: #4A90E2;
+    border: none;
+    transition: 0.3s;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #357ABD;
+}
+
+/* Pesan Error */
+.error-message {
+    color: red;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.show-error {
+    opacity: 1;
+}
+
+/* Responsif agar tetap nyaman di layar kecil */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 25px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Tombol Back to Home -->
+    <a href="index.html" class="back-home-btn">
+        <i class="fa fa-home"></i> Home
+    </a>
+
+    <!-- Halaman Login -->
+    <div class="login-container">
+        <a class="navbar-brand" href="login.html">
+            <img src="assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+            <div class="navbar-text">
+                <span class="navbar-title">Administrasi</span>
+                <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+            </div>
+        </a>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+            <div id="errorMessage" class="error-message text-center mt-2"></div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const users = [
+                { name: "Admin", username: "20102470", password: "20102470" },
+                { name: "Irwanto Sumantri", username: "134026", password: "123456" },
+                { name: "Sulaeman", username: "156434", password: "123456" },
+                { name: "Herru Tri Handaka", username: "139160", password: "123456" },
+                { name: "Atin Supryatin", username: "139152", password: "123456" },
+                { name: "Yenidar", username: "139736", password: "123456" },
+                { name: "Retnowati", username: "173098", password: "123456" },
+                { name: "Yani Samsuwati", username: "170444", password: "123456" },
+                { name: "Tunggul Hutagaol", username: "192231", password: "123456" },
+                { name: "Suhanah", username: "192194", password: "123456" },
+                { name: "Nina Komala Sari", username: "193779", password: "123456" },
+                { name: "Maryatun", username: "167744", password: "123456" },
+                { name: "Magda Ctellah Matindas", username: "191243", password: "123456" },
+                { name: "Kusmiyati", username: "193607", password: "123456" },
+                { name: "Muthoharoh", username: "184963", password: "123456" },
+                { name: "Mariam Giselle Andrea Luciano", username: "195879", password: "123456" },
+                { name: "Septia Saraswati", username: "199966", password: "123456" },
+                { name: "Ina Musdalifa", username: "208312", password: "123456" },
+                { name: "Dewi Komalasari", username: "208839", password: "123456" },
+                { name: "Purnakarta", username: "210741", password: "123456" }
+            ];
+
+            if (sessionStorage.getItem('user')) {
+                window.location.href = 'dashboard.html';
+            }
+
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const username = document.getElementById('username').value.trim();
+                const password = document.getElementById('password').value.trim();
+                const errorMessage = document.getElementById('errorMessage');
+
+                const user = users.find(u => u.username === username && u.password === password);
+
+                if (user) {
+                    sessionStorage.setItem('user', JSON.stringify(user));
+                    window.location.href = 'dashboard.html';
+                } else {
+                    errorMessage.textContent = 'Username atau password salah.';
+                    errorMessage.classList.add('show-error');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* ==========================================================
+   SARPRAS PAGE STYLING
+   ========================================================== */
+
+/* 📌 Pastikan hero section rapi & tidak bertabrakan dengan navbar */
+.hero {
+    background: linear-gradient(120deg, #E8EFFB, #FFFFFF);
+    color: #1E4B9B;
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📌 Efek Fade-in untuk Tabel */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 📌 Style untuk Tabel Data Sarana dan Prasarana */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background: #4A90E2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+}
+
+.table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 📌 Hover Effect untuk Row */
+.table tbody tr:hover {
+    background: #F4F7FC;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 📌 Tombol "Detail" di tabel */
+.btn-info {
+    background-color: #4A90E2;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-info:hover {
+    background-color: #1E4B9B;
+}
+
+/* 📌 Style Modal Detail Sarana dan Prasarana */
+.modal-content {
+    border-radius: 8px;
+}
+
+/* 📌 Responsif: Atur ukuran tabel & modal di layar kecil */
+@media (max-width: 768px) {
+    .table th, .table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .table th, .table td {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}

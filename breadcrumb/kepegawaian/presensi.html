@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Kesiswaan">
+    <title>Presensi - Kepegawaian - Administrasi SMP Negeri 3 Jakarta</title>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.min.css">
+    <link rel="stylesheet" href="../../css/kepegawaian.min.css">
+    <style>
+        .breadcrumb-container {
+            margin-top: 120px;
+        }
+        .content-container {
+            margin-top: 20px;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+        .table td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (PC) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                <li class="nav-item ms-auto">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar (Mobile) -->
+    <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                        <!-- Login Button -->
+                    <a href="login.html" class="btn btn-primary w-100 mt-3">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../../kepegawaian.html">Kepegawaian</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Presensi</li>
+            </ol>
+        </div>
+    </nav>
+    </div>
+    <!-- Main Content -->
+<div class="container my-5">
+    <h2>Presensi Hari Penting Nasional</h2>
+    <p>Daftar presensi untuk berbagai peringatan hari penting nasional yang harus diikuti oleh pegawai.</p>
+
+    <div class="container my-5">
+        <h2>Daftar Presensi</h2>
+        <div class="accordion" id="accordionExample">
+
+            <!-- Presensi Peringatan HUT RI -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Peringatan HUT RI
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Silakan lakukan presensi untuk peringatan Hari Ulang Tahun Republik Indonesia dengan mengakses tautan di bawah ini:</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBpPsuMuEeB2oiblhB0UyWcP9h_hGHDqXyYuuyjOhJNgVsug/viewform" class="btn btn-primary" target="_blank">Presensi HUT RI</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Presensi Hari Lahir Pancasila -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Hari Lahir Pancasila
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Silakan lakukan presensi untuk peringatan Hari Lahir Pancasila dengan mengakses tautan di bawah ini:</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSej011YAxUfGS8LfqLuEIcnZvLMlO6KRsPW4dcSqVsk6sseSw/viewform" class="btn btn-primary" target="_blank">Presensi Hari Lahir Pancasila</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kesaktian Pancasila -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Kesaktian Pancasila
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Silakan lakukan presensi untuk Kesaktian Pancasila melalui tautan berikut:</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9DrastTbHnyVrN2yP12RpFG_oSoYc3a0Hinldqh3AH2KtGA/viewform" target="_blank" class="btn btn-primary">Presensi Kesaktian Pancasila</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sumpah Pemuda -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Sumpah Pemuda
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Silakan lakukan presensi untuk Sumpah Pemuda melalui tautan berikut:</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX8Mvkj5se6DAnumEqjeF9CiWIWfnMh88NZ1YrH0KsKaE7jA/viewform" target="_blank" class="btn btn-primary">Presensi Sumpah Pemuda</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hari Kebangkitan Nasional -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Hari Kebangkitan Nasional
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Silakan lakukan presensi untuk Hari Kebangkitan Nasional melalui tautan berikut:</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd18HuPE-wASSUjXKW7Wtp0_3m-y2tztlSi7vc6ZbZw4AYF7A/viewform" target="_blank" class="btn btn-primary">Presensi Kebangkitan Nasional</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HUT DKI Jakarta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        HUT DKI Jakarta
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Silakan lakukan presensi untuk HUT DKI Jakarta melalui tautan berikut:</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHpLA5fNi2zjbr-QU4BxpzKRtH5ThRMBy4NgzwAtYpoqFBpw/viewform" target="_blank" class="btn btn-primary">Presensi HUT DKI Jakarta</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HUT Korpri -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        HUT Korpri
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Silakan lakukan presensi untuk HUT Korpri melalui tautan berikut:</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdnN3WJb0Csq8uHkBexVEuZCViIQZE5hYqTTqYyVXuvJDj2PQ/viewform" target="_blank" class="btn btn-primary">Presensi HUT Korpri</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hari Pahlawan -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        Hari Pahlawan
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Silakan lakukan presensi untuk Hari Pahlawan melalui tautan berikut:</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCFqU3vbAFN2U15rs18GGCN8G22P7ppRi5q0HKTtjYL0VT0g/viewform" target="_blank" class="btn btn-primary">Presensi Hari Pahlawan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+<footer class="text-dark py-4 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-center flex-wrap">
+            <p class="mb-0">&copy; 2025 SMPN 3 Jakarta</p>
+            <span class="mx-2">|</span>
+            <p class="mb-0">Developed by Riyan Heriyanto</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap & Kepegawaian JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/kepegawaian.js"></script>
+</body>
+</html>

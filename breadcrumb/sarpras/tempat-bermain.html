@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Kesiswaan">
+    <title>Tempat Bermain & Olahraga - Sarpras - Administrasi SMP Negeri 3 Jakarta</title>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.min.css">
+    <link rel="stylesheet" href="../../css/sarpras.min.css">
+    <style>
+        .breadcrumb-container {
+            margin-top: 120px;
+        }
+        .content-container {
+            margin-top: 20px;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+        .table td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (PC) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                <li class="nav-item ms-auto">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar (Mobile) -->
+    <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                        <!-- Login Button -->
+                    <a href="login.html" class="btn btn-primary w-100 mt-3">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../../sarpras.html">Sarpras</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tempat Bermain & Olahraga</li>
+            </ol>
+        </div>
+    </nav>
+    </div>
+    <div class="container my-5">
+    
+        <!-- Deskripsi Tempat Bermain/Berolahraga -->
+        <div class="mb-4">
+            <h4>Fungsi & Standar Tempat Bermain/Berolahraga</h4>
+            <ul>
+                <li>Digunakan sebagai area bermain, berolahraga, pendidikan jasmani, upacara, dan kegiatan ekstrakurikuler.</li>
+                <li>Rasio minimum luas tempat bermain/berolahraga:
+                    <ul>
+                        <li>**3 m²/peserta didik**.</li>
+                        <li>Jika peserta didik kurang dari **167 orang**, luas minimum adalah **500 m²**.</li>
+                        <li>Di dalamnya terdapat **ruang olahraga 20 m x 15 m**.</li>
+                    </ul>
+                </li>
+                <li>Area ini harus memiliki pohon penghijauan sebagai peneduh.</li>
+                <li>Lokasi harus strategis dan tidak mengganggu pembelajaran di kelas.</li>
+                <li>Tidak boleh digunakan sebagai area parkir.</li>
+                <li>Ruang bebas harus memiliki **permukaan datar, drainase baik, tanpa hambatan** seperti pohon atau saluran air.</li>
+                <li>Dilengkapi sarana sebagaimana tercantum dalam tabel berikut.</li>
+            </ul>
+        </div>
+    
+        <!-- Tabel Fasilitas Tempat Bermain/Berolahraga -->
+        <h4 class="mb-3">Tabel 2.14: Jenis, Rasio, dan Deskripsi Sarana Tempat Bermain/Berolahraga</h4>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>No</th>
+                        <th>Jenis</th>
+                        <th>Rasio</th>
+                        <th>Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Peralatan Pendidikan -->
+                    <tr class="table-primary">
+                        <td colspan="4"><strong>1. Peralatan Pendidikan</strong></td>
+                    </tr>
+                    <tr>
+                        <td>1.1</td>
+                        <td>Tiang bendera</td>
+                        <td>1 buah/sekolah</td>
+                        <td>Tinggi sesuai ketentuan yang berlaku.</td>
+                    </tr>
+                    <tr>
+                        <td>1.2</td>
+                        <td>Bendera</td>
+                        <td>1 buah/sekolah</td>
+                        <td>Ukuran sesuai ketentuan yang berlaku.</td>
+                    </tr>
+                    <tr>
+                        <td>1.3</td>
+                        <td>Peralatan bola voli</td>
+                        <td>1 set/sekolah</td>
+                        <td>Minimal terdiri dari **6 bola**.</td>
+                    </tr>
+                    <tr>
+                        <td>1.4</td>
+                        <td>Peralatan sepak bola</td>
+                        <td>1 set/sekolah</td>
+                        <td>Minimal terdiri dari **6 bola**.</td>
+                    </tr>
+                    <tr>
+                        <td>1.5</td>
+                        <td>Peralatan senam</td>
+                        <td>1 set/sekolah</td>
+                        <td>Minimal terdiri dari **matras, peti loncat, tali loncat, simpai, bola plastik, dan tongkat**.</td>
+                    </tr>
+                    <tr>
+                        <td>1.6</td>
+                        <td>Peralatan atletik</td>
+                        <td>1 set/sekolah</td>
+                        <td>Minimal terdiri dari **lembing, cakram, peluru, tongkat estafet, dan bak loncat**.</td>
+                    </tr>
+                    <tr>
+                        <td>1.7</td>
+                        <td>Peralatan seni budaya</td>
+                        <td>1 set/sekolah</td>
+                        <td>Disesuaikan dengan potensi masing-masing satuan pendidikan.</td>
+                    </tr>
+                    <tr>
+                        <td>1.8</td>
+                        <td>Peralatan keterampilan</td>
+                        <td>1 set/sekolah</td>
+                        <td>Disesuaikan dengan potensi masing-masing satuan pendidikan.</td>
+                    </tr>
+    
+                    <!-- Perlengkapan Lain -->
+                    <tr class="table-primary">
+                        <td colspan="4"><strong>2. Perlengkapan Lain</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2.1</td>
+                        <td>Pengeras suara</td>
+                        <td>1 set/sekolah</td>
+                        <td>Digunakan untuk mendukung acara dan kegiatan di lapangan.</td>
+                    </tr>
+                    <tr>
+                        <td>2.2</td>
+                        <td>Tape recorder</td>
+                        <td>1 buah/sekolah</td>
+                        <td>Digunakan untuk latihan senam atau kegiatan seni budaya.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+<footer class="text-dark py-4 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-center flex-wrap">
+            <p class="mb-0">&copy; 2025 SMPN 3 Jakarta</p>
+            <span class="mx-2">|</span>
+            <p class="mb-0">Developed by Riyan Heriyanto</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap & Kepegawaian JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sarpras.js"></script>
+</body>
+</html>

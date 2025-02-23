@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laboratorium - Sarana dan Prasarana SMP Negeri 3 Jakarta">
+    <title>Laboratorium - Sarpras - Administrasi SMP Negeri 3 Jakarta</title>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.min.css">
+    <link rel="stylesheet" href="../../css/sarpras.min.css">
+    <style>
+        .breadcrumb-container {
+            margin-top: 120px;
+        }
+        .content-container {
+            margin-top: 20px;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+        .table td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (PC) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                <li class="nav-item ms-auto">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar (Mobile) -->
+    <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                        <a href="login.html" class="btn btn-primary w-100 mt-3">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../../sarpras.html">Sarpras</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Laboratorium</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container my-5">
+    
+        <!-- Deskripsi Laboratorium IPA -->
+        <div class="mb-4">
+            <h4>Fungsi & Standar Laboratorium IPA</h4>
+            <ul>
+                <li>Laboratorium IPA digunakan untuk kegiatan praktikum sains, eksperimen, dan pembelajaran berbasis investigasi.</li>
+                <li>Luas minimum laboratorium harus dapat menampung seluruh peserta didik dalam satu sesi praktikum.</li>
+                <li>Dilengkapi dengan ventilasi yang baik untuk memastikan sirkulasi udara yang optimal.</li>
+                <li>Memiliki sumber air bersih dan sistem pembuangan limbah yang aman.</li>
+                <li>Dilengkapi peralatan laboratorium sesuai dengan jenjang pendidikan dan kurikulum yang berlaku.</li>
+                <li>Memiliki fasilitas keamanan seperti alat pemadam kebakaran, kotak P3K, dan jalur evakuasi.</li>
+                <li>Dilengkapi sarana sebagaimana tercantum dalam tabel berikut.</li>
+            </ul>
+        </div>
+    
+        <!-- Tabel Fasilitas Laboratorium IPA -->
+        <h4 class="mb-3">Tabel 2.7: Jenis, Rasio, dan Deskripsi Sarana Laboratorium IPA</h4>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>No</th>
+                        <th>Jenis</th>
+                        <th>Rasio</th>
+                        <th>Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Perabot -->
+                    <tr class="table-primary">
+                        <td colspan="4"><strong>1. Perabot</strong></td>
+                    </tr>
+                    <tr>
+                        <td>1.1</td>
+                        <td>Meja praktikum</td>
+                        <td>1 meja/4 peserta didik</td>
+                        <td>Dilengkapi dengan permukaan tahan zat kimia dan air.</td>
+                    </tr>
+                    <tr>
+                        <td>1.2</td>
+                        <td>Kursi peserta didik</td>
+                        <td>1 buah/peserta didik</td>
+                        <td>Kuat, stabil, dan sesuai dengan tinggi meja praktikum.</td>
+                    </tr>
+                    <tr>
+                        <td>1.3</td>
+                        <td>Meja & kursi guru</td>
+                        <td>1 set/guru</td>
+                        <td>Kuat dan nyaman untuk mendukung kegiatan mengajar.</td>
+                    </tr>
+                    <tr>
+                        <td>1.4</td>
+                        <td>Lemari penyimpanan</td>
+                        <td>1 buah/laboratorium</td>
+                        <td>Digunakan untuk menyimpan alat dan bahan praktikum dengan aman.</td>
+                    </tr>
+                    <tr>
+                        <td>1.5</td>
+                        <td>Papan tulis</td>
+                        <td>1 buah/laboratorium</td>
+                        <td>Ukuran minimum 90 cm x 200 cm, mudah terlihat oleh peserta didik.</td>
+                    </tr>
+    
+                    <!-- Peralatan Laboratorium -->
+                    <tr class="table-primary">
+                        <td colspan="4"><strong>2. Peralatan Laboratorium</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2.1</td>
+                        <td>Tabung reaksi</td>
+                        <td>Minimal 10 set</td>
+                        <td>Digunakan untuk berbagai eksperimen kimia dan biologi.</td>
+                    </tr>
+                    <tr>
+                        <td>2.2</td>
+                        <td>Mikroskop</td>
+                        <td>Minimal 2 unit</td>
+                        <td>Digunakan untuk mengamati benda mikroskopis.</td>
+                    </tr>
+                    <tr>
+                        <td>2.3</td>
+                        <td>Termometer</td>
+                        <td>Minimal 5 unit</td>
+                        <td>Untuk mengukur suhu dalam percobaan.</td>
+                    </tr>
+                    <tr>
+                        <td>2.4</td>
+                        <td>Timbangan digital</td>
+                        <td>Minimal 1 unit</td>
+                        <td>Digunakan untuk menimbang bahan dengan presisi.</td>
+                    </tr>
+                    <tr>
+                        <td>2.5</td>
+                        <td>Beaker glass</td>
+                        <td>Minimal 10 unit</td>
+                        <td>Digunakan untuk mencampur dan menampung cairan.</td>
+                    </tr>
+                    <tr>
+                        <td>2.6</td>
+                        <td>Pipet ukur</td>
+                        <td>Minimal 5 unit</td>
+                        <td>Untuk mengukur volume cairan dengan presisi.</td>
+                    </tr>
+    
+                    <!-- Media Pendidikan -->
+                    <tr class="table-primary">
+                        <td colspan="4"><strong>3. Media Pendidikan</strong></td>
+                    </tr>
+                    <tr>
+                        <td>3.1</td>
+                        <td>Poster sains</td>
+                        <td>Minimal 3 buah</td>
+                        <td>Menampilkan konsep-konsep dasar fisika, kimia, dan biologi.</td>
+                    </tr>
+                    <tr>
+                        <td>3.2</td>
+                        <td>Model anatomi</td>
+                        <td>Minimal 1 set</td>
+                        <td>Menunjukkan struktur tubuh manusia atau hewan.</td>
+                    </tr>
+                    <tr>
+                        <td>3.3</td>
+                        <td>Proyektor</td>
+                        <td>Minimal 1 unit</td>
+                        <td>Digunakan untuk menampilkan materi pembelajaran secara visual.</td>
+                    </tr>
+    
+                    <!-- Perlengkapan Keamanan -->
+                    <tr class="table-primary">
+                        <td colspan="4"><strong>4. Perlengkapan Keamanan</strong></td>
+                    </tr>
+                    <tr>
+                        <td>4.1</td>
+                        <td>Alat pemadam kebakaran</td>
+                        <td>Minimal 1 unit</td>
+                        <td>Ditempatkan di lokasi yang mudah dijangkau.</td>
+                    </tr>
+                    <tr>
+                        <td>4.2</td>
+                        <td>Kotak P3K</td>
+                        <td>Minimal 1 unit</td>
+                        <td>Dilengkapi dengan peralatan pertolongan pertama.</td>
+                    </tr>
+                    <tr>
+                        <td>4.3</td>
+                        <td>Tempat sampah bahan kimia</td>
+                        <td>Minimal 1 unit</td>
+                        <td>Digunakan untuk pembuangan limbah laboratorium.</td>
+                    </tr>
+                    <tr>
+                        <td>4.4</td>
+                        <td>Jalur evakuasi</td>
+                        <td>Minimal 1 unit</td>
+                        <td>Ditandai dengan jelas untuk keadaan darurat.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+<!-- Main Container -->
+<div class="container my-5">
+    <h2 class="text-center">Ruang Laboratorium Komputer</h2>
+
+    <!-- Deskripsi Ruang Laboratorium Komputer -->
+    <p class="mt-3">
+        Ruang laboratorium komputer berfungsi sebagai tempat peserta didik mengembangkan keterampilan dalam bidang teknologi informasi dan komunikasi.
+        Laboratorium ini harus mampu menampung minimal satu rombongan belajar yang bekerja dalam kelompok dua orang per komputer.
+    </p>
+    
+    <h4 class="mt-4">Standar Ruang Laboratorium Komputer</h4>
+    <ul>
+        <li>Luas minimum: <strong>2 m² per peserta didik</strong>.</li>
+        <li>Jika peserta didik kurang dari 15 orang, luas ruangan minimal <strong>30 m²</strong>.</li>
+        <li>Lebar minimum ruang laboratorium: <strong>5 meter</strong>.</li>
+    </ul>
+
+    <!-- Tabel Sarana Laboratorium Komputer -->
+    <h4 class="mt-4">Jenis, Rasio, dan Deskripsi Sarana</h4>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>No</th>
+                    <th>Jenis</th>
+                    <th>Rasio</th>
+                    <th>Deskripsi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4">1</td>
+                    <td colspan="3"><strong>Perabot</strong></td>
+                </tr>
+                <tr>
+                    <td>Kursi peserta didik</td>
+                    <td>1 buah/peserta</td>
+                    <td>Kuat, stabil, dan nyaman untuk belajar.</td>
+                </tr>
+                <tr>
+                    <td>Meja peserta didik</td>
+                    <td>1 buah/2 peserta</td>
+                    <td>Menampung 1 komputer dan ruang kerja nyaman.</td>
+                </tr>
+                <tr>
+                    <td>Meja & Kursi Guru</td>
+                    <td>1 set/guru</td>
+                    <td>Kuat dan stabil untuk kenyamanan mengajar.</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="7">2</td>
+                    <td colspan="3"><strong>Peralatan Pendidikan</strong></td>
+                </tr>
+                <tr>
+                    <td>Komputer</td>
+                    <td>1 unit/2 peserta</td>
+                    <td>Mendukung multimedia dengan layar min. 15”.</td>
+                </tr>
+                <tr>
+                    <td>Printer</td>
+                    <td>1 unit/lab</td>
+                    <td>Digunakan untuk mencetak dokumen hasil pembelajaran.</td>
+                </tr>
+                <tr>
+                    <td>Scanner</td>
+                    <td>1 unit/lab</td>
+                    <td>Untuk digitalisasi dokumen.</td>
+                </tr>
+                <tr>
+                    <td>Internet</td>
+                    <td>1 titik/lab</td>
+                    <td>Saluran telepon atau jaringan nirkabel.</td>
+                </tr>
+                <tr>
+                    <td>LAN</td>
+                    <td>1 jaringan/lab</td>
+                    <td>Terhubung dengan seluruh komputer.</td>
+                </tr>
+                <tr>
+                    <td>Stabilizer</td>
+                    <td>1 unit/komputer</td>
+                    <td>Mencegah kerusakan akibat ketidakstabilan listrik.</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">3</td>
+                    <td colspan="3"><strong>Media Pendidikan</strong></td>
+                </tr>
+                <tr>
+                    <td>Papan Tulis</td>
+                    <td>1 buah/lab</td>
+                    <td>Ukuran minimum 90 cm x 200 cm.</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3">4</td>
+                    <td colspan="3"><strong>Perlengkapan Lain</strong></td>
+                </tr>
+                <tr>
+                    <td>Soket Listrik</td>
+                    <td>1 unit/komputer</td>
+                    <td>Memastikan daya listrik aman dan mencukupi.</td>
+                </tr>
+                <tr>
+                    <td>Jam Dinding</td>
+                    <td>1 buah/lab</td>
+                    <td>Untuk mengatur waktu selama proses belajar.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    <!-- Footer -->
+<footer class="text-dark py-4 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-center flex-wrap">
+            <p class="mb-0">&copy; 2025 SMPN 3 Jakarta</p>
+            <span class="mx-2">|</span>
+            <p class="mb-0">Developed by Riyan Heriyanto</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/sarpras.js"></script>
+</body>
+</html>

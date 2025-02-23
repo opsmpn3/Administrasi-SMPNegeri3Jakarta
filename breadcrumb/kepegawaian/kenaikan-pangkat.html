@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Kesiswaan">
+    <title>Cuti - Kepegawaian - Administrasi SMP Negeri 3 Jakarta</title>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.min.css">
+    <link rel="stylesheet" href="../../css/kepegawaian.min.css">
+    <style>
+        .breadcrumb-container {
+            margin-top: 120px;
+        }
+        .content-container {
+            margin-top: 20px;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            text-align: left;
+        }
+        .table td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (PC) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>            
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                <li class="nav-item ms-auto">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar (Mobile) -->
+    <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+                <div class="navbar-text">
+                    <span class="navbar-title">Administrasi</span>
+                    <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../profil.html">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kepegawaian.html">Kepegawaian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kesiswaan.html">Kesiswaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../inventaris.html">Inventaris</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../sarpras.html">Sarpras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../persuratan.html">Persuratan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../kontak.html">Kontak</a></li>
+                        <!-- Login Button -->
+                    <a href="login.html" class="btn btn-primary w-100 mt-3">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../../kepegawaian.html">Kepegawaian</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Kenaikan Pangkat</li>
+            </ol>
+        </div>
+    </nav>
+    </div>
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h2>Kenaikan Pangkat PNS</h2>
+<p>
+    Di lingkungan institusi pemerintahan, kenaikan pangkat PNS memiliki aturan yang sama bagi seluruh ASN, baik di pemerintahan daerah maupun di institusi pusat. 
+    Seorang PNS diberikan kenaikan pangkat apabila telah memenuhi syarat tertentu, seperti kinerja, gelar pendidikan, masa kerja, dan sebagainya. 
+    Dengan kenaikan pangkat, otomatis gaji dan tunjangan seorang PNS akan meningkat. 
+</p>
+<p>
+    Kenaikan pangkat PNS diatur dalam <strong>PP Nomor 99 Tahun 2000</strong> tentang Kenaikan Pangkat Pegawai Negeri Sipil. 
+    Secara umum, terdapat tiga kategori kenaikan pangkat bagi PNS:
+</p>
+<ol>
+    <li><strong>Kenaikan Pangkat Reguler</strong></li>
+    <li><strong>Kenaikan Pangkat Jabatan Struktural</strong></li>
+    <li><strong>Kenaikan Pangkat Jabatan Fungsional</strong></li>
+</ol>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Kenaikan Pangkat Reguler
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>PNS dan Calon PNS yang telah bekerja sekurang-kurangnya 1 (satu) tahun secara terus menerus berhak atas cuti tahunan Lamanya cuti tahunan adalah 12 (dua belas) hari kerja Permintaan cuti tahunan dapat diberikan untuk paling kurang 1 (satu) hari kerja Pemberian cuti tahunan pada saat yang bersamaan harus memperhatikan kekuatan jumlah pegawai yang ditentukan berdasarkan jumlah pegawai pada Subbidang/Subbagian/Seksi/Unit Lama perjalanan yang harus ditempuh lebih dari 18 (delapan belas) jam; Alat trasportasi tidak tersedia setiap hari: atau Harus menggunakan alat transportasi darat, laut, dan udara dalam satu perjalanan untuk menuju tempat. 
+                            Hak atas cuti tahunan yang tidak digunakan dalam tahun yang bersangkutan, dapat digunakan dalam tahun berikutnya untuk paling lama 18 (delapan belas) hari kerja termasuk cuti tahunan dalam tahun berjalan Sisa hak atas cuti tahunan yang tidak digunakan dalam tahun bersangkutan dapat digunakan pada tahun berikutnya paling banyak 6 (enam) hari kerja PNS dan CPNS yang tidak pernah menggunakan cuti tahunan selama 2 (dua) tahun atau lebih berturut-turut berhak mendapat cuti tahunan paling lama 24 (dua puluh empat) hari Hak atas cuti tahunan dapat ditangguhkan penggunaannya oleh Pybmc untuk paling lama 1 (satu) tahun, apabila terdapat kepentingan dinas mendesak.
+                            Hak atas cuti tahunan yang ditangguhkan hanya dapat digunakan untuk tahun berikutnya Sisa hak cuti tahunan yang ditangguhkan dapat digunakan sesuai dengan jumlah hari cuti yang ditangguhkan PNS yang menduduki jabatan guru pada sekolah yang mendapat liburan menurut peraturan perundang-undangan, disamakan dengan PNS yang telah menggunakan hak cuti tahunan.</p>
+                            <p>Persyaratan:</p>
+                            <ul>
+                                <li>Kartu Pegawai</li>
+                                <li>SKP 2 (dua) Tahun terakhir</li>
+                                <li>SK Pangkat terakhir</li>
+                                <li>STLUD (Surat Tanda Lulus Ujian Dinas) bagi yang pindah golongan</li>
+                                <li>Diklatpim bagi yang tidak memiliki STLUD (Surat Tanda Lulus Ujian Dinas)</li>
+                                <li>Ijazah terakhir</li>
+                                <li>SK CPNS (80%)</li>
+                                <li>SK PNS (100%)</li>
+                                <li>SK Peninjauan Masa Kerja (bagi yang memiliki Peninjauan Masa Kerja)</li>
+                                <li>Berita Acara Pengambilan Sumpah PNS</li>
+                                <li>SK NIP Baru</li>
+                                <li>Surat Pernyataan dari Kepala Unit Kerja</li>
+                            </ul>                            
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Kenaikan Pangkat Jabatan Struktural
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Kenaikan Pangkat adalah penghargaan dan kepercayaaan yang diberikan pada PNS yang menduduki jabatan struktural dan kenaikan pangkat menjadi salah satu layanan dari Bidang Mutasi dan Status Kepegawaian.</p>
+                        <p>Persyaratan :</p>
+                        <ul>
+                            <li>Kartu Pegawai</li>
+                            <li>SKP 2 (dua) Tahun terakhir</li>
+                            <li>SK Pangkat terakhir</li>
+                            <li>SK Jabatan terakhir</li>
+                            <li>Surat Pernyataan Pelantikan terakhir</li>
+                            <li>Ijazah terakhir</li>
+                            <li>SK Pengangkatan Pertama (SK 80%)</li>
+                            <li>SK PNS (100%)</li>
+                            <li>Sertifikat Diklat Pim</li>
+                            <li>SK Peninjauan Masa Kerja (bagi yang memiliki Peninjauan Masa Kerja)</li>
+                            <li>Berita Acara Pengambilan Sumpah PNS</li>
+                            <li>SK NIP Baru</li>
+                            <li>Surat Pernyataan dari Kepala Unit Kerja</li>
+                            <li>Daftar Riwayat Jabatan (khusus yang ingin naik pangkat ke Golongan IV)</li>
+                            <li>Daftar promosi kenaikan pangkat</li>
+                            <li>Bagi yang pernah berada di jabatan fungsional, wajib melampirkan surat pemberhentian dari jabatan fungsional.</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Kenaikan Jabatan Fungsional Tertentu
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Kenaikan Jabatan Fungsional Tertentu adalah kenaikan jabatan yang diberikan kepada Pegawai Negeri Sipil 
+                            yang menduduki jabatan fungsional tertentu atas kinerjanya berdasarkan angka kredit yang dipersyaratkan. 
+                            Ketentuan ini sesuai dengan peraturan perundang-undangan yang mengatur jenis jabatan fungsional tertentu.</p>
+                        <p>Persyaratan :</p>
+                        <ul>
+                            <li>Kartu Pegawai</li>
+                            <li>SKP 2 (dua) tahun terakhir</li>
+                            <li>SK Pangkat terakhir</li>
+                            <li>SK Jabatan Fungsional terbaru (baik Golongan III maupun Golongan IV)</li>
+                            <li>PAK pada Pangkat terakhir</li>
+                            <li>Asli PAK Baru</li>
+                            <li>Ijazah terakhir</li>
+                            <li>SK Pengangkatan Pertama (SK 80%)</li>
+                            <li>SK PNS (100%)</li>
+                            <li>SK Peninjauan Masa Kerja (bagi yang memiliki PMK)</li>
+                            <li>SK NIP Baru</li>
+                            <li>Berita Acara Pengambilan Sumpah PNS</li>
+                            <li>Surat Pernyataan dari Kepala Unit Kerja</li>
+                            <li>Daftar promosi kenaikan pangkat</li>
+                            <li>Melampirkan dokumen Jabatan Fungsional Baru</li>
+                            <li>Surat Izin Belajar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Kenaikan Pangkat Penyesuaian Ijazah
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Ujian Kenaikan Pangkat Penyesuaian ljazah Tingkat I (UKP-PI Tk I) diikuti oleh PNS yang pangkatnya akan disesuaikan dengan memiliki ijazah SMA atau yang sederajat, dan dapat dinaikkan pangkatnya menjadi Pengatur Muda (II/a) dengan memiliki Pangkat golongan ruang saat ini Juru Tk. I (l/d) ke bawah;</li>
+                            <li>Ujian Kenaikan Pangkat Penyesuaian ljazah Tingkat II (UKP-PI Tk II) diikuti oleh PNS yang pangkatnya akan disesuaikan dengan memiliki ijazah Diploma Ill (Sarjana Muda), Akademi, atau yang sederajat dapat dinaikkan pangkatnya menjadi Pengatur (11/c) memiliki pangkat golongan ruang saat ini Pengatur Muda Tk I (11/b) ke bawah;</li>
+                            <li>Ujian Kenaikan Pangkat Penyesuaian ljazah Tingkat Ill (UKP-PI Tk Ill) diikuti oleh PNS yang pangkatnya akan disesuaikan dengan memiliki ijazah Sarjana (S-1) atau Diploma IV yang diangkat menjadi PNS berdasarkan ijazah Diploma Ill atau yang sederajat dapat dinaikkan pangkatnya menjadi Penata Muda (Ill/a) paling kurang memiliki pangkat golongan ruang saat ini Pengatur Tk I (11/d) ke bawah;</li>
+                            <li>Ujian Kenaikan Pangkat Penyesuaian ljazah Tingkat IV (UKP-PI Tk IV) diikuti oleh PNS yang pangkatnya akan disesuaikan dengan memiliki ijazah Dokter, Apoteker, Magister (S-2), Spesialis I atau yang sederajat dan dapat dinaikkan pangkatnya menjadi Penata Muda Tingkat I (111/b) setelah memiliki pangkat golongan ruang Penata Muda (Ill/a);</li>
+                            <li>Ujian Kenaikan Pangkat Penyesuaian ljazah Tingkat V (UKP-PI Tk V) diikuti oleh PNS yang pangkatnya akan disesuaikan dengan memiliki ijazah Doktor (S-3), Spesialis II atau yang sederajat dapat dinaikkan pangkatnya menjadi Penata (111/c) setelah memiliki pangkat golongan ruang Penata Muda Tingkat I (111/b).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+<div class="container my-5">
+    <h2 class="text-center">Tabel Kenaikan Pangkat</h2>
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>NO</th>
+                <th>KODE</th>
+                <th>NAMA</th>
+                <th>SYARAT</th>
+                <th>MIN MASA KERJA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="7">1</td>
+                <td rowspan="7">PI</td>
+                <td>Ujian Kenaikan Pangkat Penyesuaian Ijazah</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>PI SMA</td>
+                <td>1. PNS Gol. I/c s.d I/d<br>2. Memiliki Ijazah SMA</td>
+                <td>1 Tahun<br>Dari Pangkat Terakhir</td>
+            </tr>
+            <tr>
+                <td>PI D3</td>
+                <td>1. PNS Gol. II/a s.d II/b<br>2. Memiliki IJazah D3</td>
+                <td>1 Tahun<br>Dari Pangkat Terakhir</td>
+            </tr>
+            <tr>
+                <td>PI S1 STAF</td>
+                <td>1. PNS Gol. II/a s.d II/d<br>2. Memiliki Ijazah S1/D4</td>
+                <td>1 Tahun<br>Dari Pangkat Terakhir</td>
+            </tr>
+            <tr>
+                <td>PI S1 GURU</td>
+                <td>1. PNS Gol. II/a s.d II/d<br>2. Memiliki Ijazah S1/D4</td>
+                <td>1 Tahun<br>Dari Pangkat Terakhir</td>
+            </tr>
+            <tr>
+                <td>PI S2</td>
+                <td>1. PNS Gol. III/a<br>2. Memiliki Ijazah S2</td>
+                <td>1 Tahun<br>Dari Pangkat Terakhir</td>
+            </tr>
+            <tr>
+                <td>PI S3</td>
+                <td>1. PNS Gol. III/b<br>2. Memiliki Ijazah S3</td>
+                <td>1 Tahun<br>Dari Pangkat Terakhir</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <!-- Footer -->
+<footer class="text-dark py-4 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-center flex-wrap">
+            <p class="mb-0">&copy; 2025 SMPN 3 Jakarta</p>
+            <span class="mx-2">|</span>
+            <p class="mb-0">Developed by Riyan Heriyanto</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap & Kepegawaian JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/kepegawaian.js"></script>
+</body>
+</html>
