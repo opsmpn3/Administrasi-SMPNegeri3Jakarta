@@ -45,10 +45,11 @@
         </ul>
 
         <!-- Search Box -->
-        <div class="search-container">
-            <input type="text" id="searchInput" class="form-control" placeholder="Cari...">
-            <i class="fas fa-search" onclick="searchSite()"></i> <!-- Ikon search -->
-        </div>
+<div class="search-container">
+    <input type="text" id="searchInput" class="form-control" placeholder="Cari...">
+    <i class="fas fa-search" onclick="searchSite()" tabindex="0"></i> 
+</div>
+
 
         <!-- Login Button -->
         <a href="./akun/login.html" class="btn btn-primary ms-3">
@@ -98,10 +99,11 @@
                 </ul>
 
                 <!-- Search Box di Mobile -->
-                <div class="search-container mt-3">
-                    <input type="text" id="searchInputMobile" class="form-control" placeholder="Cari...">
-                    <i class="fas fa-search" onclick="searchSite()"></i>
-                </div>
+            <div class="search-container mt-3">
+                <input type="text" id="searchInputMobile" class="form-control" placeholder="Cari..." onkeypress="handleEnterMobile(event)">
+                <i class="fas fa-search" onclick="searchSite()" tabindex="0"></i>
+            </div>
+
 
                 <!-- Login Button -->
                 <a href="login.html" class="btn btn-primary w-100 mt-3">
