@@ -1,4 +1,113 @@
+/* ===================================================================
+   HERO SECTION
+   Mengatur gaya bagian hero, termasuk latar belakang, warna teks, padding, dan efek bayangan.
+   =================================================================== */
+.hero {
+    background: linear-gradient(120deg, #E8EFFB, #FFFFFF);
+    color: #1E4B9B;
+    padding: 80px 10px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
 
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #4A90E2;
+}
+
+/* ===================================================================
+   HERO INDEX
+   Mengatur gaya bagian hero khusus untuk halaman index.
+   =================================================================== */
+.index-page .hero {
+    padding: 80px 10px; /* Atur padding sesuai kebutuhan */
+    padding-bottom: 10px;
+}
+
+.index-page .container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ===================================================================
+   CAROUSEL
+   Mengatur gaya dan perilaku carousel, termasuk gambar dan caption.
+   =================================================================== */
+.carousel {
+    padding: 10px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 500px; /* Atau gunakan `min-height: 300px` untuk ponsel */
+    width: 100%; 
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 350px; /* Tinggi lebih kecil di layar mobile */
+    }
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 30% lebih gelap */
+}
+
+/* ===================================================================
+   CARD DESIGN
+   Mengatur gaya dan perilaku card, termasuk efek hover.
+   =================================================================== */
+.card {
+    border: none;
+    background: #FFFFFF; /* White */
+    color: #333D4B;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Menambahkan radius sudut */
+    padding: 20px; /* Menambahkan padding */
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #4A90E2; /* Soft Royal Blue */
+    margin-bottom: 10px; /* Menambahkan margin bawah */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #67758D; /* Cool Gray */
+    margin-bottom: 20px; /* Menambahkan margin bawah */
+}
 
 /* Kotak Informasi Penting */
 .breaking-news {
@@ -14,65 +123,11 @@
 }
 
 .breaking-news::before {
-    content: "New!";
+    content: "Baru!";
     position: absolute;
     top: -10px;
     left: 10px;
     background-color: #FFC107; /* Warna kuning gelap */
-    color: #fff;
-    padding: 5px 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    transform: rotate(-10deg);
-}
-
-/* Kotak Informasi Penting */
-.breaking-news {
-    background-color: #FFF3CD; /* Warna kuning cerah */
-    border: 2px solid #FFC107; /* Garis kuning gelap */
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.breaking-news::before {
-    content: "Baru!";
-    position: absolute;
-    top: -10px;
-    left: 10px;
-    background-color: #ff0707; /* Warna kuning gelap */
-    color: #fff;
-    padding: 5px 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    transform: rotate(-10deg);
-}
-
-/* Kotak Informasi Penting */
-.breaking-news {
-    background-color: #FFF3CD; /* Warna kuning cerah */
-    border: 2px solid #FFC107; /* Garis kuning gelap */
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.breaking-news::before {
-    content: "Baru!";
-    position: absolute;
-    top: -10px;
-    left: 10px;
-    background-color: #ff0707; /* Warna kuning gelap */
     color: #fff;
     padding: 5px 10px;
     font-size: 1rem;
@@ -106,10 +161,8 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-
-
- /* Styling untuk jam & tanggal */
- .datetime-container {
+/* Styling untuk jam & tanggal */
+.datetime-container {
     position: absolute;
     top: -400%;
     left: 50%;
@@ -130,54 +183,9 @@
     font-weight: bold;
 }
 
-/* Styling untuk carousel */
-.carousel-item img {
-    height: 500px; /* Sesuaikan tinggi gambar */
-    object-fit: cover;
-}
-
 /* Styling indikator */
 .carousel-indicators {
     bottom: 20px;
-}
-
-
-/* CSS khusus untuk modal layanan administrasi */
-.modal.modal-layanan .modal-dialog {
-    max-width: 500px;
-}
-
-.modal.modal-layanan .modal-header {
-    background-color: #f8f9fa;
-    border-bottom: 2px solid #dee2e6;
-    text-align: center;
-}
-
-.modal.modal-layanan .modal-title {
-    font-weight: bold;
-    color: #333;
-}
-
-.modal.modal-layanan .modal-body {
-    font-size: 16px;
-    color: #555;
-    padding: 20px;
-}
-
-.modal.modal-layanan .modal-footer {
-    background-color: #f8f9fa;
-    border-top: 2px solid #dee2e6;
-    text-align: center;
-}
-
-.modal.modal-layanan .btn-primary {
-    background-color: #007bff;
-    border: none;
-}
-
-.modal.modal-layanan .btn-secondary {
-    background-color: #6c757d;
-    border: none;
 }
 
 /* General Styles for Statistics Section */
@@ -245,7 +253,6 @@
     }
 }
 
-
 /*galeri foto*/
 .gallery-img {
     width: 100%;
@@ -263,4 +270,70 @@
 .modal-img {
     width: 100%;
     border-radius: 10px;
+}
+
+/* ===================================================================
+   LIGHTBOX EFFECT
+   Mengatur efek lightbox untuk item galeri.
+   =================================================================== */
+.gallery-item {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================================================
+   FADE-IN ANIMATION
+   Mengatur animasi fade-in untuk elemen tertentu.
+   =================================================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CSS khusus untuk modal layanan administrasi */
+.modal.modal-layanan .modal-dialog {
+    max-width: 500px;
+}
+
+.modal.modal-layanan .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    text-align: center;
+}
+
+.modal.modal-layanan .modal-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.modal.modal-layanan .modal-body {
+    font-size: 16px;
+    color: #555;
+    padding: 20px;
+}
+
+.modal.modal-layanan .modal-footer {
+    background-color: #f8f9fa;
+    border-top: 2px solid #dee2e6;
+    text-align: center;
+}
+
+.modal.modal-layanan .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.modal.modal-layanan .btn-secondary {
+    background-color: #6c757d;
+    border: none;
 }
