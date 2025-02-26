@@ -172,7 +172,7 @@ body::before {
 <body>
 
     <!-- Tombol Back to Home -->
-    <a href="index.html" class="back-home-btn">
+    <a href="../index.html" class="back-home-btn">
         <i class="fa fa-home"></i> Home
     </a>
 
@@ -202,50 +202,80 @@ body::before {
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const users = [
-                { name: "Admin", username: "20102470", password: "20102470" },
-                { name: "Irwanto Sumantri", username: "134026", password: "123456" },
-                { name: "Sulaeman", username: "156434", password: "123456" },
-                { name: "Herru Tri Handaka", username: "139160", password: "123456" },
-                { name: "Atin Supryatin", username: "139152", password: "123456" },
-                { name: "Yenidar", username: "139736", password: "123456" },
-                { name: "Retnowati", username: "173098", password: "123456" },
-                { name: "Yani Samsuwati", username: "170444", password: "123456" },
-                { name: "Tunggul Hutagaol", username: "192231", password: "123456" },
-                { name: "Suhanah", username: "192194", password: "123456" },
-                { name: "Nina Komala Sari", username: "193779", password: "123456" },
-                { name: "Maryatun", username: "167744", password: "123456" },
-                { name: "Magda Ctellah Matindas", username: "191243", password: "123456" },
-                { name: "Kusmiyati", username: "193607", password: "123456" },
-                { name: "Muthoharoh", username: "184963", password: "123456" },
-                { name: "Mariam Giselle Andrea Luciano", username: "195879", password: "123456" },
-                { name: "Septia Saraswati", username: "199966", password: "123456" },
-                { name: "Ina Musdalifa", username: "208312", password: "123456" },
-                { name: "Dewi Komalasari", username: "208839", password: "123456" },
-                { name: "Purnakarta", username: "210741", password: "123456" }
-            ];
+    const users = [
+        { name: "Admin", username: "20102470", password: "20102470" },
+        { name: "Irwanto Sumantri", username: "134026", password: "123456" },
+        { name: "Sulaeman", username: "156434", password: "123456" },
+        { name: "Herru Tri Handaka", username: "139160", password: "123456" },
+        { name: "Atin Supryatin", username: "139152", password: "123456" },
+        { name: "Yenidar", username: "139736", password: "123456" },
+        { name: "Retnowati", username: "173098", password: "123456" },
+        { name: "Yani Samsuwati", username: "170444", password: "123456" },
+        { name: "Tunggul Hutagaol", username: "192231", password: "123456" },
+        { name: "Suhanah", username: "192194", password: "123456" },
+        { name: "Nina Komala Sari", username: "193779", password: "123456" },
+        { name: "Maryatun", username: "167744", password: "123456" },
+        { name: "Magda Ctellah Matindas", username: "191243", password: "123456" },
+        { name: "Kusmiyati", username: "193607", password: "123456" },
+        { name: "Muthoharoh", username: "184963", password: "123456" },
+        { name: "Mariam Giselle Andrea Luciano", username: "195879", password: "123456" },
+        { name: "Septia Saraswati", username: "199966", password: "123456" },
+        { name: "Ina Musdalifa", username: "208312", password: "123456" },
+        { name: "Dewi Komalasari", username: "208839", password: "123456" },
+        { name: "Purnakarta", username: "210741", password: "123456" },
+        { name: "Rahmad Hafido Prayoga", username: "154342", password: "123456" },
+        { name: "Khonsa Tsabita Baityhaq", username: "206299", password: "123456" },
+        { name: "Hanny Sugiharyani", username: "207284", password: "123456" },
+        { name: "Raka Prasetyo", username: "213756", password: "123456" },
+        { name: "Gita Marlinda", username: "216932", password: "123456" },
+        { name: "Maizal", username: "213122", password: "123456" },
+        { name: "Achmad Darojih", username: "214922", password: "123456" },
+        { name: "Riris", username: "216785", password: "123456" },
+        { name: "Arni Purwati", username: "216783", password: "123456" },
+        { name: "Citra Febrianti", username: "216969", password: "123456" },
+        { name: "Vivi Rizky Awalia", username: "215074", password: "123456" },
+        { name: "Siti Nurhaeni", username: "217650", password: "123456" },
+        { name: "Henrikus Wawan Kurniawan", username: "214384", password: "123456" },
+        { name: "Nur Aini", username: "219596", password: "123456" },
+        { name: "Aries Andesko Syamsirman", username: "1005790", password: "123456" },
+        { name: "Sri Sariwani", username: "123456", password: "123456" },
+        { name: "Dian Setiawati, S.E", username: "1016569", password: "123456" },
+        { name: "Sulasto, S.Pd", username: "1016578", password: "123456" },
+        { name: "Riyan Heriyanto, S.Kom", username: "1020259", password: "123456" },
+        { name: "Jojor Sinaga, S.Kom", username: "1016550", password: "123456" },
+        { name: "Saprudin", username: "1016568", password: "123456" },
+        { name: "Siswanto", username: "1016571", password: "123456" },
+        { name: "Lulu Firdaus", username: "1026286", password: "123456" },
+        { name: "Sunaryo", username: "1016570", password: "123456" },
+        { name: "Fauziah Utami, S.Kom", username: "1030678", password: "123456" },
+        { name: "Ahmad Fauzi", username: "1016573", password: "123456" },
+        { name: "Iyan Sopian", username: "1016575", password: "123456" },
+        { name: "Catur Nurhasanah", username: "164848", password: "123456" },
+        { name: "Dwi Desi Rima Irani", username: "139150", password: "123456" }
+    ];
 
-            if (sessionStorage.getItem('user')) {
-                window.location.href = 'dashboard.html';
-            }
+    if (sessionStorage.getItem('user')) {
+        window.location.href = 'dashboard.html';
+    }
 
-            document.getElementById('loginForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-                const username = document.getElementById('username').value.trim();
-                const password = document.getElementById('password').value.trim();
-                const errorMessage = document.getElementById('errorMessage');
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const errorMessage = document.getElementById('errorMessage');
 
-                const user = users.find(u => u.username === username && u.password === password);
+        const user = users.find(u => u.username === username && u.password === password);
 
-                if (user) {
-                    sessionStorage.setItem('user', JSON.stringify(user));
-                    window.location.href = 'dashboard.html';
-                } else {
-                    errorMessage.textContent = 'Username atau password salah.';
-                    errorMessage.classList.add('show-error');
-                }
-            });
-        });
+        if (user) {
+            sessionStorage.setItem('user', JSON.stringify(user));
+            window.location.href = 'dashboard.html';
+        } else {
+            errorMessage.textContent = 'Username atau password salah.';
+            errorMessage.classList.add('show-error');
+        }
+    });
+});
+
     </script>
 
 </body>
