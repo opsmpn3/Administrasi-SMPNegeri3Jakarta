@@ -1,15 +1,3 @@
-/* ==========================================================
-   KEPEGAWAIAN PAGE STYLING
-   Mengatur gaya khusus untuk halaman kepegawaian, termasuk hero section, efek fade-in, tabel data pegawai, dan modal detail pegawai.
-   ========================================================== */
-/* ===================================================================
-   RESET AND BASIC STYLES
-   Mengatur gaya dasar untuk semua elemen HTML, termasuk menghilangkan margin dan padding default serta mengatur box-sizing menjadi border-box untuk memudahkan pengaturan lebar dan tinggi elemen.
-   =================================================================== */
-   /* Mengatur jarak antara navbar dan hero section untuk halaman non-index */
-
-
-/* 📌 Pastikan hero section rapi & tidak bertabrakan dengan navbar */
 .hero {
     background: linear-gradient(120deg, #E8EFFB, #FFFFFF);
     color: #1E4B9B;
