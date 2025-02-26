@@ -2,13 +2,16 @@
    INVENTARIS PAGE STYLING
    ========================================================== */
 
-/* 📌 Pastikan hero section rapi & tidak bertabrakan dengan navbar */
 .hero {
     background: linear-gradient(120deg, #E8EFFB, #FFFFFF);
     color: #1E4B9B;
     padding: 80px 20px;
     text-align: center;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section {
+    margin-top: 60px; /* Sesuaikan nilai margin sesuai kebutuhan */
 }
 
 /* 📌 Efek Fade-in untuk Tabel */
