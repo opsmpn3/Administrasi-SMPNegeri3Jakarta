@@ -8,6 +8,7 @@
     <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.min.css">
     <link rel="stylesheet" href="../../css/sarpras.min.css">
     <style>
@@ -32,16 +33,16 @@
     <!-- Navbar (PC) -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
             <div class="navbar-text">
                 <span class="navbar-title">Administrasi</span>
                 <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
             </div>
         </a>           
         <ul class="nav">
-            <li class="nav-item"><a class="nav-link active" href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="profil.html"><i class="bi bi-person-badge"></i> Profil</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../../index.html"><i class="bi bi-house-door"></i> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../profil.html"><i class="bi bi-person-badge"></i> Profil</a></li>
             
             <!-- Dropdown Administrasi -->
             <li class="nav-item dropdown">
@@ -49,35 +50,37 @@
                     <i class="bi bi-folder"></i> Administrasi
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="kepegawaian.html"><i class="bi bi-people"></i> Kepegawaian</a></li>
-                    <li><a class="dropdown-item" href="kesiswaan.html"><i class="bi bi-mortarboard"></i> Kesiswaan</a></li>
-                    <li><a class="dropdown-item" href="inventaris.html"><i class="bi bi-box-seam"></i> Inventaris</a></li>
-                    <li><a class="dropdown-item" href="sarpras.html"><i class="bi bi-building"></i> Sarpras</a></li>
-                    <li><a class="dropdown-item" href="persuratan.html"><i class="bi bi-envelope"></i> Persuratan</a></li>
+                    <li><a class="dropdown-item" href="../../kepegawaian.html"><i class="bi bi-people"></i> Kepegawaian</a></li>
+                    <li><a class="dropdown-item" href="../../kesiswaan.html"><i class="bi bi-mortarboard"></i> Kesiswaan</a></li>
+                    <li><a class="dropdown-item" href="../../inventaris.html"><i class="bi bi-box-seam"></i> Inventaris</a></li>
+                    <li><a class="dropdown-item" href="../../sarpras.html"><i class="bi bi-building"></i> Sarpras</a></li>
+                    <li><a class="dropdown-item" href="../../persuratan.html"><i class="bi bi-envelope"></i> Persuratan</a></li>
                 </ul>
             </li>
 
-            <li class="nav-item"><a class="nav-link" href="kontak.html"><i class="bi bi-telephone"></i> Kontak</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../kontak.html"><i class="bi bi-telephone"></i> Kontak</a></li>
         </ul>
 
         <!-- Search Box -->
-        <div class="search-container">
-            <input type="text" id="searchInput" class="form-control" placeholder="Cari...">
-            <i class="fas fa-search" onclick="searchSite()"></i> <!-- Ikon search -->
-        </div>
+<div class="search-container">
+    <input type="text" id="searchInput" class="form-control" placeholder="Cari...">
+    <i class="fas fa-search" onclick="searchSite()" tabindex="0"></i> 
+</div>
+
 
         <!-- Login Button -->
-        <a href="./akun/login.html" class="btn btn-primary ms-3">
+        <a href="https://opsmpn3.github.io/Login-Administrasi-SMPN3Jakarta/" class="btn btn-primary ms-3">
             <i class="bi bi-box-arrow-in-right"></i> Login
         </a>
+
     </div>
 </nav>
 
     <!-- Navbar (Mobile) -->
 <nav class="navbar bg-body-tertiary fixed-top navbar-fixed d-lg-none">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-            <img src="/assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../assets/logosnega.png" alt="Logo Sekolah" width="40" class="navbar-logo">
             <div class="navbar-text">
                 <span class="navbar-title">Administrasi</span>
                 <span class="navbar-subtitle">SMP Negeri 3 Jakarta</span>
@@ -93,8 +96,8 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 pe-3">
-                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="profil.html"><i class="bi bi-person-badge"></i> Profil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../../index.html"><i class="bi bi-house-door"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../profil.html"><i class="bi bi-person-badge"></i> Profil</a></li>
                     
                     <!-- Dropdown Administrasi -->
                     <li class="nav-item dropdown">
@@ -102,31 +105,47 @@
                             <i class="bi bi-folder"></i> Administrasi
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="kepegawaian.html"><i class="bi bi-people"></i> Kepegawaian</a></li>
-                            <li><a class="dropdown-item" href="kesiswaan.html"><i class="bi bi-mortarboard"></i> Kesiswaan</a></li>
-                            <li><a class="dropdown-item" href="inventaris.html"><i class="bi bi-box-seam"></i> Inventaris</a></li>
-                            <li><a class="dropdown-item" href="sarpras.html"><i class="bi bi-building"></i> Sarpras</a></li>
-                            <li><a class="dropdown-item" href="persuratan.html"><i class="bi bi-envelope"></i> Persuratan</a></li>
+                            <li><a class="dropdown-item" href="../../kepegawaian.html"><i class="bi bi-people"></i> Kepegawaian</a></li>
+                            <li><a class="dropdown-item" href="../../kesiswaan.html"><i class="bi bi-mortarboard"></i> Kesiswaan</a></li>
+                            <li><a class="dropdown-item" href="../../kesiswaan.html"><i class="bi bi-box-seam"></i> Inventaris</a></li>
+                            <li><a class="dropdown-item" href="../../sarpras.html"><i class="bi bi-building"></i> Sarpras</a></li>
+                            <li><a class="dropdown-item" href="../../persuratan.html"><i class="bi bi-envelope"></i> Persuratan</a></li>
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="kontak.html"><i class="bi bi-telephone"></i> Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../kontak.html"><i class="bi bi-telephone"></i> Kontak</a></li>
                 </ul>
 
                 <!-- Search Box di Mobile -->
-                <div class="search-container mt-3">
-                    <input type="text" id="searchInputMobile" class="form-control" placeholder="Cari...">
-                    <i class="fas fa-search" onclick="searchSite()"></i>
-                </div>
+            <div class="search-container mt-3">
+                <input type="text" id="searchInputMobile" class="form-control" placeholder="Cari..." onkeypress="handleEnterMobile(event)">
+                <i class="fas fa-search" onclick="searchSite()" tabindex="0"></i>
+            </div>
+
 
                 <!-- Login Button -->
-                <a href="login.html" class="btn btn-primary w-100 mt-3">
+                <a href="https://opsmpn3.github.io/Login-Administrasi-SMPN3Jakarta/" class="btn btn-primary w-100 mt-3">
                     <i class="bi bi-box-arrow-in-right"></i> Login
                 </a>
+
             </div>
         </div>
     </div>
 </nav>
+<!-- Modal Hasil Pencarian -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">🔎 Hasil Pencarian</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="modalResult" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Breadcrumb -->
     <div class="container breadcrumb-container">
@@ -299,6 +318,7 @@
 
     <!-- Bootstrap & Kepegawaian JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/script.js"></script>
     <script src="../../js/sarpras.js"></script>
 </body>
 </html>
