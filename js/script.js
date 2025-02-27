@@ -55,75 +55,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
-// Daftar halaman yang akan dicari (sesuaikan dengan struktur direktori website)
+// Daftar halaman yang akan dicari
 const pages = [
-    "daftar-kir.html",
-    "kiba.html",
-    "kibb.html",
-    "kibc.html",
-    "kibd.html",
-    "kibe.html",
-    "kibf.html",
-    "statistik-kir.html",
-    "cuti.html",
-    "data-pendidik.html",
-    "data-tendik.html",
-    "kartu-pegawai.html",
-    "kenaikan-pangkat.html",
-    "mutasi.html",
-    "penghargaan.html",
-    "pensiun.html",
-    "presensi.html",
-    "statistik-pegawai.html",
-    "tamsil.html",
-    "tunjangan.html",
-    "ekstrakurikuler.html",
-    "prestasi.html",
-    "surat-keterangan-aktif.html",
-    "surat-keterangan-kehilangan.html",
-    "kantin.html",
-    "laboratorium.html",
-    "perpustakaan.html",
-    "ruang-gudang.html",
-    "ruang-guru.html",
-    "ruang-kelas.html",
-    "ruang-konseling.html",
-    "ruang-pimpinan.html",
-    "ruang-sirkulasi.html",
-    "ruang-tatausaha.html",
-    "ruang-uks.html",
-    "tempat-bermain.html",
-    "tempat-ibadah.html",
-    "toilet.html",
-    "dashboard.html",
-    "index copy.html",
-    "index.html",
-    "inventaris.html",
-    "kepegawaian.html",
-    "kesiswaan.html",
-    "kontak.html",
-    "login.html",
-    "persuratan.html",
-    "profil.html",
-    "profiluser.html",
-    "sarpras.html"
+    "daftar-kir.html", "kiba.html", "kibb.html", "kibc.html", "kibd.html",
+    "kibe.html", "kibf.html", "statistik-kir.html", "cuti.html", "data-pendidik.html",
+    "data-tendik.html", "kartu-pegawai.html", "kenaikan-pangkat.html", "mutasi.html",
+    "penghargaan.html", "pensiun.html", "presensi.html", "statistik-pegawai.html",
+    "tamsil.html", "tunjangan.html", "ekstrakurikuler.html", "prestasi.html",
+    "surat-keterangan-aktif.html", "surat-keterangan-kehilangan.html", "kantin.html",
+    "laboratorium.html", "perpustakaan.html", "ruang-gudang.html", "ruang-guru.html",
+    "ruang-kelas.html", "ruang-konseling.html", "ruang-pimpinan.html", "ruang-sirkulasi.html",
+    "ruang-tatausaha.html", "ruang-uks.html", "tempat-bermain.html", "tempat-ibadah.html",
+    "toilet.html", "dashboard.html", "index.html", "inventaris.html", "kepegawaian.html",
+    "kesiswaan.html", "kontak.html", "login.html", "persuratan.html", "profil.html",
+    "profiluser.html", "sarpras.html"
 ];
 
+// Fungsi utama untuk pencarian
 function searchSite() {
-    let input = document.getElementById("searchInput").value.trim().toLowerCase();
+    let inputDesktop = document.getElementById("searchInput");
+    let inputMobile = document.getElementById("searchInputMobile");
+    
+    let input = (inputDesktop?.value || inputMobile?.value || "").trim().toLowerCase();
     let modalResult = document.getElementById("modalResult");
     let searchModal = new bootstrap.Modal(document.getElementById("searchModal"));
     let foundResults = [];
-    let searchMessage = `<li class="list-group-item text-warning">🔎 Sedang mencari...</li>`;
-    
-    modalResult.innerHTML = searchMessage;
-    searchModal.show();
 
-    if (input === "") {
+    if (!input) {
         modalResult.innerHTML = `<li class="list-group-item text-danger">⚠️ Masukkan kata kunci untuk mencari!</li>`;
+        searchModal.show();
         return;
     }
+
+    modalResult.innerHTML = `<li class="list-group-item text-warning">🔎 Sedang mencari...</li>`;
+    searchModal.show();
 
     let promises = pages.map(page => fetch(page)
         .then(response => {
@@ -133,17 +98,15 @@ function searchSite() {
         .then(html => {
             let doc = new DOMParser().parseFromString(html, "text/html");
             let bodyText = doc.body.innerText.toLowerCase();
-            
+
             if (bodyText.includes(input)) {
-                let snippet = getSnippet(doc.body.innerText, input);
-                foundResults.push(
-                    `<li class="list-group-item">
-                        <a href="${page}" class="text-primary">
-                            🔗 ${capitalize(page.replace(".html", ""))}
-                        </a>
+                let snippet = getSnippet(bodyText, input);
+                foundResults.push(`
+                    <li class="list-group-item">
+                        <a href="${page}" class="text-primary">🔗 ${capitalize(page.replace(".html", ""))}</a>
                         <p class="text-muted small">${snippet}</p>
-                    </li>`
-                );
+                    </li>
+                `);
             }
         })
         .catch(error => console.warn(error))
@@ -160,7 +123,7 @@ function searchSite() {
 
 // Fungsi untuk menampilkan cuplikan teks yang mengandung kata kunci
 function getSnippet(text, keyword) {
-    let index = text.toLowerCase().indexOf(keyword);
+    let index = text.indexOf(keyword);
     if (index === -1) return "";
     
     let start = Math.max(0, index - 30);
@@ -181,11 +144,19 @@ function capitalize(text) {
     return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
-// ✅ Tambahkan event listener untuk menangani ENTER pada input pencarian
-document.getElementById("searchInput").addEventListener("keypress", function(event) {
+// ✅ Event Listener untuk Desktop & Mobile
+document.getElementById("searchInput")?.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
         searchSite();
     }
 });
+
+document.getElementById("searchInputMobile")?.addEventListener("input", function(event) {
+    if (event.target.value.length > 2) { // Minimal 3 huruf sebelum pencarian
+        searchSite();
+    }
+});
+
+
 
