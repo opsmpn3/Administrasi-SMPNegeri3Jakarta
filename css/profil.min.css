@@ -1,8 +1,8 @@
 /* ==========================================================
-   PROFIL PAGE STYLING
+   INVENTARIS PAGE STYLING
    ========================================================== */
 
-.hero {
+   .hero {
     background: linear-gradient(120deg, #E8EFFB, #FFFFFF);
     color: #1E4B9B;
     padding: 80px 20px;
@@ -14,28 +14,7 @@
     margin-top: 60px; /* Sesuaikan nilai margin sesuai kebutuhan */
 }
 
-
-/* 📌 Tabel Styling */
-.table-responsive {
-    overflow-x: auto;
-}
-
-.table th {
-    background: #4A90E2;
-    color: white;
-    text-align: center;
-}
-
-.table tbody tr:hover {
-    background: #F4F7FC;
-}
-
-.table td {
-    text-align: left;
-}
-
-
-/* 📌 Efek Fade-in */
+/* 📌 Efek Fade-in untuk Tabel */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -47,9 +26,92 @@
     transform: translateY(0);
 }
 
-/* 📌 Modal Zoom */
-#modalZoomImage {
-    max-width: 100%;
-    max-height: 90vh;
-    border-radius: 8px;
+
+/* 📌 Style untuk Tabel Data Inventaris */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background: #4A90E2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+}
+
+.table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 📌 Hover Effect untuk Row */
+.table tbody tr:hover {
+    background: #F4F7FC;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 📌 Tombol "Detail" di tabel */
+.btn-info {
+    background-color: #4A90E2;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-info:hover {
+    background-color: #1E4B9B;
+}
+
+/* 📌 Style Modal Detail Inventaris */
+.modal-content {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* 📌 Responsif: Atur ukuran tabel & modal di layar kecil */
+@media (max-width: 768px) {
+    .table th, .table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .table th, .table td {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
 }
