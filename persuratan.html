@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Persuratan">
-    <title>Persuratan - Administrasi SMP Negeri 3 Jakarta</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/persuratan.min.css">
-</head>
+    <head>
+        <!-- Meta Basic SEO -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Informasi persuratan SMP Negeri 3 Jakarta - Manajemen surat masuk, surat keluar, dan dokumentasi administrasi sekolah.">
+        <link rel="canonical" href="https://opsmpn3.github.io/persuratan.html">
+    
+        <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Persuratan - SMPN 3 Jakarta">
+        <meta property="og:description" content="Informasi lengkap tentang sistem persuratan SMP Negeri 3 Jakarta, termasuk surat masuk, surat keluar, dan dokumentasi administrasi sekolah.">
+        <meta property="og:image" content="https://opsmpn3.github.io/assets/logosnega.png">
+        <meta property="og:url" content="https://opsmpn3.github.io/persuratan.html">
+    
+        <!-- Twitter Card (For Twitter/X) -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Persuratan - SMPN 3 Jakarta">
+        <meta name="twitter:description" content="Informasi lengkap tentang sistem persuratan SMP Negeri 3 Jakarta, termasuk surat masuk, surat keluar, dan dokumentasi administrasi sekolah.">
+        <meta name="twitter:image" content="https://opsmpn3.github.io/assets/logosnega.png">
+        <meta name="twitter:site" content="@smpn3jakarta">
+    
+        <!-- Page Title -->
+        <title>Persuratan - Administrasi SMP Negeri 3 Jakarta</title>
+    
+        <!-- Favicon -->
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/persuratan.min.css">
+    </head>
+    
 <body>
     <!-- Navbar (PC) -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
@@ -138,49 +161,156 @@
     </div>
 </div>
 
-<!-- Section Jenis Persuratan -->
+<!-- Tabel Daftar Surat -->
 <div class="container my-5">
-    <h2 class="text-center mb-4">Jenis Persuratan</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <h3 class="text-center fw-bold text-primary">
+        <i class="bi bi-file-earmark-text"></i> Daftar Surat
+    </h3>
 
-        <!-- Surat Keterangan Aktif -->
+    <div class="table-container shadow-lg p-3 rounded bg-white">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Surat</th>
+                        <th>Nomor Surat</th>
+                        <th>Tanggal</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="suratTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Informasi Grafis Persuratan -->
+<div class="container my-5">
+    <h3 class="text-center fw-bold text-primary">
+        <i class="bi bi-envelope"></i> Informasi Persuratan
+    </h3>
+    <p class="text-center text-muted">Klik "Detail" untuk informasi lebih lanjut tentang setiap jenis surat.</p>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+        <!-- Surat Keputusan -->
         <div class="col">
-            <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-file-earmark-text display-3 text-success"></i>
+            <div class="card shadow-lg text-center p-4">
+                <div class="icon-container">
+                    <i class="fas fa-gavel text-danger"></i>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Surat Keterangan Aktif</h5>
-                    <p class="card-text">Surat keterangan aktif adalah surat yang menyatakan bahwa siswa masih aktif di sekolah. Surat ini biasanya diperlukan untuk keperluan administrasi seperti pendaftaran kembali atau verifikasi status siswa.</p>
-                    <a href="breadcrumb/persuratan/surat-keterangan-aktif.html" class="btn btn-success">Detail</a>
+                    <h5 class="card-title">Surat Keputusan</h5>
+                    <p class="card-text">Dokumen resmi mengenai keputusan yang diambil oleh pihak sekolah.</p>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalKeputusan">Detail</button>
                 </div>
             </div>
         </div>
 
-        <!-- Surat Keterangan Lulus -->
+        <!-- Surat Tugas -->
         <div class="col">
-            <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-file-earmark-check display-3 text-warning"></i>
+            <div class="card shadow-lg text-center p-4">
+                <div class="icon-container">
+                    <i class="fas fa-user-tie text-primary"></i>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Surat Keterangan Lulus</h5>
-                    <p class="card-text">Surat keterangan lulus adalah surat yang menyatakan bahwa siswa telah lulus dari sekolah. Surat ini diperlukan untuk berbagai keperluan seperti pendaftaran perguruan tinggi atau bekerja.</p>
-                    <a href="breadcrumb/persuratan/surat-keterangan-lulus.html" class="btn btn-warning">Detail</a>
+                    <h5 class="card-title">Surat Tugas</h5>
+                    <p class="card-text">Dokumen penugasan bagi guru atau staf dalam berbagai kegiatan.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTugas">Detail</button>
                 </div>
             </div>
         </div>
 
-        <!-- Surat Keterangan Kehilangan -->
+        <!-- Surat Keterangan -->
         <div class="col">
-            <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-file-earmark-x display-3 text-dark"></i>
-                <div class="card-body">
-                    <h5 class="card-title">Surat Keterangan Kehilangan</h5>
-                    <p class="card-text">Surat keterangan kehilangan adalah surat yang menyatakan bahwa barang milik siswa hilang. Surat ini diperlukan untuk proses penggantian barang hilang.</p>
-                    <a href="breadcrumb/persuratan/surat-keterangan-kehilangan.html" class="btn btn-dark">Detail</a>
+            <div class="card shadow-lg text-center p-4">
+                <div class="icon-container">
+                    <i class="fas fa-file-alt text-primary"></i> <!-- Mengubah ikon -->
                 </div>
+                <div class="card-body">
+                    <h5 class="card-title">Surat Keterangan</h5>
+                    <p class="card-text">Dokumen resmi untuk keperluan administratif sekolah.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalKeterangan">Detail</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Modal: Surat Keputusan -->
+<div class="modal fade" id="modalKeputusan" tabindex="-1" aria-labelledby="modalKeputusanLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalKeputusanLabel">Surat Keputusan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body">
+                <p>Surat Keputusan (SK) adalah dokumen resmi yang berisi keputusan dari pihak sekolah terkait kebijakan, pengangkatan, atau penugasan tertentu.</p>
+                <p><strong>Contoh:</strong></p>
+                <ul>
+                    <li>SK Pengangkatan Guru</li>
+                    <li>SK Pendirian Komite Sekolah</li>
+                    <li>SK Struktur Organisasi</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <a href="https://forms.gle/xxxxxxx" target="_blank" class="btn btn-primary">Ajukan</a>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Modal: Surat Tugas -->
+<div class="modal fade" id="modalTugas" tabindex="-1" aria-labelledby="modalTugasLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTugasLabel">Surat Tugas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body">
+                <p>Surat Tugas adalah dokumen resmi yang memberikan mandat atau penugasan kepada guru, staf, atau siswa dalam berbagai kegiatan akademik dan non-akademik.</p>
+                <p><strong>Contoh:</strong></p>
+                <ul>
+                    <li>Surat Tugas Pelatihan Guru</li>
+                    <li>Surat Tugas Perjalanan Dinas</li>
+                    <li>Surat Tugas Pengawas Ujian</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <a href="https://forms.gle/yyyyyyy" target="_blank" class="btn btn-primary">Ajukan</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Surat Keterangan -->
+<div class="modal fade" id="modalKeterangan" tabindex="-1" aria-labelledby="modalKeteranganLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalKeteranganLabel">Surat Keterangan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body">
+                <p>Surat Keterangan digunakan untuk berbagai keperluan administratif, seperti:</p>
+                <ul>
+                    <li>Keterangan Siswa Aktif</li>
+                    <li>Keterangan Pindah Sekolah</li>
+                    <li>Keterangan Lulus</li>
+                    <li>Keterangan Kehadiran</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <a href="https://forms.gle/zzzzzzz" target="_blank" class="btn btn-primary">Ajukan</a>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Footer -->
 <footer class="text-dark py-4 mt-5">
@@ -197,6 +327,70 @@
     <!-- Bootstrap & Persuratan JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/persuratan.js"></script> <!-- Pindahkan ke sini -->
+    <script src="js/persuratan.js"></script>
+    <script>
+        // Data surat (simulasi dari Google Drive)
+        const daftarSurat = [
+            {
+                nama: "Surat Perintah Perjalanan Dinas",
+                nomor: "001/SPJ/2024",
+                tanggal: "05 Januari 2024",
+                link: "https://drive.google.com/file/d/1ABCXYZ/view?usp=sharing"
+            },
+            {
+                nama: "Surat Keterangan Mahasiswa",
+                nomor: "002/SKM/2024",
+                tanggal: "12 Januari 2024",
+                link: "https://drive.google.com/file/d/2DEFUVW/view?usp=sharing"
+            },
+            {
+                nama: "Surat Keterangan Penghasilan",
+                nomor: "003/SKP/2024",
+                tanggal: "18 Februari 2024",
+                link: "https://drive.google.com/file/d/3GHIJKL/view?usp=sharing"
+            },
+            {
+                nama: "Surat Permohonan Pindah",
+                nomor: "004/SPP/2024",
+                tanggal: "02 Maret 2024",
+                link: "https://drive.google.com/file/d/4MNOPQR/view?usp=sharing"
+            },
+            {
+                nama: "Surat Keterangan Domisili",
+                nomor: "005/SKD/2024",
+                tanggal: "15 Maret 2024",
+                link: "https://drive.google.com/file/d/5STUVWX/view?usp=sharing"
+            }
+        ];
+
+        // Fungsi untuk menampilkan data ke dalam tabel
+        function loadSurat() {
+            let tableBody = document.getElementById("suratTableBody");
+            tableBody.innerHTML = "";
+
+            daftarSurat.forEach((surat, index) => {
+                let row = `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${surat.nama}</td>
+                        <td>${surat.nomor}</td>
+                        <td>${surat.tanggal}</td>
+                        <td>
+                            <a href="${surat.link}" target="_blank" class="btn btn-sm btn-info">
+                                <i class="bi bi-eye"></i> Lihat
+                            </a>
+                            <a href="${surat.link.replace('/view', '/uc?export=download')}" class="btn btn-sm btn-success">
+                                <i class="bi bi-download"></i> Unduh
+                            </a>
+                        </td>
+                    </tr>
+                `;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        // Panggil fungsi saat halaman dimuat
+        window.onload = loadSurat;
+    </script>
 </body>
 </html>
