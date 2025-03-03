@@ -1,8 +1,8 @@
 /* ===================================================================
    RESET AND BASIC STYLES
-   Mengatur gaya dasar untuk semua elemen HTML, termasuk menghilangkan margin dan padding default serta mengatur box-sizing menjadi border-box untuk memudahkan pengaturan lebar dan tinggi elemen.
+   Mengatur gaya dasar untuk semua elemen HTML.
    =================================================================== */
-   html {
+html {
     scroll-behavior: smooth;
 }
 
@@ -14,6 +14,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    font-size: 16px; /* Ukuran dasar teks */
     line-height: 1.6;
     color: #333D4B; /* Dark Gray */
     background: #F4F7FC; /* Soft Grayish Blue */
@@ -21,8 +22,8 @@ body {
 }
 
 /* ===================================================================
-   TYPOGRAPHY
-   Mengatur gaya teks untuk berbagai elemen seperti heading (h1 hingga h6), paragraf (p), dan lainnya.
+   TYPOGRAPHY (Gaya Teks Global)
+   Mengatur ukuran dan struktur teks secara konsisten.
    =================================================================== */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
@@ -30,9 +31,80 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
+h1 { font-size: 2.5rem; } /* 40px */
+h2 { font-size: 2rem; }   /* 32px */
+h3 { font-size: 1.75rem; } /* 28px */
+h4 { font-size: 1.5rem; } /* 24px */
+h5 { font-size: 1.25rem; } /* 20px */
+h6 { font-size: 1rem; }   /* 16px */
+
 p {
+    font-size: 1rem; /* 16px */
+    margin-bottom: 1rem;
+    color: #444; /* Sedikit lebih gelap dari body agar kontras */
+}
+
+/* List */
+ul, ol {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+}
+
+/* Strong (Teks Bold) */
+strong {
+    font-weight: 700;
+}
+
+/* Teks Kecil */
+.small-text {
+    font-size: 0.875rem; /* 14px */
+    color: #666;
+}
+
+/* Link */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Blockquote */
+blockquote {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #007bff;
+    padding-left: 1rem;
     margin-bottom: 1rem;
 }
+
+/* ===================================================================
+   RESPONSIVE TYPOGRAPHY
+   Menyesuaikan ukuran teks untuk berbagai ukuran layar.
+   =================================================================== */
+@media (max-width: 992px) {
+    h1 { font-size: 2rem; } /* 32px */
+    h2 { font-size: 1.75rem; } /* 28px */
+    h3 { font-size: 1.5rem; } /* 24px */
+    h4 { font-size: 1.25rem; } /* 20px */
+    h5 { font-size: 1.125rem; } /* 18px */
+    h6 { font-size: 1rem; } /* 16px */
+    p  { font-size: 0.9375rem; } /* 15px */
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 1.75rem; } /* 28px */
+    h2 { font-size: 1.5rem; } /* 24px */
+    h3 { font-size: 1.25rem; } /* 20px */
+    h4 { font-size: 1.125rem; } /* 18px */
+    h5, h6 { font-size: 1rem; } /* 16px */
+    p { font-size: 0.875rem; } /* 14px */
+}
+
 
 /* ========================================================
    NAVBAR & OFFCANVAS (Gaya modern dan responsif)
@@ -247,6 +319,44 @@ p {
     background-color: #1E4B9B;
     color: #fff;
 }
+.btn:active {
+    transform: scale(0.98);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===================================================================
+   CARD DESIGN
+   Mengatur gaya dan perilaku card, termasuk efek hover.
+   =================================================================== */
+   .card {
+    border: none;
+    background: #FFFFFF; /* White */
+    color: #333D4B;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Menambahkan radius sudut */
+    padding: 20px; /* Menambahkan padding */
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #4A90E2; /* Soft Royal Blue */
+    margin-bottom: 10px; /* Menambahkan margin bawah */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #67758D; /* Cool Gray */
+    margin-bottom: 20px; /* Menambahkan margin bawah */
+}
+
 
 /* ===================================================================
    BUTTONS VARIATIONS
@@ -308,14 +418,17 @@ p {
     background-color: #138496;
 }
 
-/* FOOTER STYLING */
-footer {
+/* ==============================
+   FOOTER STYLING (Modern & Responsif)
+   ============================== */
+   footer {
     background-color: #FFFFFF;
     color: #67758D;
-    padding: 15px 20px;
+    padding: 20px; /* Tambahkan sedikit padding agar lebih proporsional */
     text-align: center;
     box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
+    min-height: 60px; /* Pastikan tinggi footer cukup */
 }
 
 /* FLEXBOX - Pastikan teks tetap sejajar di layar besar */
@@ -324,12 +437,13 @@ footer .d-flex {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 10px; /* Tambahkan jarak antar elemen */
 }
 
 /* Agar teks tidak turun terlalu cepat di layar kecil */
 footer p {
     margin: 0;
-    font-size: 0.85rem;
+    font-size: clamp(0.8rem, 2vw, 0.85rem); /* Responsif untuk berbagai layar */
     white-space: nowrap;
 }
 
@@ -338,11 +452,13 @@ footer p {
     footer .d-flex {
         flex-direction: column;
         text-align: center;
+        gap: 5px; /* Jarak lebih kecil di layar kecil */
     }
     footer span {
         display: none; /* Hilangkan garis pemisah di layar kecil */
     }
 }
+
 
 /* ===================================================================
    RESPONSIVE DESIGN
@@ -446,3 +562,51 @@ footer p {
         width: 100%;
     }
 }
+
+/* ==============================
+   BREADCRUMB GLOBAL (Modern & Responsif)
+   ============================== */
+   .breadcrumb-container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Breadcrumb tetap responsif di semua ukuran layar */
+.breadcrumb {
+    display: flex;
+    flex-wrap: nowrap; /* Tetap satu baris, tapi bisa di-scroll */
+    align-items: center; /* Ikon & teks sejajar */
+    gap: 5px; /* Jarak antar item */
+    font-size: 14px;
+    padding: 10px;
+    overflow-x: auto; /* Aktifkan scrolling jika terlalu panjang */
+    white-space: nowrap; /* Cegah teks turun ke baris berikutnya */
+    scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
+    -ms-overflow-style: none; /* Sembunyikan scrollbar di IE/Edge */
+}
+
+/* Hilangkan scrollbar pada Chrome/Safari */
+.breadcrumb::-webkit-scrollbar {
+    display: none;
+}
+
+/* Atur batas lebar breadcrumb-item agar tetap rapi */
+.breadcrumb-item {
+    flex-shrink: 0; /* Cegah item mengecil */
+}
+
+/* Untuk layar kecil, pastikan tidak terlalu kecil */
+@media (max-width: 576px) {
+    .breadcrumb {
+        font-size: 13px; /* Sedikit lebih kecil agar lebih muat */
+        padding: 8px; /* Kurangi padding */
+    }
+
+    .breadcrumb-item {
+        max-width: 85vw; /* Batasi lebar maksimal */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
