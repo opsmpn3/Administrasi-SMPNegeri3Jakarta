@@ -15,18 +15,6 @@
         .breadcrumb-container {
             margin-top: 120px;
         }
-        .content-container {
-            margin-top: 20px;
-        }
-        .table-container {
-            margin-top: 20px;
-        }
-        .table th, .table td {
-            text-align: left;
-        }
-        .table td:first-child {
-            text-align: left;
-        }
     </style>
 </head>
 <body>
@@ -146,90 +134,68 @@
         </div>
     </div>
 </div>
-    <!-- Breadcrumb -->
-    <div class="container breadcrumb-container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="../../inventaris.html">Inventaris</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Daftar KIR</li>
-            </ol>
-        </nav>
-    </div>
+   <!-- Breadcrumb Daftar KIR -->
+<div class="container breadcrumb-container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-light shadow-sm p-3 rounded">
+            <li class="breadcrumb-item">
+                <a href="../../index.html" class="text-decoration-none text-primary">
+                    <i class="bi bi-house-door"></i> Home
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="../../inventaris.html" class="text-decoration-none text-primary">
+                    <i class="bi bi-box-seam"></i> Inventaris
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                <i class="bi bi-card-list"></i> Daftar KIR
+            </li>
+        </ol>
+    </nav>
+</div>
+<div class="container my-5">
+    <h3 class="text-center fw-bold text-primary">
+<h3 class="text-center">Data Ruangan SMP Negeri 3</h3>
+<p class="text-center text-muted">Daftar ruangan yang ada di SMP Negeri 3 beserta informasi lantai dan nama ruangan.</p>
 
-    <!-- Main Content -->
-    <div class="container content-container">
-        <h3 class="text-center">Data Ruangan SMP Negeri 3</h3>
-        <p class="text-center text-muted">Daftar ruangan yang ada di SMP Negeri 3 beserta informasi lantai dan nama ruangan.</p>
+<h4 class="mt-4">Keterangan</h4>
+<ul>
+    <li><b>Kode Ruangan:</b> Nomor unik untuk setiap ruangan.</li>
+    <li><b>Nama Gedung:</b> Nama gedung tempat ruangan berada.</li>
+    <li><b>Lantai:</b> Lantai tempat ruangan tersebut.</li>
+    <li><b>Nama Ruangan:</b> Nama ruangan sesuai fungsinya.</li>
+</ul>
 
-        <h4 class="mt-4">Keterangan</h4>
-        <ul>
-            <li><b>Kode Ruangan:</b> Nomor unik untuk setiap ruangan.</li>
-            <li><b>Nama Gedung:</b> Nama gedung tempat ruangan berada.</li>
-            <li><b>Lantai:</b> Lantai tempat ruangan tersebut.</li>
-            <li><b>Nama Ruangan:</b> Nama ruangan sesuai fungsinya.</li>
-        </ul>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped text-center">
+        <thead class="table-primary">
+            <tr>
+                <th onclick="sortTable(0)">Kode Ruangan ⬍</th>
+                <th onclick="sortTable(1)">Nama Gedung ⬍</th>
+                <th onclick="sortTable(2)">Lantai ⬍</th>
+                <th onclick="sortTable(3)">Nama Ruangan ⬍</th>
+            </tr>
+        </thead>
+        <tbody id="ruanganBody"></tbody>
+    </table>
+</div>
 
-        <h4 class="mt-4">Cari Ruangan</h4>
-        <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Cari ruangan..." class="form-control">
-
-        <div class="table-container">
-            <table id="roomTable" class="table table-hover table-bordered text-center">
-                <thead>
-                    <tr>
-                        <th>KODE RUANGAN</th>
-                        <th>NAMA GEDUNG</th>
-                        <th>LANTAI</th>
-                        <th>NAMA RUANGAN</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>101001</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX A</td></tr>
-                    <tr><td>101002</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX B</td></tr>
-                    <tr><td>101003</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX C</td></tr>
-                    <tr><td>101004</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX D</td></tr>
-                    <tr><td>101005</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX E</td></tr>
-                    <tr><td>101006</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX F</td></tr>
-                    <tr><td>101007</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX G</td></tr>
-                    <tr><td>101008</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX H</td></tr>
-                    <tr><td>101009</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VIII A</td></tr>
-                    <tr><td>101010</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VIII B</td></tr>
-                    <tr><td>101011</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VIII C</td></tr>
-                    <tr><td>101012</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VIII D</td></tr>
-                    <tr><td>101013</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VIII E</td></tr>
-                    <tr><td>101014</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VIII F</td></tr>
-                    <tr><td>101015</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VIII G</td></tr>
-                    <tr><td>101016</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VIII H</td></tr>
-                    <tr><td>101017</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VII A</td></tr>
-                    <tr><td>101018</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VII B</td></tr>
-                    <tr><td>101019</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VII C</td></tr>
-                    <tr><td>101020</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VII D</td></tr>
-                    <tr><td>101021</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VII E</td></tr>
-                    <tr><td>101022</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VII F</td></tr>
-                    <tr><td>101023</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VII G</td></tr>
-                    <tr><td>101024</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS VII H</td></tr>
-                    <tr><td>101025</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG KEPALA SEKOLAH</td></tr>
-                    <tr><td>101026</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG WAKIL/STAFF</td></tr>
-                    <tr><td>101027</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG GURU</td></tr>
-                    <tr><td>101028</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG TATA USAHA</td></tr>
-                    <tr><td>101029</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG PERPUSTAKAAN</td></tr>
-                    <tr><td>101030</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG BK</td></tr>
-                    <tr><td>101031</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG OSIS</td></tr>
-                    <tr><td>101032</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG PRAMUKA</td></tr>
-                    <tr><td>101033</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG LAB. IPA</td></tr>
-                    <tr><td>101034</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG LAB. BAHASA</td></tr>
-                    <tr><td>101035</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG LAB. TIK</td></tr>
-                    <tr><td>101036</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG GUDANG</td></tr>
-                    <tr><td>101037</td><td>SMP NEGERI 3</td><td>1</td><td>RUANG TATA BOGA</td></tr>
-                    <tr><td>101038</td><td>SMP NEGERI 3</td><td>1</td><td>KAMAR MANDI GURU/SISWA</td></tr>
-                    <tr><td>101039</td><td>SMP NEGERI 3</td><td>1</td><td>RUMAH DINAS</td></tr>
-                    <tr><td>101040</td><td>SMP NEGERI 3</td><td>1</td><td>MASJID</td></tr>
-                    <tr><td>101041</td><td>SMP NEGERI 3 JAKARTA</td><td>1</td><td>AULA</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
+<!-- Pagination -->
+<nav>
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="#" onclick="changePage(-1)">Previous</a>
+        </li>
+        <li class="page-item disabled">
+            <span class="page-link" id="pagination-info">Halaman 1</span>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#" onclick="changePage(1)">Next</a>
+        </li>
+    </ul>
+</nav>
+</div>
     <!-- Footer -->
 <footer class="text-dark py-4 mt-5">
     <div class="container">
@@ -253,6 +219,7 @@
                 row.style.display = row.textContent.toLowerCase().includes(input) ? "" : "none";
             });
         }
+
     </script>
 </body>
 </html>
