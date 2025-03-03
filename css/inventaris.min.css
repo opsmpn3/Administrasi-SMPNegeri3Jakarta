@@ -1,8 +1,8 @@
 /* ==========================================================
-   INVENTARIS PAGE STYLING
+   KESISWAAN PAGE STYLING
    ========================================================== */
 
-.hero {
+   .hero {
     background: linear-gradient(120deg, #E8EFFB, #FFFFFF);
     color: #1E4B9B;
     padding: 80px 20px;
@@ -14,29 +14,7 @@
     margin-top: 60px; /* Sesuaikan nilai margin sesuai kebutuhan */
 }
 
-
-
-/* 📌 Tabel Styling */
-.table-responsive {
-    overflow-x: auto;
-}
-
-.table th {
-    background: #4A90E2;
-    color: white;
-    text-align: center;
-}
-
-.table tbody tr:hover {
-    background: #F4F7FC;
-}
-
-.table td {
-    text-align: left;
-}
-
-
-/* 📌 Efek Fade-in */
+/* 📌 Efek Fade-in untuk Tabel */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -48,13 +26,32 @@
     transform: translateY(0);
 }
 
-/* 📌 Modal Zoom */
-#modalZoomImage {
-    max-width: 100%;
-    max-height: 90vh;
-    border-radius: 8px;
+/* 📌 Style untuk Tabel Data Siswa */
+.table-responsive {
+    overflow-x: auto;
 }
 
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background: #4A90E2;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 12px;
+}
+
+.table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
 
 /* 📌 Hover Effect untuk Row */
 .table tbody tr:hover {
@@ -73,9 +70,17 @@
     background-color: #1E4B9B;
 }
 
-/* 📌 Style Modal Detail Inventaris */
+/* 📌 Style Modal Detail Siswa */
 .modal-content {
     border-radius: 8px;
+}
+
+#modalFoto {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #4A90E2;
 }
 
 /* 📌 Responsif: Atur ukuran tabel & modal di layar kecil */
@@ -83,6 +88,10 @@
     .table th, .table td {
         padding: 8px;
         font-size: 14px;
+    }
+
+    #modalFoto {
+        max-height: 250px;
     }
 
     .btn {
@@ -100,8 +109,97 @@
         font-size: 12px;
     }
 
+    #modalFoto {
+        max-height: 200px;
+    }
+
     .btn {
         font-size: 12px;
         padding: 6px 10px;
     }
 }
+
+
+
+
+
+.table-container {
+    width: 90%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 768px) {
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+
+.app-card-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid;
+    background: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-card-horizontal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.app-card-horizontal i {
+    font-size: 3rem;
+    width: 70px;
+    text-align: center;
+}
+
+.app-content {
+    flex: 1;
+}
+
+.app-content h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.app-content p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.app-content a {
+    display: inline-block;
+    padding: 6px 15px;
+    font-size: 0.9rem;
+}
+
