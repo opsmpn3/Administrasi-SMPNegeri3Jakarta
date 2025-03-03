@@ -42,17 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateDateTime(); // Panggil sekali saat DOMContentLoaded
     setInterval(updateDateTime, 1000); // Update setiap detik (opsional, jika ingin waktu yang berjalan)
 
-
-    // 4. Visitor Counter (Optimal & Aman)
-    let count = localStorage.getItem("visitor-count");
-    count = count ? parseInt(count) + 1 : 1; // Gunakan ternary operator dan pastikan count adalah integer
-    localStorage.setItem("visitor-count", count);
-
-    const visitorCountElement = document.getElementById("visitor-count"); // Amankan pemilihan elemen
-    if (visitorCountElement) { // Periksa apakah elemen ditemukan
-      visitorCountElement.textContent = count;
-    }
-
 });
 
 // Daftar halaman yang akan dicari
