@@ -15,18 +15,58 @@
         .breadcrumb-container {
             margin-top: 120px;
         }
-        .content-container {
-            margin-top: 20px;
-        }
-        .table-container {
-            margin-top: 20px;
-        }
-        .table th, .table td {
-            text-align: left;
-        }
-        .table td:first-child {
-            text-align: left;
-        }
+        /* ==============================
+   CONTENT & TABLE STYLING
+   ============================== */
+.content-container {
+    margin-top: 20px;
+    padding: 15px; /* Menambahkan padding agar tidak terlalu padat */
+}
+
+.table-container {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px; /* Sudut tabel sedikit melengkung */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk tampilan lebih modern */
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Gaya header tabel */
+.table th {
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 10px;
+    font-weight: 600;
+}
+
+/* Gaya sel tabel */
+.table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Pastikan kolom pertama selalu rata kiri */
+.table td:first-child {
+    text-align: left;
+    font-weight: 500; /* Sedikit lebih tebal agar lebih jelas */
+}
+
+/* RESPONSIVE: Pastikan tabel tetap rapi di layar kecil */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto; /* Tambahkan scroll jika tabel terlalu lebar */
+    }
+    .table th, .table td {
+        font-size: 14px; /* Mengurangi ukuran font di layar kecil */
+        padding: 6px;
+    }
+}
     </style>
 </head>
 <body>
@@ -147,42 +187,127 @@
     </div>
 </div>
 
-    <!-- Breadcrumb -->
-    <div class="container breadcrumb-container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="../../kepegawaian.html">Kepegawaian</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Kartu Pegawai</li>
-            </ol>
-        </nav>
-    </div>
+    <!-- Breadcrumb Kartu Pegawai -->
+<div class="container breadcrumb-container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-light shadow-sm p-3 rounded">
+            <li class="breadcrumb-item">
+                <a href="../../index.html" class="text-decoration-none text-primary">
+                    <i class="bi bi-house-door"></i> Home
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="../../kepegawaian.html" class="text-decoration-none text-primary">
+                    <i class="bi bi-people"></i> Kepegawaian
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                <i class="bi bi-credit-card"></i> Kartu Pegawai
+            </li>
+        </ol>
+    </nav>
+</div>
 
-    <!-- Main Content -->
-    <div class="container my-5">
-        <h2>KARPEG (Kartu Pegawai)</h2>
-        <p>KARPEG adalah kartu identitas Pegawai Negeri Sipil dan diberikan kepada mereka yang telah berstatus sebagai Pegawai Negeri Sipil.</p>
-        <p><strong>Persyaratan:</strong></p>
-        <ul>
-            <li>Usulan dari Unit Kerja/SKPD.</li>
-            <li>Foto 3 x 4 (4 lembar).</li>
-            <li>Fotokopi SK CPNS (legalisir).</li>
-            <li>Fotokopi SK PNS (legalisir).</li>
-            <li>Fotokopi STTPL (legalisir).</li>
-            <li>Fotokopi SPMT (legalisir).</li>
-            <li>Surat Keterangan Kehilangan dari Kepolisian (asli) untuk penggantian Karpeg yang hilang.</li>
-        </ul>
+ <!-- Main Content -->
+<div class="container my-5">
+    <h2 class="text-center text-primary fw-bold mb-4">
+        <i class="bi bi-card-list"></i> Kartu Pegawai & Kartu Suami/Istri
+    </h2>
 
-        <h2>KARSU/KARIS (Kartu Suami/Istri)</h2>
-        <p>Karis/Karsu adalah kartu identitas istri/suami PNS. Penetapan Karis/Karsu bertujuan untuk memberikan jaminan bahwa pemegangnya adalah istri/suami sah dari PNS yang bersangkutan.</p>
-        <p><strong>Persyaratan:</strong></p>
-        <ul>
-            <li>Scan asli laporan perkawinan pertama.</li>
-            <li>Scan asli surat nikah.</li>
-            <li>Scan asli kartu keluarga/Daftar susunan keluarga.</li>
-            <li>Scan foto suami/istri berwarna.</li>
-        </ul>
+    <div class="row g-4">
+        <!-- KARPEG (Kartu Pegawai) -->
+        <div class="col-lg-6 col-md-12">
+            <div class="card border-0 shadow-lg animate-fade h-100">
+                <div class="card-body">
+                    <h4 class="text-success fw-bold">
+                        <i class="bi bi-person-badge"></i> KARPEG (Kartu Pegawai) 
+                        <span class="badge bg-success text-white ms-2">Wajib</span>
+                    </h4>
+                    <p class="text-muted">
+                        KARPEG adalah kartu identitas Pegawai Negeri Sipil yang diberikan kepada mereka yang telah berstatus sebagai PNS.
+                    </p>
+                    <h5 class="mt-3 text-dark"><i class="bi bi-list-check"></i> Persyaratan:</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">✅ Usulan dari Unit Kerja/SKPD.</li>
+                        <li class="list-group-item">📷 Foto 3 x 4 (4 lembar).</li>
+                        <li class="list-group-item">📄 Fotokopi SK CPNS (legalisir).</li>
+                        <li class="list-group-item">📄 Fotokopi SK PNS (legalisir).</li>
+                        <li class="list-group-item">📄 Fotokopi STTPL (legalisir).</li>
+                        <li class="list-group-item">📄 Fotokopi SPMT (legalisir).</li>
+                        <li class="list-group-item">🚔 Surat Keterangan Kehilangan dari Kepolisian (asli) untuk penggantian Karpeg yang hilang.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- KARSU/KARIS (Kartu Suami/Istri) -->
+        <div class="col-lg-6 col-md-12">
+            <div class="card border-0 shadow-lg animate-fade h-100">
+                <div class="card-body">
+                    <h4 class="text-danger fw-bold">
+                        <i class="bi bi-heart"></i> KARSU/KARIS (Kartu Suami/Istri)
+                        <span class="badge bg-danger text-white ms-2">Opsional</span>
+                    </h4>
+                    <p class="text-muted">
+                        KARSU/KARIS adalah kartu identitas bagi istri atau suami PNS sebagai jaminan bahwa pemegangnya adalah pasangan sah dari PNS terkait.
+                    </p>
+                    <h5 class="mt-3 text-dark"><i class="bi bi-list-check"></i> Persyaratan:</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">📝 Scan asli laporan perkawinan pertama.</li>
+                        <li class="list-group-item">📜 Scan asli surat nikah.</li>
+                        <li class="list-group-item">🏠 Scan asli kartu keluarga / daftar susunan keluarga.</li>
+                        <li class="list-group-item">📸 Scan foto suami/istri berwarna.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+<!-- Custom CSS -->
+<style>
+    /* Efek Animasi Fade-in */
+    .animate-fade {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Hover Effect */
+    .card {
+        transition: 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsiveness Tweaks */
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 1.5rem; /* Ukuran lebih kecil di layar kecil */
+        }
+        .card-body {
+            padding: 1rem;
+        }
+        .list-group-item {
+            font-size: 0.9rem; /* Ukuran font lebih kecil agar tetap rapi */
+        }
+    }
+</style>
+
 
     <!-- Footer -->
 <footer class="text-dark py-4 mt-5">
