@@ -202,16 +202,26 @@
         </div>
     </div>
 </div>
-    <!-- Breadcrumb -->
-    <div class="container breadcrumb-container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="../../inventaris.html">Inventaris</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Statistik Data KIR</li>
-            </ol>
-        </nav>
-    </div>
+    <!-- Breadcrumb Statistik Data KIR -->
+<div class="container breadcrumb-container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-light shadow-sm p-3 rounded">
+            <li class="breadcrumb-item">
+                <a href="../../index.html" class="text-decoration-none text-primary">
+                    <i class="bi bi-house-door"></i> Home
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="../../inventaris.html" class="text-decoration-none text-primary">
+                    <i class="bi bi-box-seam"></i> Inventaris
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                <i class="bi bi-bar-chart-line"></i> Statistik Data KIR
+            </li>
+        </ol>
+    </nav>
+</div>
 
     <div class="container my-5">
         <h3 class="text-center mb-4">Statistik Data KIR</h3>
@@ -268,28 +278,21 @@
             </table>
         </div>
     
-        <!-- Tabel Data KIR (Responsive) -->
-        <div class="mt-5 table-responsive">
-            <h4 class="mb-3">Data Lengkap KIR</h4>
-            <table id="dataKIRTable" class="table table-bordered table-striped">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Kode Ruangan</th>
-                        <th>Nama Gedung</th>
-                        <th>Lantai</th>
-                        <th>Nama Ruangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>101001</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX A</td></tr>
-                    <tr><td>101002</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX B</td></tr>
-                    <tr><td>101003</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX C</td></tr>
-                    <tr><td>101004</td><td>SMP NEGERI 3</td><td>1</td><td>KELAS IX D</td></tr>
-                </tbody>
-            </table>
-        </div>
-    
+    <!-- Tabel Data KIR -->
+    <div class="table-responsive">
+        <table id="dataKIRTable" class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th onclick="sortTable(0)" style="cursor: pointer;">Kode Ruangan ⬍</th>
+                    <th onclick="sortTable(1)" style="cursor: pointer;">Nama Gedung ⬍</th>
+                    <th onclick="sortTable(2)" style="cursor: pointer;">Lantai ⬍</th>
+                    <th onclick="sortTable(3)" style="cursor: pointer;">Nama Ruangan ⬍</th>
+                </tr>
+            </thead>
+            <tbody id="ruanganBody"></tbody>
+        </table>
     </div>
+</div>
     <!-- Footer -->
 <footer class="text-dark py-4 mt-5">
     <div class="container">
@@ -342,6 +345,139 @@
                 }
             }
         });
+
+
+
+        // Data Ruangan
+const dataRuangan = [
+    { kode: "101001", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas IX A" },
+    { kode: "101002", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas IX B" },
+    { kode: "101003", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas IX C" },
+    { kode: "101004", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas IX D" },
+    { kode: "101005", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas IX E" },
+    { kode: "101006", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas IX F" },
+    { kode: "101007", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas IX G" },
+    { kode: "101008", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas IX H" },
+    { kode: "101009", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VIII A" },
+    { kode: "101010", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VIII B" },
+    { kode: "101011", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VIII C" },
+    { kode: "101012", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VIII D" },
+    { kode: "101013", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VIII E" },
+    { kode: "101014", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VIII F" },
+    { kode: "101015", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VIII G" },
+    { kode: "101016", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VIII H" },
+    { kode: "101017", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VII A" },
+    { kode: "101018", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VII B" },
+    { kode: "101019", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VII C" },
+    { kode: "101020", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VII D" },
+    { kode: "101021", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VII E" },
+    { kode: "101022", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VII F" },
+    { kode: "101023", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VII G" },
+    { kode: "101024", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kelas VII H" },
+    { kode: "101025", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang Kepala Sekolah" },
+    { kode: "101026", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang Wakil/Staff" },
+    { kode: "101027", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang Guru" },
+    { kode: "101028", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang Tata Usaha" },
+    { kode: "101029", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang Perpustakaan" },
+    { kode: "101030", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang BK" },
+    { kode: "101031", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang OSIS" },
+    { kode: "101032", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang Pramuka" },
+    { kode: "101033", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang Lab. IPA" },
+    { kode: "101034", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang Lab. Bahasa" },
+    { kode: "101035", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang Lab. TIK" },
+    { kode: "101036", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang Gudang" },
+    { kode: "101037", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Ruang Tata Boga" },
+    { kode: "101038", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Kamar Mandi Guru/Siswa" },
+    { kode: "101039", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Rumah Dinas" },
+    { kode: "101040", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Masjid" },
+    { kode: "101041", gedung: "SMP Negeri 3 Jakarta", lantai: 1, nama: "Aula" }
+];
+
+let sortAscending = true;
+
+// Mengelompokkan data berdasarkan kategori
+function hitungKategori() {
+    const kategori = {};
+
+    dataRuangan.forEach(item => {
+        let kategoriNama = "Lainnya";
+        if (item.nama.includes("Kelas IX")) kategoriNama = "Kelas IX";
+        else if (item.nama.includes("Kelas VIII")) kategoriNama = "Kelas VIII";
+        else if (item.nama.includes("Kelas VII")) kategoriNama = "Kelas VII";
+        else if (item.nama.includes("Kepala") || item.nama.includes("Guru")) kategoriNama = "Ruang Kepala/Wakil/Guru";
+        else if (item.nama.includes("Perpustakaan")) kategoriNama = "Ruang Perpustakaan";
+        else if (item.nama.includes("Lab")) kategoriNama = "Laboratorium";
+
+        if (!kategori[kategoriNama]) kategori[kategoriNama] = 0;
+        kategori[kategoriNama]++;
+    });
+
+    return kategori;
+}
+
+// Memuat tabel statistik secara otomatis
+function loadStatistikTable() {
+    const statistikBody = document.querySelector("#statistikTable tbody");
+    statistikBody.innerHTML = "";
+    const kategoriData = hitungKategori();
+    let index = 1;
+
+    for (const kategori in kategoriData) {
+        let row = `<tr>
+            <td>${index++}</td>
+            <td>${kategori}</td>
+            <td>${kategoriData[kategori]}</td>
+        </tr>`;
+        statistikBody.innerHTML += row;
+    }
+}
+
+// Memuat tabel data KIR
+function loadTable() {
+    const ruanganBody = document.getElementById("ruanganBody");
+    ruanganBody.innerHTML = "";
+
+    dataRuangan.forEach(item => {
+        let row = `<tr>
+            <td>${item.kode}</td>
+            <td>${item.gedung}</td>
+            <td>${item.lantai}</td>
+            <td>${item.nama}</td>
+        </tr>`;
+        ruanganBody.innerHTML += row;
+    });
+}
+
+// Fungsi untuk sorting tabel KIR
+function sortTable(colIndex) {
+    sortAscending = !sortAscending;
+    const keys = ["kode", "gedung", "lantai", "nama"];
+
+    dataRuangan.sort((a, b) => {
+        let valA = String(a[keys[colIndex]]).toUpperCase();
+        let valB = String(b[keys[colIndex]]).toUpperCase();
+        return sortAscending ? valA.localeCompare(valB) : valB.localeCompare(valA);
+    });
+
+    loadTable();
+}
+
+// Fungsi untuk mencari data di tabel KIR
+document.getElementById("searchInput").addEventListener("input", function () {
+    const searchValue = this.value.toLowerCase();
+    const rows = document.querySelectorAll("#ruanganBody tr");
+
+    rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(searchValue) ? "" : "none";
+    });
+});
+
+// Memuat data saat halaman selesai dimuat
+document.addEventListener("DOMContentLoaded", function () {
+    loadStatistikTable();
+    loadTable();
+});
     </script>
 </body>
 </html>
