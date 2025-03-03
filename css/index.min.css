@@ -1,113 +1,271 @@
 /* ===================================================================
-   HERO SECTION
-   Mengatur gaya bagian hero, termasuk latar belakang, warna teks, padding, dan efek bayangan.
-   =================================================================== */
+   HERO SECTION IMPROVEMENT
+   Perbaikan tampilan Hero agar lebih responsif dan modern.
+=================================================================== */
+
 .hero {
-    background: linear-gradient(120deg, #E8EFFB, #FFFFFF);
+    background: linear-gradient(135deg, #E8EFFB, #FFFFFF);
     color: #1E4B9B;
-    padding: 80px 10px;
+    padding: 60px 15px;
     text-align: center;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    padding-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Tambahkan efek sudut */
+    margin-bottom: 20px; /* Jarak agar tidak terlalu mepet */
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
 }
 
+/* Menambahkan efek animasi saat halaman dimuat */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gaya untuk Judul */
 .hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
+/* Responsif: Ukuran teks lebih kecil di layar kecil */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Gaya untuk Subjudul */
 .hero p {
-    font-size: 1.3rem;
-    color: #4A90E2;
+    font-size: 1.2rem;
+    color: #3A7BD5;
+    margin-bottom: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsif: Ukuran teks lebih kecil di layar kecil */
+@media (max-width: 768px) {
+    .hero p {
+        font-size: 1rem;
+    }
 }
 
 /* ===================================================================
-   HERO INDEX
-   Mengatur gaya bagian hero khusus untuk halaman index.
-   =================================================================== */
+   HERO INDEX (Untuk Halaman Utama)
+=================================================================== */
+
 .index-page .hero {
-    padding: 80px 10px; /* Atur padding sesuai kebutuhan */
-    padding-bottom: 10px;
+    padding: 60px 15px; /* Menyesuaikan padding agar tidak terlalu besar */
+    border-radius: 15px; /* Lebih lembut di halaman utama */
 }
 
 .index-page .container {
     padding-left: 20px;
     padding-right: 20px;
+    max-width: 1000px; /* Batasi lebar agar tidak terlalu melebar */
 }
+
 
 /* ===================================================================
-   CAROUSEL
-   Mengatur gaya dan perilaku carousel, termasuk gambar dan caption.
-   =================================================================== */
+   CAROUSEL IMPROVEMENTS
+   Mengatur gaya dan perilaku carousel, termasuk gambar dan transisi.
+=================================================================== */
+
+/* Menghapus padding tambahan agar carousel tidak terpotong */
 .carousel {
-    padding: 10px;
+    margin-top: 10px;
+    padding: 0;
 }
 
+/* Pastikan gambar dalam carousel tidak terdistorsi */
 .carousel-item img {
     object-fit: cover;
-    height: 500px; /* Atau gunakan `min-height: 300px` untuk ponsel */
-    width: 100%; 
+    width: 100%;
+    height: 500px;
+    transition: transform 0.5s ease-in-out;
 }
 
+/* Responsive untuk layar lebih kecil */
 @media (max-width: 768px) {
     .carousel-item img {
-        height: 350px; /* Tinggi lebih kecil di layar mobile */
+        height: 350px; /* Ukuran lebih kecil di mobile */
     }
 }
 
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 5px;
-    color: #FFFFFF;
-    text-align: center;
+/* Efek transisi smooth saat perpindahan gambar */
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
 }
 
-.carousel-item {
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+/* Styling teks di dalam caption */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    bottom: 20px;
+}
+
+/* Efek hover pada gambar carousel (opsional) */
+.carousel-item:hover img {
+    transform: scale(1.02);
+}
+
+/* Tombol navigasi carousel lebih terlihat */
+.carousel-control-prev, .carousel-control-next {
+    filter: brightness(80%);
+}
+
+/* Tombol navigasi lebih besar di mobile */
+@media (max-width: 576px) {
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Styling Jam & Tanggal dalam Carousel */
+.datetime-container {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Perbaikan indikator carousel agar tidak bertumpuk dengan teks */
+.carousel-indicators {
+    bottom: -5px;
+}
+
+/* Perbaikan Marquee */
+.marquee-text {
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 1rem;
+    z-index: 5;
     position: relative;
 }
 
-.carousel-item::after {
+
+/* ==========================================================
+   STYLING LAYANAN KAMI - DENGAN BACKGROUND
+   ========================================================== */
+
+   .service-card {
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 📌 Efek Hover */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.service-card a {
+    position: relative; /* Pastikan tombol tidak tertutup */
+    z-index: 2;
+}
+
+/* 📌 Animasi Latar Belakang */
+.service-card::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    width: 0;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* 30% lebih gelap */
+    background: rgba(255, 255, 255, 0.1);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
-/* ===================================================================
-   CARD DESIGN
-   Mengatur gaya dan perilaku card, termasuk efek hover.
-   =================================================================== */
-.card {
-    border: none;
-    background: #FFFFFF; /* White */
-    color: #333D4B;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px; /* Menambahkan radius sudut */
-    padding: 20px; /* Menambahkan padding */
-    margin-bottom: 20px;
+.service-card:hover::before {
+    width: 100%;
+    left: 0;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+/* 📌 Styling Icon */
+.icon-container {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.card-title {
-    font-weight: 600;
-    color: #4A90E2; /* Soft Royal Blue */
-    margin-bottom: 10px; /* Menambahkan margin bawah */
+.service-card:hover .icon-container {
+    transform: rotateY(360deg);
 }
 
-.card-text {
+/* 📌 Card Title */
+.service-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 📌 Text Styling */
+.service-card p {
     font-size: 1rem;
-    color: #67758D; /* Cool Gray */
-    margin-bottom: 20px; /* Menambahkan margin bawah */
+    opacity: 0.9;
 }
+
+/* 📌 Button Styling */
+.service-card .btn {
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.service-card .btn:hover {
+    opacity: 0.8;
+}
+
+/* 📌 Responsif */
+@media (max-width: 768px) {
+    .service-card {
+        padding: 20px;
+    }
+
+    .icon-container {
+        font-size: 2.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+}
+
 
 /* Kotak Informasi Penting */
 .breaking-news {
@@ -337,41 +495,104 @@
     background-color: #6c757d;
     border: none;
 }
-/* 📌 Tabel Styling */
-.table-responsive {
-    overflow-x: auto;
+
+/* ===================================================================
+   MAP AND CALENDAR STYLES
+   Mengatur gaya untuk peta dan kalender.
+   =================================================================== */
+
+/* Kontainer Peta & Kalender */
+.map-container, .calendar-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.table th {
+/* Styling iframe untuk peta */
+.map-container iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 350px; /* Menyesuaikan tinggi agar tetap proporsional */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling kalender */
+.calendar-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Header kalender dengan tombol navigasi */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tombol navigasi kalender */
+.calendar-header button {
     background: #4A90E2;
     color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.calendar-header button:hover {
+    background: #357ABD;
+}
+
+/* Tabel kalender */
+.calendar-grid {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-grid th,
+.calendar-grid td {
+    width: 14.2857%;
+    padding: 12px;
     text-align: center;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
 }
 
-.table tbody tr:hover {
-    background: #F4F7FC;
+.calendar-grid th {
+    background-color: #eef1f7;
+    font-weight: bold;
 }
 
-.table td {
-    text-align: left;
+/* Efek hover & hari aktif */
+.calendar-grid td:hover {
+    background-color: #f0f0f0;
 }
 
-
-/* 📌 Efek Fade-in */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+.calendar-grid td.active-day {
+    background-color: #4A90E2; 
+    color: white;
+    font-weight: bold;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* Responsif kalender */
+@media (max-width: 600px) {
+    .calendar-grid th,
+    .calendar-grid td {
+        padding: 8px;
+    }
+
+    .calendar-header button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
 }
 
-/* 📌 Modal Zoom */
-#modalZoomImage {
-    max-width: 100%;
-    max-height: 90vh;
-    border-radius: 8px;
-}
