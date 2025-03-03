@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Inventaris SMP Negeri 3 Jakarta - Data dan Program Inventaris">
-    <title>Inventaris - SMP Negeri 3 Jakarta</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/inventaris.min.css">
-</head>
+    <head>
+        <!-- Meta Basic SEO -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Informasi inventaris SMP Negeri 3 Jakarta - Data aset sekolah, pemeliharaan, dan program pengelolaan barang.">
+        <link rel="canonical" href="https://opsmpn3.github.io/inventaris.html">
+    
+        <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Inventaris - SMPN 3 Jakarta">
+        <meta property="og:description" content="Informasi lengkap tentang inventaris SMP Negeri 3 Jakarta, termasuk data aset sekolah, pemeliharaan, dan pengelolaan barang.">
+        <meta property="og:image" content="https://opsmpn3.github.io/assets/logosnega.png">
+        <meta property="og:url" content="https://opsmpn3.github.io/inventaris.html">
+    
+        <!-- Twitter Card (For Twitter/X) -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Inventaris - SMPN 3 Jakarta">
+        <meta name="twitter:description" content="Informasi lengkap tentang inventaris SMP Negeri 3 Jakarta, termasuk data aset sekolah, pemeliharaan, dan pengelolaan barang.">
+        <meta name="twitter:image" content="https://opsmpn3.github.io/assets/logosnega.png">
+        <meta name="twitter:site" content="@smpn3jakarta">
+    
+        <!-- Page Title -->
+        <title>Inventaris - SMP Negeri 3 Jakarta</title>
+    
+        <!-- Favicon -->
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/inventaris.min.css">
+    </head>
+    
 <body>
     <!-- Navbar (PC) -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
@@ -117,20 +140,20 @@
 </nav>
 
     <!-- Hero Section -->
-    <header class="hero d-flex align-items-center text-center hero-section">
-        <div class="container">
-            <h2>Inventaris</h2>
-            <p>Data dan Program Inventaris Sekolah</p>
-        </div>
-    </header>
-    
-    <!-- Modal Hasil Pencarian -->
+<header class="hero d-flex align-items-center text-center hero-section">
+    <div class="container">
+        <h2 class="fw-bold">Inventaris Sekolah</h2>
+        <p class="lead">Data dan Program Inventaris Sekolah: Sistem pencatatan dan pengelolaan barang sekolah untuk efisiensi dan akuntabilitas.</p>
+    </div>
+</header>
+
+<!-- Modal Hasil Pencarian -->
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="searchModalLabel">🔎 Hasil Pencarian</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
             </div>
             <div class="modal-body">
                 <ul id="modalResult" class="list-group"></ul>
@@ -139,19 +162,18 @@
     </div>
 </div>
 
-
- <!-- Data KIB -->
+<!-- Data Kartu Inventaris Barang (KIB) -->
 <div class="container my-5">
-    <h2 class="text-center mb-4">Data Kartu Inventaris Barang (KIB)</h2>
+    <h2 class="text-center mb-4 fw-bold"> Data Kartu Inventaris Barang (KIB)</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        
+
         <!-- KIB A - Tanah -->
         <div class="col">
             <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-tree-fill display-3 text-primary"></i>
+                <i class="bi bi-geo-alt-fill display-3 text-primary" aria-hidden="true"></i>
                 <div class="card-body">
                     <h5 class="card-title">KIB A - Tanah</h5>
-                    <p class="card-text">Mencatat data tanah milik sekolah seperti luas, tahun pengadaan, letak, status tanah, penggunaan, harga tanah, dan sebagainya.</p>
+                    <p class="card-text">Data tanah milik sekolah.</p>
                     <a href="breadcrumb/inventaris/kiba.html" class="btn btn-primary">Detail</a>
                 </div>
             </div>
@@ -160,10 +182,10 @@
         <!-- KIB B - Peralatan dan Mesin -->
         <div class="col">
             <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-gear-wide-connected display-3 text-success"></i>
+                <i class="bi bi-gear-wide-connected display-3 text-success" aria-hidden="true"></i>
                 <div class="card-body">
                     <h5 class="card-title">KIB B - Peralatan dan Mesin</h5>
-                    <p class="card-text">Mencatat data barang sekolah yang tergolong ke dalam kategori Peralatan dan Mesin.</p>
+                    <p class="card-text">Barang kategori Peralatan dan Mesin.</p>
                     <a href="breadcrumb/inventaris/kibb.html" class="btn btn-success">Detail</a>
                 </div>
             </div>
@@ -172,10 +194,10 @@
         <!-- KIB C - Gedung dan Bangunan -->
         <div class="col">
             <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-building display-3 text-warning"></i>
+                <i class="bi bi-building display-3 text-warning" aria-hidden="true"></i>
                 <div class="card-body">
                     <h5 class="card-title">KIB C - Gedung dan Bangunan</h5>
-                    <p class="card-text">Mencatat data barang yang termasuk kategori Gedung dan Bangunan.</p>
+                    <p class="card-text">Mencatat data Gedung dan Bangunan.</p>
                     <a href="breadcrumb/inventaris/kibc.html" class="btn btn-warning">Detail</a>
                 </div>
             </div>
@@ -184,10 +206,10 @@
         <!-- KIB D - Irigasi, Jalan, dan Jaringan -->
         <div class="col">
             <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-signpost-2-fill display-3 text-info"></i>
+                <i class="bi bi-signpost-2-fill display-3 text-info" aria-hidden="true"></i>
                 <div class="card-body">
                     <h5 class="card-title">KIB D - Irigasi, Jalan, dan Jaringan</h5>
-                    <p class="card-text">Mencatat data barang atau fasilitas sekolah yang termasuk Irigasi, Jalan, dan Jaringan.</p>
+                    <p class="card-text">Fasilitas seperti Irigasi, Jalan, dan Jaringan.</p>
                     <a href="breadcrumb/inventaris/kibd.html" class="btn btn-info">Detail</a>
                 </div>
             </div>
@@ -196,10 +218,10 @@
         <!-- KIB E - Aset Tetap Lainnya -->
         <div class="col">
             <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-archive-fill display-3 text-secondary"></i>
+                <i class="bi bi-archive-fill display-3 text-secondary" aria-hidden="true"></i>
                 <div class="card-body">
                     <h5 class="card-title">KIB E - Aset Tetap Lainnya</h5>
-                    <p class="card-text">Mencatat data inventaris yang termasuk Aset Tetap Lainnya seperti buku pelajaran dan sebagainya.</p>
+                    <p class="card-text">Inventaris seperti buku pelajaran.</p>
                     <a href="breadcrumb/inventaris/kibe.html" class="btn btn-secondary">Detail</a>
                 </div>
             </div>
@@ -208,29 +230,29 @@
         <!-- KIB F - Konstruksi atau Pengerjaan -->
         <div class="col">
             <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-hammer display-3 text-danger"></i>
+                <i class="bi bi-hammer display-3 text-danger" aria-hidden="true"></i>
                 <div class="card-body">
                     <h5 class="card-title">KIB F - Konstruksi atau Pengerjaan</h5>
-                    <p class="card-text">Mencatat data barang atau benda atau bangunan yang masih berada Dalam Tahapan Konstruksi atau Pengerjaan.</p>
+                    <p class="card-text">Data bangunan dalam tahap konstruksi.</p>
                     <a href="breadcrumb/inventaris/kibf.html" class="btn btn-danger">Detail</a>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
+<!-- Data Kartu Inventaris Ruangan (KIR) -->
 <div class="container my-5">
-    <h2 class="text-center mb-4">Data Kartu Inventaris Ruangan (KIR)</h2>
+    <h2 class="text-center mb-4 fw-bold">Data Kartu Inventaris Ruangan (KIR)</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        
+
         <!-- Statistik Tabel Data KIR -->
         <div class="col">
             <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-bar-chart-line display-3 text-primary"></i>
+                <i class="bi bi-bar-chart-line display-3 text-primary" aria-hidden="true"></i>
                 <div class="card-body">
-                    <h5 class="card-title">Statistik Tabel Data KIR</h5>
-                    <p class="card-text">Visualisasi statistik terkait data KIR dalam bentuk grafik dan tabel.</p>
+                    <h5 class="card-title">Statistik KIR</h5>
+                    <p class="card-text">Visualisasi statistik terkait data KIR.</p>
                     <a href="breadcrumb/inventaris/statistik-kir.html" class="btn btn-primary">Detail</a>
                 </div>
             </div>
@@ -239,10 +261,10 @@
         <!-- Daftar KIR -->
         <div class="col">
             <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-card-list display-3 text-success"></i>
+                <i class="bi bi-card-list display-3 text-success" aria-hidden="true"></i>
                 <div class="card-body">
                     <h5 class="card-title">Daftar KIR</h5>
-                    <p class="card-text">Informasi lengkap mengenai daftar Kartu Inventaris Ruangan (KIR) yang dimiliki oleh sekolah.</p>
+                    <p class="card-text">Informasi lengkap daftar Kartu Inventaris Ruangan.</p>
                     <a href="breadcrumb/inventaris/daftar-kir.html" class="btn btn-success">Detail</a>
                 </div>
             </div>
@@ -250,6 +272,8 @@
 
     </div>
 </div>
+
+
 
     <!-- Footer -->
 <footer class="text-dark py-4 mt-5">
