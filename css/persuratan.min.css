@@ -102,3 +102,15 @@
         padding: 6px 10px;
     }
 }
+
+.icon-container {
+    font-size: 50px; /* Ukuran default */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Perbesar ikon saat di mode PC (≥992px) */
+@media (min-width: 992px) {
+    .icon-container {
+        font-size: 70px; /* Ukuran ikon lebih besar di layar PC */
+    }
+}
