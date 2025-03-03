@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Administrasi SMP Negeri 3 Jakarta - Informasi Kesiswaan">
-    <title>Home - Administrasi SMP Negeri 3 Jakarta</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/index.min.css">
-</head>
+        <!-- Meta Basic SEO -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Sistem Administrasi SMP Negeri 3 Jakarta - Portal informasi kepegawaian, kesiswaan, sarana prasarana, persuratan, dan inventaris sekolah.">
+        <link rel="canonical" href="https://opsmpn3.github.io/">
+    
+        <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Administrasi SMPN 3 Jakarta">
+        <meta property="og:description" content="Portal administrasi SMP Negeri 3 Jakarta - Kepegawaian, kesiswaan, sarana prasarana, persuratan, dan inventaris sekolah.">
+        <meta property="og:image" content="https://opsmpn3.github.io/assets/logosnega.png">
+        <meta property="og:url" content="https://opsmpn3.github.io/">
+    
+        <!-- Twitter Card (For Twitter/X) -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Administrasi SMPN 3 Jakarta">
+        <meta name="twitter:description" content="Portal administrasi SMP Negeri 3 Jakarta - Kepegawaian, kesiswaan, sarana prasarana, persuratan, dan inventaris sekolah.">
+        <meta name="twitter:image" content="https://opsmpn3.github.io/assets/logosnega.png">
+        <meta name="twitter:site" content="@smpn3jakarta">
+    
+        <!-- Page Title -->
+        <title>Home - Administrasi SMP Negeri 3 Jakarta</title>
+    
+        <!-- Favicon -->
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/index.min.css">
+</head> 
 <body>
     <!-- Navbar (PC) -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed d-none d-lg-block">
@@ -52,9 +75,10 @@
 
 
         <!-- Login Button -->
-        <a href="https://opsmpn3.github.io/Login-Administrasi-SMPN3Jakarta/" class="btn btn-primary ms-3">
+        <a href="https://opsmpn3.github.io/Login-Administrasi-SMPN3Jakarta/" class="btn btn-primary ms-3" target="_blank">
             <i class="bi bi-box-arrow-in-right"></i> Login
-        </a>
+        </a>        
+                
 
     </div>
 </nav>
@@ -118,27 +142,31 @@
 
 
     <!-- Carousel -->
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-indicators">
+        <!-- Wadah Jam & Tanggal -->
         <div class="datetime-container">
             <div id="jam"></div>
             <div id="hari-tanggal"></div>
         </div>   
+
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="assets/slidehome.jpg" class="d-block w-100" alt="Gambar 1">
+            <img src="assets/slidehome.jpg" class="d-block w-100 carousel-img" alt="Gambar 1">
         </div>
         <div class="carousel-item">
-            <img src="assets/slidehome1.jpg" class="d-block w-100" alt="Gambar 2">
+            <img src="assets/slidehome1.jpg" class="d-block w-100 carousel-img" alt="Gambar 2">
         </div>
         <div class="carousel-item">
-            <img src="assets/slidehome3.jpg" class="d-block w-100" alt="Gambar 3">
+            <img src="assets/slidehome3.jpg" class="d-block w-100 carousel-img" alt="Gambar 3">
         </div>
     </div>
+
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -148,11 +176,14 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-    <marquee behavior="scroll" direction="left" scrollamount="5" class="bg-warning p-3 text-dark">
-        ⏰ Jam Pelayanan Tata Usaha: Senin - Jumat, 08:00 - 15:00 WIB |  
-        🕌 Perubahan Jadwal selama Bulan Suci Ramadhan: Pelayanan dimulai pukul 09:00 - 14:00 WIB |  
-        ⚠️ Batas Akhir Laporan DJP Online: 31 Maret 2025, segera laporkan sebelum tenggat waktu!
-    </marquee>
+
+<!-- Marquee -->
+<marquee behavior="scroll" direction="left" scrollamount="5" class="bg-warning p-3 text-dark marquee-text">
+    ⏰ Jam Pelayanan Tata Usaha: Senin - Jumat, 08:00 - 15:00 WIB |  
+    🕌 Perubahan Jadwal selama Bulan Suci Ramadhan: Pelayanan dimulai pukul 09:00 - 14:00 WIB |  
+    ⚠️ Batas Akhir Laporan DJP Online: 31 Maret 2025, segera laporkan sebelum tenggat waktu!
+</marquee>
+
     
 
     <!-- Hero Section -->
@@ -224,117 +255,118 @@
     </div>
 </div>
 
-
-    <hr>
-    <!-- Services Section -->
+ <!-- Section: Layanan Kami -->
 <section class="container my-5">
-    <h2 class="text-center mb-4">Layanan Kami</h2>
+    <h2 class="text-center fw-bold mb-4">Layanan Administrasi</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
         <!-- Kepegawaian -->
         <div class="col">
-            <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-people-fill display-3 text-success"></i>
-                <div class="card-body">
-                    <h5 class="card-title">Kepegawaian</h5>
-                    <p class="card-text">Informasi tentang program kepegawaian.</p>
-                    <a href="kepegawaian.html" class="btn btn-success">Detail</a>
+            <div class="service-card bg-success text-white">
+                <div class="icon-container">
+                    <i class="bi bi-people-fill"></i>
                 </div>
+                <h3>Kepegawaian</h3>
+                <p>Informasi tentang program kepegawaian.</p>
+                <a href="kepegawaian.html" class="btn btn-light">Detail</a>
             </div>
         </div>
 
         <!-- Kesiswaan -->
         <div class="col">
-            <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-person-badge display-3 text-primary"></i>
-                <div class="card-body">
-                    <h5 class="card-title">Kesiswaan</h5>
-                    <p class="card-text">Informasi tentang program kesiswaan.</p>
-                    <a href="kesiswaan.html" class="btn btn-primary">Detail</a>
+            <div class="service-card bg-primary text-white">
+                <div class="icon-container">
+                    <i class="bi bi-person-badge"></i>
                 </div>
+                <h3>Kesiswaan</h3>
+                <p>Informasi tentang program kesiswaan.</p>
+                <a href="kesiswaan.html" class="btn btn-light">Detail</a>
             </div>
         </div>
 
-        <!-- Sarpras -->
+        <!-- Sarana Prasarana (GANTI ICON: bi-hammer → bi-tools) -->
         <div class="col">
-            <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-hammer display-3 text-warning"></i>
-                <div class="card-body">
-                    <h5 class="card-title">Sarpras</h5>
-                    <p class="card-text">Informasi tentang sarana dan prasarana.</p>
-                    <a href="sarpras.html" class="btn btn-warning">Detail</a>
+            <div class="service-card bg-warning text-dark">
+                <div class="icon-container">
+                    <i class="bi bi-tools"></i> 
                 </div>
+                <h3>Sarpras</h3>
+                <p>Informasi tentang sarana dan prasarana.</p>
+                <a href="sarpras.html" class="btn btn-light">Detail</a>
             </div>
         </div>
 
         <!-- Persuratan -->
         <div class="col">
-            <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-envelope-paper display-3 text-danger"></i>
-                <div class="card-body">
-                    <h5 class="card-title">Persuratan</h5>
-                    <p class="card-text">Informasi tentang persuratan.</p>
-                    <a href="persuratan.html" class="btn btn-danger">Detail</a>
+            <div class="service-card bg-danger text-white">
+                <div class="icon-container">
+                    <i class="bi bi-envelope-paper"></i>
                 </div>
+                <h3>Persuratan</h3>
+                <p>Informasi tentang persuratan.</p>
+                <a href="persuratan.html" class="btn btn-light">Detail</a>
             </div>
         </div>
 
         <!-- Inventaris -->
         <div class="col">
-            <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-box-seam display-3 text-secondary"></i>
-                <div class="card-body">
-                    <h5 class="card-title">Inventaris</h5>
-                    <p class="card-text">Informasi tentang inventaris.</p>
-                    <a href="inventaris.html" class="btn btn-secondary">Detail</a>
+            <div class="service-card bg-secondary text-white">
+                <div class="icon-container">
+                    <i class="bi bi-box-seam"></i>
                 </div>
+                <h3>Inventaris</h3>
+                <p>Informasi tentang inventaris.</p>
+                <a href="inventaris.html" class="btn btn-light">Detail</a>
             </div>
         </div>
 
-        <!-- Kontak -->
+        <!-- Kontak (GANTI ICON: bi-chat-dots → bi-telephone-inbound-fill) -->
         <div class="col">
-            <div class="card h-100 shadow text-center p-4">
-                <i class="bi bi-chat-dots display-3 text-dark"></i>
-                <div class="card-body">
-                    <h5 class="card-title">Kontak</h5>
-                    <p class="card-text">Hubungi kami untuk informasi lebih lanjut.</p>
-                    <a href="kontak.html" class="btn btn-dark">Detail</a>
+            <div class="service-card bg-dark text-white">
+                <div class="icon-container">
+                    <i class="bi bi-telephone-inbound-fill"></i> 
                 </div>
+                <h3>Kontak</h3>
+                <p>Hubungi kami untuk informasi lebih lanjut.</p>
+                <a href="kontak.html" class="btn btn-light">Detail</a>
             </div>
         </div>
 
     </div>
 </section>
 
-    <hr>
+
     <section class="container my-5 text-center">
         <h2 class="mb-4">Statistik Administrasi</h2>
         <div class="row">
+            
             <!-- Chart Container -->
             <div class="col-md-6">
                 <div class="chart-wrapper">
-                    <canvas id="statistikChart" class="chart"></canvas>
+                    <canvas id="statistikChart" class="chart" aria-label="Grafik statistik jumlah pendidik, tenaga kependidikan, dan siswa"></canvas>
                     <div class="legend-box">
-                        <h5>Keterangan</h5>
-                        <ul>
-                            <li style="color: rgba(54, 162, 235, 1);">Pendidik</li>
-                            <li style="color: rgba(255, 99, 132, 1);">Tendik</li>
-                            <li style="color: rgba(75, 192, 192, 1);">Siswa</li>
+                        <h3 class="legend-title">Keterangan</h3>
+                        <ul class="legend-list">
+                            <li><span class="legend-color" style="background-color: rgba(54, 162, 235, 1);"></span> Pendidik</li>
+                            <li><span class="legend-color" style="background-color: rgba(255, 99, 132, 1);"></span> Tendik</li>
+                            <li><span class="legend-color" style="background-color: rgba(75, 192, 192, 1);"></span> Siswa</li>
                         </ul>
                     </div>
                 </div>
             </div>
+    
             <!-- Table Container -->
             <div class="col-md-6">
                 <div class="table-container">
-                    <h5>Statistik Tahunan</h5>
+                    <h3>Statistik Tahunan</h3>
                     <table class="table table-striped table-bordered">
+                        <caption class="visually-hidden">Tabel statistik tahunan jumlah pendidik, tenaga kependidikan, dan siswa</caption>
                         <thead>
                             <tr>
-                                <th>Tahun</th>
-                                <th>Pendidik</th>
-                                <th>Tendik</th>
-                                <th>Siswa</th>
+                                <th scope="col">Tahun</th>
+                                <th scope="col">Pendidik</th>
+                                <th scope="col">Tendik</th>
+                                <th scope="col">Siswa</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -366,263 +398,302 @@
                     </table>
                 </div>
             </div>
+    
         </div>
     </section>
     
-    <hr>
-    <section class="container my-5 text-center">
-        <h2 class="mb-4">Layanan Administrasi Terpopuler</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card p-4 shadow">
-                    <i class="bi bi-file-earmark-medical display-3 text-primary"></i>
-                    <h4 class="mt-3">Legalisasi Ijazah</h4>
-                    <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalLegalisasi">Ajukan Sekarang</button>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4 shadow">
-                    <i class="bi bi-envelope-fill display-3 text-success"></i>
-                    <h4 class="mt-3">Surat Keterangan Aktif</h4>
-                    <button type="button" class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalSuratAktif">Ajukan Sekarang</button>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4 shadow">
-                    <i class="bi bi-journal-text display-3 text-danger"></i>
-                    <h4 class="mt-3">Mutasi Siswa</h4>
-                    <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#modalMutasi">Ajukan Sekarang</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal Legalisasi Ijazah -->
-    <div class="modal fade" id="modalLegalisasi" tabindex="-1" aria-labelledby="modalLegalisasiLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalLegalisasiLabel">Legalisasi Ijazah</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>Informasi mengenai legalisasi ijazah.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <a href="persuratan.html" class="btn btn-primary">Lanjutkan</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal Surat Keterangan Aktif -->
-    <div class="modal fade" id="modalSuratAktif" tabindex="-1" aria-labelledby="modalSuratAktifLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalSuratAktifLabel">Surat Keterangan Aktif</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>Informasi mengenai surat keterangan aktif.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <a href="persuratan.html" class="btn btn-success">Lanjutkan</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal Mutasi Siswa -->
-    <div class="modal fade" id="modalMutasi" tabindex="-1" aria-labelledby="modalMutasiLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalMutasiLabel">Mutasi Siswa</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>Informasi mengenai mutasi siswa.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <a href="persuratan.html" class="btn btn-danger">Lanjutkan</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container my-4">
-        <h2 class="text-center mb-4">Galeri</h2>
-        
-        <div class="row g-3">
-            <!-- Gambar Galeri dari Direktori Lokal -->
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="assets/navigasi_kepegawaian.png" class="gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="assets/navigasi_kesiswaan.png" class="gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="assets/navigasi_inventaris.png" class="gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="assets/navigasi_sarpras.png" class="gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="assets/navigasi_profil.png" class="gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <img src="assets/navigasi_persuratan.png" class="gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-            </div>
-        </div>
-    </div>
     
-    <!-- Modal untuk melihat gambar -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel">Foto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Section: Layanan Administrasi Terpopuler -->
+<section class="container my-5 text-center">
+    <h2 class="mb-4">Layanan Administrasi Terpopuler</h2>
+    <div class="row">
+        
+        <!-- Layanan - Legalisasi Ijazah -->
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <i class="bi bi-file-earmark-medical display-3 text-primary" aria-hidden="true"></i>
+                <h3 class="mt-3">Legalisasi Ijazah</h3>
+                <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalLegalisasi" aria-label="Ajukan legalisasi ijazah">Ajukan Sekarang</button>
+            </div>
+        </div>
+
+        <!-- Layanan - Surat Keterangan Aktif -->
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <i class="bi bi-envelope-fill display-3 text-success" aria-hidden="true"></i>
+                <h3 class="mt-3">Surat Keterangan Aktif</h3>
+                <button type="button" class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalSuratAktif" aria-label="Ajukan surat keterangan aktif">Ajukan Sekarang</button>
+            </div>
+        </div>
+
+        <!-- Layanan - Mutasi Siswa -->
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <i class="bi bi-journal-text display-3 text-danger" aria-hidden="true"></i>
+                <h3 class="mt-3">Mutasi Siswa</h3>
+                <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#modalMutasi" aria-label="Ajukan mutasi siswa">Ajukan Sekarang</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal: Legalisasi Ijazah -->
+<div class="modal fade" id="modalLegalisasi" tabindex="-1" aria-labelledby="modalLegalisasiLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLegalisasiLabel">Legalisasi Ijazah</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body">
+                <p>Informasi mengenai legalisasi ijazah.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <a href="persuratan.html" class="btn btn-primary">Lanjutkan</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Surat Keterangan Aktif -->
+<div class="modal fade" id="modalSuratAktif" tabindex="-1" aria-labelledby="modalSuratAktifLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalSuratAktifLabel">Surat Keterangan Aktif</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body">
+                <p>Informasi mengenai surat keterangan aktif.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <a href="persuratan.html" class="btn btn-success">Lanjutkan</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Mutasi Siswa -->
+<div class="modal fade" id="modalMutasi" tabindex="-1" aria-labelledby="modalMutasiLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMutasiLabel">Mutasi Siswa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body">
+                <p>Informasi mengenai mutasi siswa.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <a href="persuratan.html" class="btn btn-danger">Lanjutkan</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+  <!-- Section: Galeri -->
+<section class="container my-4">
+    <h2 class="text-center mb-4">Galeri</h2>
+
+    <div class="row g-3">
+        <!-- Gambar Galeri dari Direktori Lokal -->
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="assets/navigasi_kepegawaian.png" class="gallery-img" alt="Navigasi Kepegawaian"
+                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="assets/navigasi_kesiswaan.png" class="gallery-img" alt="Navigasi Kesiswaan"
+                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="assets/navigasi_inventaris.png" class="gallery-img" alt="Navigasi Inventaris"
+                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="assets/navigasi_sarpras.png" class="gallery-img" alt="Navigasi Sarpras"
+                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="assets/navigasi_profil.png" class="gallery-img" alt="Navigasi Profil"
+                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="assets/navigasi_persuratan.png" class="gallery-img" alt="Navigasi Persuratan"
+                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+        </div>
+    </div>
+</section>
+
+<!-- Modal untuk melihat gambar -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Tampilan Gambar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" class="modal-img" src="" alt="Gambar galeri">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Section: FAQ Singkat Tata Usaha -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">FAQ Singkat Tata Usaha</h2>
+    <div class="accordion" id="faqAccordion">
+        
+        <!-- Pertanyaan 1 -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading1">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1" 
+                    aria-expanded="true" aria-controls="faq1">
+                    Bagaimana cara mengurus surat keterangan aktif?
+                </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Silakan datang ke Tata Usaha dengan membawa kartu siswa dan mengisi formulir pengajuan.
                 </div>
-                <div class="modal-body text-center">
-                    <img id="modalImage" class="modal-img" src="" alt="Foto">
+            </div>
+        </div>
+
+        <!-- Pertanyaan 2 -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading2">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2" 
+                    aria-expanded="false" aria-controls="faq2">
+                    Berapa lama waktu pemrosesan legalisasi ijazah?
+                </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Biasanya membutuhkan waktu sekitar 2-3 hari kerja setelah dokumen lengkap.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pertanyaan 3 -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading3">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3" 
+                    aria-expanded="false" aria-controls="faq3">
+                    Bagaimana cara mengajukan permohonan cuti?
+                </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Silakan datang ke Tata Usaha dengan membawa formulir cuti dan surat keterangan dari guru wali.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pertanyaan 4 -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading4">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4" 
+                    aria-expanded="false" aria-controls="faq4">
+                    Bagaimana cara mengajukan permohonan izin belajar di luar negeri?
+                </button>
+            </h3>
+            <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Silakan datang ke Tata Usaha dengan membawa formulir izin belajar di luar negeri, 
+                    surat keterangan dari guru wali, dan dokumen pendukung lainnya.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pertanyaan 5 -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading5">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5" 
+                    aria-expanded="false" aria-controls="faq5">
+                    Bagaimana cara mengajukan permohonan penghapusan data pribadi?
+                </button>
+            </h3>
+            <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Silakan datang ke Tata Usaha dengan membawa formulir penghapusan data pribadi dan identitas diri yang sah.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pertanyaan 6 -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading6">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6" 
+                    aria-expanded="false" aria-controls="faq6">
+                    Bagaimana cara mengajukan permohonan pengubahan data pribadi?
+                </button>
+            </h3>
+            <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Silakan datang ke Tata Usaha dengan membawa formulir pengubahan data pribadi, identitas diri yang sah, dan dokumen pendukung lainnya.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<div class="container mt-5 pt-4">
+    <div class="row gy-4">
+        <!-- Kolom Peta Lokasi -->
+        <div class="col-lg-6 d-flex justify-content-center">
+            <div class="map-container w-100">
+                <h3 class="text-center mb-3">📍 Lokasi Sekolah</h3>
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=SMP+Negeri+3+Jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" allowfullscreen 
+                        aria-label="Peta Lokasi SMP Negeri 3 Jakarta" class="w-100">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kolom Kalender -->
+        <div class="col-lg-6 d-flex justify-content-center">
+            <div class="calendar-container w-100">
+                <h3 class="text-center mb-3">📅 Kalender Akademik</h3>
+                <div class="calendar-header d-flex justify-content-between align-items-center mb-2">
+                    <button class="btn btn-outline-primary prev-month">❮ Sebelumnya</button>
+                    <span class="current-month fw-bold">Februari 2025</span>
+                    <button class="btn btn-outline-primary next-month">Berikutnya ❯</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="calendar-grid table table-bordered text-center">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Minggu</th>
+                                <th>Senin</th>
+                                <th>Selasa</th>
+                                <th>Rabu</th>
+                                <th>Kamis</th>
+                                <th>Jumat</th>
+                                <th>Sabtu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Baris kalender akan diisi dengan JavaScript -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <section class="container my-5">
-        <h2 class="text-center mb-4">FAQ Singkat Tata Usaha</h2>
-        <div class="accordion" id="faqAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                        Bagaimana cara mengurus surat keterangan aktif?
-                    </button>
-                </h2>
-                <div id="faq1" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                        Silakan datang ke Tata Usaha dengan membawa kartu siswa dan mengisi formulir pengajuan.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
-                        Berapa lama waktu pemrosesan legalisasi ijazah?
-                    </button>
-                </h2>
-                <div id="faq2" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Biasanya membutuhkan waktu sekitar 2-3 hari kerja setelah dokumen lengkap.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
-                        Bagaimana cara mengajukan permohonan cuti?
-                    </button>
-                </h2>
-                <div id="faq3" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Silakan datang ke Tata Usaha dengan membawa formulir cuti dan surat keterangan dari guru wali.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
-                        Bagaimana cara mengajukan permohonan izin belajar di luar negeri?
-                    </button>
-                </h2>
-                <div id="faq4" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Silakan datang ke Tata Usaha dengan membawa formulir izin belajar di luar negeri, surat keterangan dari guru wali, dan dokumen pendukung lainnya.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
-                        Bagaimana cara mengajukan permohonan penghapusan data pribadi?
-                    </button>
-                </h2>
-                <div id="faq5" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Silakan datang ke Tata Usaha dengan membawa formulir penghapusan data pribadi dan identitas diri yang sah.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">
-                        Bagaimana cara mengajukan permohonan pengubahan data pribadi?
-                    </button>
-                </h2>
-                <div id="faq6" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Silakan datang ke Tata Usaha dengan membawa formulir pengubahan data pribadi, identitas diri yang sah, dan dokumen pendukung lainnya.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq7">
-                        Bagaimana cara mengajukan permohonan pengambilan kopi surat?
-                    </button>
-                </h2>
-                <div id="faq7" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Silakan datang ke Tata Usaha dengan membawa formulir pengambilan kopi surat dan surat asli yang akan dikopikan.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq8">
-                        Bagaimana cara mengajukan permohonan pengambilan fotokopi ijazah?
-                    </button>
-                </h2>
-                <div id="faq8" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Silakan datang ke Tata Usaha dengan membawa formulir pengambilan fotokopi ijazah dan ijazah asli.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq9">
-                        Bagaimana cara mengajukan permohonan pengambilan fotokopi SKHU?
-                    </button>
-                </h2>
-                <div id="faq9" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Silakan datang ke Tata Usaha dengan membawa formulir pengambilan fotokopi SKHU dan SKHU asli.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq10">
-                        Bagaimana cara mengajukan permohonan pengambilan fotokopi SKHUN?
-                    </button>
-                </h2>
-                <div id="faq10" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Silakan datang ke Tata Usaha dengan membawa formulir pengambilan fotokopi SKHUN dan SKHUN asli.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-        
-
-    <!-- Footer -->
+<!-- Footer -->
 <footer class="text-dark py-4 mt-5">
     <div class="container">
         <div class="d-flex justify-content-center flex-wrap">
@@ -633,16 +704,69 @@
     </div>
 </footer>
 
+<!-- Bootstrap & Custom JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/script.js"></script>
+<script src="js/index.js"></script>
+<script>
+    function showImage(imgElement) {
+        document.getElementById("modalImage").src = imgElement.src;
+    }
 
-    <!-- Bootstrap & Custom JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/index.js"></script>
-    <script>
-        function showImage(imgElement) {
-            document.getElementById("modalImage").src = imgElement.src;
+    document.addEventListener('DOMContentLoaded', function() {
+        const calendarGrid = document.querySelector('.calendar-grid tbody');
+        const currentMonth = document.querySelector('.current-month');
+        const prevMonthButton = document.querySelector('.prev-month');
+        const nextMonthButton = document.querySelector('.next-month');
+
+        let currentDate = new Date();
+
+        function renderCalendar() {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const today = new Date().getDate();
+
+            currentMonth.textContent = new Intl.DateTimeFormat('default', { month: 'long', year: 'numeric' }).format(currentDate);
+
+            let calendarHTML = '';
+            let date = 1;
+
+            for (let i = 0; i < 6; i++) {
+                calendarHTML += '<tr>';
+                for (let j = 0; j < 7; j++) {
+                    if (i === 0 && j < firstDay) {
+                        calendarHTML += '<td></td>';
+                    } else if (date > daysInMonth) {
+                        break;
+                    } else {
+                        const isToday = year === new Date().getFullYear() && month === new Date().getMonth() && date === today;
+                        calendarHTML += `<td class="${isToday ? 'today' : ''}">${date}</td>`;
+                        date++;
+                    }
+                }
+                calendarHTML += '</tr>';
+            }
+
+            calendarGrid.innerHTML = calendarHTML;
         }
-    </script>
+
+        prevMonthButton.addEventListener('click', function() {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        });
+
+        nextMonthButton.addEventListener('click', function() {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        });
+
+        renderCalendar();
+    });
+</script>
+
 </body>
 </html>
