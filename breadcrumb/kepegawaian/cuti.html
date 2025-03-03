@@ -15,18 +15,59 @@
         .breadcrumb-container {
             margin-top: 120px;
         }
-        .content-container {
-            margin-top: 20px;
-        }
-        .table-container {
-            margin-top: 20px;
-        }
-        .table th, .table td {
-            text-align: left;
-        }
-        .table td:first-child {
-            text-align: left;
-        }
+        
+        /* ==============================
+   CONTENT & TABLE STYLING
+   ============================== */
+.content-container {
+    margin-top: 20px;
+    padding: 15px; /* Menambahkan padding agar tidak terlalu padat */
+}
+
+.table-container {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px; /* Sudut tabel sedikit melengkung */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk tampilan lebih modern */
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Gaya header tabel */
+.table th {
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 10px;
+    font-weight: 600;
+}
+
+/* Gaya sel tabel */
+.table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Pastikan kolom pertama selalu rata kiri */
+.table td:first-child {
+    text-align: left;
+    font-weight: 500; /* Sedikit lebih tebal agar lebih jelas */
+}
+
+/* RESPONSIVE: Pastikan tabel tetap rapi di layar kecil */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto; /* Tambahkan scroll jika tabel terlalu lebar */
+    }
+    .table th, .table td {
+        font-size: 14px; /* Mengurangi ukuran font di layar kecil */
+        padding: 6px;
+    }
+}
     </style>
 </head>
 <body>
@@ -147,209 +188,319 @@
     </div>
 </div>
 
-    <!-- Breadcrumb -->
-    <div class="container breadcrumb-container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="../../kepegawaian.html">Kepegawaian</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Cuti</li>
-            </ol>
-        </div>
+    <!-- Breadcrumb dengan Tampilan Lebih Elegan -->
+<div class="container breadcrumb-container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-light shadow-sm p-3 rounded">
+            <li class="breadcrumb-item">
+                <a href="../../index.html" class="text-decoration-none text-primary">
+                    <i class="bi bi-house-door"></i> Home
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="../../kepegawaian.html" class="text-decoration-none text-primary">
+                    <i class="bi bi-people"></i> Kepegawaian
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                <i class="bi bi-mortarboard"></i> Cuti
+            </li>
+        </ol>
     </nav>
+</div>
+
+<!-- Main Content -->
+<div class="container mt-5">
+    <h2 class="text-center fw-bold">
+        <i class="bi bi-calendar-check"></i> Ketentuan Cuti bagi Pegawai Aparatur Sipil Negara
+    </h2>
+    
+    <p>
+        Berdasarkan <strong>Peraturan Badan Kepegawaian Negara</strong> (BKN) <strong>Nomor 24 Tahun 2017</strong> tentang 
+        <em>Tata Cara Pemberian Cuti Pegawai Negeri Sipil</em>, yang telah diubah dengan:
+    </p>
+
+    <ul class="list-group list-group-flush mb-3">
+        <li class="list-group-item">
+            <i class="bi bi-file-earmark-text text-primary me-2"></i> 
+            <strong>Peraturan BKN Nomor 7 Tahun 2021</strong>
+        </li>
+        <li class="list-group-item">
+            <i class="bi bi-file-earmark-text text-danger me-2"></i> 
+            <strong>Peraturan BKN Nomor 7 Tahun 2022</strong> tentang 
+            <em>Tata Cara Pemberian Cuti Pegawai Pemerintah dengan Perjanjian Kerja</em>
+        </li>
+    </ul>
+
+    <p>Disampaikan hal-hal sebagai berikut:</p>
+
+    <h4 class="mt-4"><i class="bi bi-clipboard-check"></i> 1. Ketentuan Cuti bagi Pegawai Aparatur Sipil Negara (ASN)</h4>
+    <p>Cuti ASN terbagi menjadi dua kategori:</p>
+
+    <h5 class="mt-3"><i class="bi bi-person-badge"></i> A. Cuti bagi Pegawai Negeri Sipil (PNS)</h5>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><i class="bi bi-calendar-event me-2 text-success"></i> Cuti tahunan</li>
+        <li class="list-group-item"><i class="bi bi-building me-2 text-warning"></i> Cuti besar</li>
+        <li class="list-group-item"><i class="bi bi-heart-pulse me-2 text-danger"></i> Cuti sakit</li>
+        <li class="list-group-item"><i class="bi bi-gender-female me-2 text-info"></i> Cuti melahirkan</li>
+        <li class="list-group-item"><i class="bi bi-exclamation-circle me-2 text-primary"></i> Cuti karena alasan penting</li>
+        <li class="list-group-item"><i class="bi bi-x-circle me-2 text-secondary"></i> Cuti di luar tanggungan negara</li>
+        <li class="list-group-item"><i class="bi bi-people me-2 text-warning"></i> Cuti bersama</li>
+    </ul>
+
+    <h5 class="mt-3"><i class="bi bi-people-fill"></i> B. Cuti bagi Pegawai Pemerintah dengan Perjanjian Kerja (PPPK)</h5>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><i class="bi bi-calendar-event me-2 text-success"></i> Cuti tahunan</li>
+        <li class="list-group-item"><i class="bi bi-heart-pulse me-2 text-danger"></i> Cuti sakit</li>
+        <li class="list-group-item"><i class="bi bi-gender-female me-2 text-info"></i> Cuti melahirkan</li>
+        <li class="list-group-item"><i class="bi bi-people me-2 text-warning"></i> Cuti bersama</li>
+    </ul>
+
+    <!-- Catatan Penting -->
+    <div class="alert alert-info mt-4" role="alert">
+        <h5 class="fw-bold"><i class="bi bi-info-circle"></i> Catatan:</h5>
+        <p>
+            PPPK yang menduduki <em>jabatan fungsional guru</em> di sekolah yang mendapat liburan sesuai ketentuan 
+            peraturan perundang-undangan dianggap telah menggunakan cuti tahunan.
+        </p>
     </div>
-    <!-- Main Content -->
-    <div class="container mt-5">
-        <h2 class="text-center fw-bold">Ketentuan Cuti bagi Pegawai Aparatur Sipil Negara</h2>
-        <p>
-            Berdasarkan <strong>Peraturan Badan Kepegawaian Negara</strong> (BKN) <strong>Nomor 24 Tahun 2017</strong> tentang 
-            <em>Tata Cara Pemberian Cuti Pegawai Negeri Sipil</em>, yang telah diubah dengan:
-        </p>
-        <ul>
-            <li><strong>Peraturan BKN Nomor 7 Tahun 2021</strong></li>
-            <li><strong>Peraturan BKN Nomor 7 Tahun 2022</strong> tentang <em>Tata Cara Pemberian Cuti Pegawai Pemerintah dengan Perjanjian Kerja</em></li>
-        </ul>
-        <p>Disampaikan hal-hal sebagai berikut:</p>
 
-        <h4 class="mt-4">1. Ketentuan Cuti bagi Pegawai Aparatur Sipil Negara (ASN)</h4>
-        <p>Cuti ASN terbagi menjadi dua kategori:</p>
+    <h4 class="mt-4"><i class="bi bi-file-text"></i> 2. Proses Permohonan dan Persetujuan Cuti</h4>
+    <p>
+        Permohonan dan persetujuan cuti dilakukan melalui sistem informasi pada laman:
+        <a href="https://pegawai.jakarta.go.id" target="_blank" class="text-decoration-none">
+            <i class="bi bi-link-45deg"></i> pegawai.jakarta.go.id
+        </a>.
+        <br>
+        📅 Berlaku mulai <strong>30 Desember 2024</strong>.
+    </p>
 
-        <h5 class="mt-3">A. Cuti bagi Pegawai Negeri Sipil (PNS)</h5>
-        <ul>
-            <li>Cuti tahunan</li>
-            <li>Cuti besar</li>
-            <li>Cuti sakit</li>
-            <li>Cuti melahirkan</li>
-            <li>Cuti karena alasan penting</li>
-            <li>Cuti di luar tanggungan negara</li>
-            <li>Cuti bersama</li>
-        </ul>
+    <h4 class="mt-4"><i class="bi bi-eye"></i> 3. Pemantauan Status Permohonan Cuti</h4>
+    <p>
+        Pegawai ASN dapat memantau status permohonan cuti melalui notifikasi di laman:
+        <a href="https://siewi.jakarta.go.id" target="_blank" class="text-decoration-none">
+            <i class="bi bi-link-45deg"></i> siewi.jakarta.go.id
+        </a>.
+    </p>
+</div>
 
-        <h5 class="mt-3">B. Cuti bagi Pegawai Pemerintah dengan Perjanjian Kerja (PPPK)</h5>
-        <ul>
-            <li>Cuti tahunan</li>
-            <li>Cuti sakit</li>
-            <li>Cuti melahirkan</li>
-            <li>Cuti bersama</li>
-        </ul>
-        <p><strong>Catatan:</strong> PPPK yang menduduki <em>jabatan fungsional guru</em> di sekolah yang mendapat liburan sesuai ketentuan peraturan perundang-undangan dianggap telah menggunakan cuti tahunan.</p>
+<!-- Responsiveness Optimization -->
+<style>
+    /* Menyesuaikan tampilan pada layar kecil */
+    @media (max-width: 768px) {
+        h2, h4 {
+            font-size: 1.4rem;
+        }
+        h5 {
+            font-size: 1.2rem;
+        }
+        .list-group-item, p {
+            font-size: 0.95rem;
+        }
+        .alert {
+            font-size: 0.95rem;
+        }
+    }
 
-        <h4 class="mt-4">2. Proses Permohonan dan Persetujuan Cuti</h4>
-        <p>
-            Permohonan dan persetujuan cuti dilakukan melalui sistem informasi pada laman:
-            <a href="https://pegawai.jakarta.go.id" target="_blank">https://pegawai.jakarta.go.id</a>  
-            <br>
-            📅 Berlaku mulai <strong>30 Desember 2024</strong>.
-        </p>
+    /* Untuk layar sangat kecil (HP kecil) */
+    @media (max-width: 480px) {
+        h2, h4 {
+            font-size: 1.2rem;
+        }
+        h5 {
+            font-size: 1.1rem;
+        }
+        .list-group-item, p {
+            font-size: 0.9rem;
+        }
+    }
+</style>
 
-        <h4 class="mt-4">3. Pemantauan Status Permohonan Cuti</h4>
-        <p>
-            Pegawai ASN dapat memantau status permohonan cuti melalui notifikasi di laman:  
-            <a href="https://siewi.jakarta.go.id" target="_blank">https://siewi.jakarta.go.id</a>.
-        </p>
-    </div>
-    <div class="container my-5">
-        <h2> Daftar Cuti</h2>
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Cuti Tahunan
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>PNS dan Calon PNS yang telah bekerja sekurang-kurangnya 1 (satu) tahun secara terus menerus berhak atas cuti tahunan Lamanya cuti tahunan adalah 12 (dua belas) hari kerja Permintaan cuti tahunan dapat diberikan untuk paling kurang 1 (satu) hari kerja Pemberian cuti tahunan pada saat yang bersamaan harus memperhatikan kekuatan jumlah pegawai yang ditentukan berdasarkan jumlah pegawai pada Subbidang/Subbagian/Seksi/Unit Lama perjalanan yang harus ditempuh lebih dari 18 (delapan belas) jam; Alat trasportasi tidak tersedia setiap hari: atau Harus menggunakan alat transportasi darat, laut, dan udara dalam satu perjalanan untuk menuju tempat. 
-                            Hak atas cuti tahunan yang tidak digunakan dalam tahun yang bersangkutan, dapat digunakan dalam tahun berikutnya untuk paling lama 18 (delapan belas) hari kerja termasuk cuti tahunan dalam tahun berjalan Sisa hak atas cuti tahunan yang tidak digunakan dalam tahun bersangkutan dapat digunakan pada tahun berikutnya paling banyak 6 (enam) hari kerja PNS dan CPNS yang tidak pernah menggunakan cuti tahunan selama 2 (dua) tahun atau lebih berturut-turut berhak mendapat cuti tahunan paling lama 24 (dua puluh empat) hari Hak atas cuti tahunan dapat ditangguhkan penggunaannya oleh Pybmc untuk paling lama 1 (satu) tahun, apabila terdapat kepentingan dinas mendesak.
-                            Hak atas cuti tahunan yang ditangguhkan hanya dapat digunakan untuk tahun berikutnya Sisa hak cuti tahunan yang ditangguhkan dapat digunakan sesuai dengan jumlah hari cuti yang ditangguhkan PNS yang menduduki jabatan guru pada sekolah yang mendapat liburan menurut peraturan perundang-undangan, disamakan dengan PNS yang telah menggunakan hak cuti tahunan.</p>
-                        <p>Persyaratan:</p>
-                        <ul>
-                            <li>Surat Pengantar dari Sekolah mengetahui Kasatlakdikcam</li>
-                            <li>Format Cuti</li>
-                            <li>SK Terakhir</li>
-                        </ul>
-                        <p>PPPK Hanya mendapatkan Hak Cuti :</p>
-                        <ul>
-                            <li>Cuti Melahirkan</li>
-                            <li>Cuti Sakit</li>
-                            <li>Cuti Tahunan Keluar Negeri Format Cuti Sampai Gubernur</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Cuti Besar
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>PNS yang telah bekerja paling singkat 5 (lima) tahun secara terus menerus berhak atas cuti besar paling lama 3 (tiga) bulan PNS yang menggunakan hak atas cuti besar tidak berhak atas cuti tahunan dalam tahun yang bersangkutan Pelaksanaan cuti besar hanya dapat digunakan untuk 1 (satu) kali penggunaan dalam tahun berjalan PNS yang telah menggunakan cuti tahunan pada tahun yang sama dengan pengajuan cuti besar, jumlah hari cuti tahunan yang telah digunakan mengurangi jumlah hari cuti besar Cuti besar dalam tahun yang berbeda, menghapus hak cuti tahunan pada tahun bulan pertama pelaksanaan cuti besar PNS yang menggunakan hak atas cuti besar dan masih mempunyai sisa hak atas cuti tahunan tahun sebelumnya maka dapat menggunakan sisa hak atas cuti tahunan tersebut Hak atas cuti besar dapat ditangguhkan penggunaannya oleh Pybmc untuk paling lama 1 (satu) tahun apabila terdapat kepentingan dinas mendesak, kecuali untuk kepentingan agama. PNS yang menggunakan cuti besar kurang dari 3 (tiga) bulan, maka sisa cuti besar yang menjadi haknya hapus Selama menggunakan hak atas cuti besar, PNS yang bersangkutan menerima penghasilan PNS.</p>
-                        <p>Persyaratan:</p>
-                        <ul>
-                            <li>Surat Pengantar dari Sekolah mengetahui Kasatlakdikcam</li>
-                            <li>Format Cuti</li>
-                            <li>SK Terakhir</li>
-                        </ul>
-                        <p>Lampiran Pendukung :</p>
-                        <ul>
-                            <li>Telah bekerja minimal 5 tahun</li>
-                            <li>Untuk cuti besar menunaikan ibadah haji dilampirkan surat pelunasan haji dan surat dari travel</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Cuti Sakit
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>Setiap PNS yang menderita sakit berhak atas cuti sakit Hak atas cuti sakit diberikan untuk waktu paling lama 1 (satu) tahun dan dapat ditambah untuk paling lama 6 (enam) bulan apabila diperlukan Pelaksanaan cuti sakit dapat digunakan untuk beberapa kali penggunaan sesuai kebutuhan dalam jangka waktu paling lama 1 (satu) tahun dan dapat ditambah untuk paling lama 6 (enam) bulan yang diperhitungkan secara akumulatif PNS yang mengalami gugur kandungan berhak atas cuti sakit untuk paling lama 1 1/2 (satu setengah) bulan PNS yang mengalami kecelakaan dalam dan oleh karena menjalankan tugas kewajibannya sehingga yang bersangkutan perlu mendapat perawatan berhak atas cuti sakit sampai yang bersangkutan sembuh dari pernyakitnya.</p>
-                        <p>Persyaratan:</p>
-                        <ul>
-                            <li>Surat Pengantar dari Sekolah mengetahui Kasatlakdikcam</li>
-                            <li>Format Cuti</li>
-                            <li>SK Terakhir</li>
-                            <li>Surat Keterangan Dokter</li>
-                        </ul>
-                        <p>Keterangan Cuti Sakit :</p>
-                        <ul>
-                            <li>Cuti melahirkan anak ke-1 sampai ke-3 pada saat menjadi PNS berhak mendapat cuti melahirkan</li>
-                            <li>Untuk kelahiran anak ke-4 dst PNS diberikan Cuti Besar</li>
-                            <li>Maksimal cuti melahirkan 3 bulan</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Cuti Melahirkan
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>CPNS dan PNS berhak mendapatkan cuti melahirkan untuk anak pertama sampai dengan kelahiran anak ketiga Persalinan anak pertama terhitung sejak yang bersangkutan diangkat menjadi CPNS Untuk persalinan anak keempat dan seterusnya, dapat diberikan cuti besar Cuti besar untuk persalinan anak keempat dan seterusnya mengesampingkan persyaratan cuti besar pada umumnya, dan untuk lama cuti yang disamakan dengan lama cuti melahirkan PNS dapat mengajukan permintaan cuti melahirkan kurang dari 3 (tiga) bulan.</p>
-                        <p>Persyaratan:</p>
-                        <ul>
-                            <li>Surat Pengantar dari Sekolah mengetahui Kasatlakdikcam</li>
-                            <li>Format Cuti</li>
-                            <li>SK Terakhir</li>
-                            <li>Surat Keterangan Dokter</li>
-                        </ul>
-                        <p>Keterangan Cuti Melahirkan :</p>
-                        <ul>
-                            <li>Cuti melahirkan anak ke-1 sampai ke-3 pada saat menjadi PNS berhak mendapat cuti melahirkan</li>
-                            <li>Untuk kelahiran anak ke-4 dst PNS diberikan Cuti Besar</li>
-                            <li>Maksimal cuti melahirkan 3 bulan</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Cuti Alasan Penting
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>PNS berhak atas cuti karena alasan penting apabila: 
-                            Ibu, bapak, istri/suami, anak, adik, kakak, mertua atau menantu sakit keras (dibuktikan dengan surat keterangan rawat inap dari Unit Pelayanan Kesehatan) atau meninggal dunia dan PNS yang bersangkutan menurut peraturan perundang-undangan</p>
-                        <ul>
-                            <li>harus mengurus hak-hak dari anggota keluarganya yang meninggal dunia.</li>
-                            <li>Melangsungkan perkawinan</li>
-                            <li>Istri melahirkan (dibuktikan dengan surat keterangan rawat inap dari Unit Pelayanan Kesehatan) Istri melahirkan (dibuktikan dengan surat keterangan rawat inap dari Unit Pelayanan Kesehatan).</li>
-                            <li>Mengalami musibah kebakaran rumah atau bencana alam (dibuktikan dengan melampirkan surat keterangan paling rendah dari Ketua Rukun Tetangga)</li>
-                            <li>Terjadi peristiwa yang menyebabkan gangguan jiwa bagi PNS yang ditempatkan pada perwakilan RI yang rawan dan/atau berbahaya</li>
-                        </ul>
-                        <p>Lamanya cuti karena alasan penting ditentukan oleh Pejabat yang berwenang untuk paling lama 1 (satu) bulan, dan hanya dapat digunakan dalam 1 (satu) kali penggunaan.</p>
-                        <p>Persyaratan:</p>
-                        <ul>
-                            <li>Surat Pengantar dari Sekolah mengetahui Kasatlakdikcam</li>
-                            <li>Format Cuti</li>
-                            <li>SK Terakhir</li>
-                            <li>Bukti Penunjang Cuti Alasan Penting</li>
-                        </ul>
-                        <p>Yang Termasuk Cuti Alasan Penting :</p>
-                        <ul>
-                            <li>Ibu, Bapak, Istri/Suami, anak, adik, kakak, Mertua atau menantu sakit keras/meninggal dunia</li>
-                            <li>Mengurus hak-hak keluarga (yang tertera pada poin 1) yang meninggal dunia</li>
-                            <li>Melangsungkan Pernikahan (yang bersangkutan yang menikah, bukan menikahkan anak)</li>
-                            <li>Mendampingi istri melahirkan</li>
-                            <li>Mengalami musibah kebakaran/bencana alam dengan melampirkan surat keterangan minimal dari Ketua RT</li>
-                        </ul>
-                    <p>Lama Cuti Alasan Penting maksimal 1 bulan
-                        (untuk hari ke-1 sampai hari ke-5 tidak dipotong TKD, hari ke-6 dan seterusnya TKD dipotong)</p>
-                    </div>
-                </div>
-            </div>
+
+
+<!-- Daftar Cuti -->
+<div class="container my-5">
+    <h2>Peryaratan Cuti</h2>
+    <div class="accordion" id="accordionExample">
+        
+        <!-- Cuti Tahunan -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <i class="bi bi-calendar-check me-3"></i> Cuti Tahunan
+        </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <p>PNS dan CPNS yang telah bekerja minimal 1 tahun berhak atas cuti tahunan selama <strong>12 hari kerja</strong>.</p>
+            
+            <h5 class="mt-3 text-primary"><i class="bi bi-list-check"></i> Persyaratan:</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-file-earmark-text me-2 text-success"></i> Surat Pengantar dari Sekolah (Kasatlakdikcam)
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-journal-text me-2 text-warning"></i> Format Cuti
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-file-earmark-check me-2 text-primary"></i> SK Terakhir
+                </li>
+            </ul>
         </div>
     </div>
+</div>
+
+<!-- Cuti Besar -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <i class="bi bi-calendar-range me-3"></i> Cuti Besar
+        </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <p>PNS dengan masa kerja minimal <strong>5 tahun</strong> berhak atas cuti besar selama <strong>3 bulan</strong>.</p>
+
+            <h5 class="mt-3 text-primary"><i class="bi bi-list-check"></i> Persyaratan:</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-file-earmark-text me-2 text-success"></i> Surat Pengantar dari Sekolah (Kasatlakdikcam)
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-journal-text me-2 text-warning"></i> Format Cuti
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-file-earmark-check me-2 text-primary"></i> SK Terakhir
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Cuti Melahirkan -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <i class="bi bi-gender-female me-3"></i> Cuti Melahirkan
+        </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <p>
+                CPNS dan PNS berhak mendapatkan cuti melahirkan untuk anak pertama sampai dengan kelahiran anak ketiga.  
+                Persalinan anak pertama terhitung sejak yang bersangkutan diangkat menjadi CPNS.  
+                Untuk persalinan anak keempat dan seterusnya, dapat diberikan <strong>Cuti Besar</strong>.
+            </p>
+
+            <h5 class="mt-3 text-primary"><i class="bi bi-list-check"></i> Persyaratan:</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-file-earmark-text me-2 text-success"></i> Surat Pengantar dari Sekolah mengetahui Kasatlakdikcam
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-journal-text me-2 text-warning"></i> Format Cuti
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-file-earmark-check me-2 text-primary"></i> SK Terakhir
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-hospital me-2 text-danger"></i> Surat Keterangan Dokter
+                </li>
+            </ul>
+
+            <h5 class="mt-3 text-danger"><i class="bi bi-exclamation-circle"></i> Keterangan Cuti Melahirkan:</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-1-circle me-2 text-success"></i> Cuti melahirkan anak ke-1 sampai ke-3 pada saat menjadi PNS berhak mendapat cuti melahirkan
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-4-circle me-2 text-danger"></i> Untuk kelahiran anak ke-4 dst, PNS diberikan Cuti Besar
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-clock me-2 text-warning"></i> Maksimal cuti melahirkan 3 bulan
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+            <!-- Cuti Alasan Penting -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <i class="bi bi-exclamation-circle me-3"></i> Cuti Alasan Penting
+        </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <p>
+                PNS berhak atas cuti karena alasan penting apabila:
+            </p>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-hospital me-2 text-danger"></i> Ibu, bapak, istri/suami, anak, adik, kakak, mertua atau menantu sakit keras (dibuktikan dengan surat keterangan rawat inap dari Unit Pelayanan Kesehatan)
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-person-dash me-2 text-warning"></i> Keluarga inti meninggal dunia & harus mengurus hak-haknya
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-heart me-2 text-primary"></i> Melangsungkan perkawinan
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-gender-female me-2 text-success"></i> Istri melahirkan (dibuktikan dengan surat keterangan rawat inap dari Unit Pelayanan Kesehatan)
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-house-fire me-2 text-danger"></i> Mengalami musibah kebakaran rumah atau bencana alam (dibuktikan dengan surat keterangan minimal dari Ketua RT)
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-person-x me-2 text-secondary"></i> Peristiwa yang menyebabkan gangguan jiwa bagi PNS yang ditempatkan di perwakilan RI yang rawan dan/atau berbahaya
+                </li>
+            </ul>
+
+            <h5 class="mt-3 text-primary"><i class="bi bi-list-check"></i> Persyaratan:</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-file-earmark-text me-2 text-success"></i> Surat Pengantar dari Sekolah mengetahui Kasatlakdikcam
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-journal-text me-2 text-warning"></i> Format Cuti
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-file-earmark-check me-2 text-primary"></i> SK Terakhir
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-file-earmark-lock me-2 text-danger"></i> Bukti Penunjang Cuti Alasan Penting
+                </li>
+            </ul>
+
+            <h5 class="mt-3 text-danger"><i class="bi bi-exclamation-triangle"></i> Yang Termasuk Cuti Alasan Penting:</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-people me-2 text-success"></i> Keluarga inti (ibu, bapak, istri/suami, anak, adik, kakak, mertua, menantu) sakit keras/meninggal dunia
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-folder-lock me-2 text-danger"></i> Mengurus hak-hak keluarga yang meninggal dunia
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-ring me-2 text-primary"></i> Melangsungkan pernikahan (untuk yang bersangkutan, bukan menikahkan anak)
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-hospital me-2 text-warning"></i> Mendampingi istri melahirkan
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-house-fire me-2 text-danger"></i> Mengalami musibah kebakaran/bencana alam (dibuktikan dengan surat keterangan minimal dari Ketua RT)
+                </li>
+            </ul>
+
+            <h5 class="mt-3 text-secondary"><i class="bi bi-calendar-check"></i> Lama Cuti Alasan Penting:</h5>
+            <p>
+                Maksimal <strong>1 bulan</strong>.  
+                (Hari ke-1 sampai hari ke-5 <strong>tidak dipotong TKD</strong>, hari ke-6 dan seterusnya <strong>TKD dipotong</strong>)
+            </p>
+        </div>
+    </div>
+</div>
+</div>
 </div>
     <!-- Footer -->
 <footer class="text-dark py-4 mt-5">
