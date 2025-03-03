@@ -274,3 +274,5 @@ document.addEventListener("DOMContentLoaded", () => {
     generateTable();
     setTimeout(generateChart, 500); // Tambahkan delay untuk memastikan canvas tersedia
 });
+
+
