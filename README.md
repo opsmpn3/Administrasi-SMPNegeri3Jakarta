@@ -1,2 +1,5 @@
-# MAAF HALAMAN SUDAH TIDAK AKTIF
-Silahkan hubungi admin.
+# ⚠️ Halaman Web Tidak Aktif ⚠️
+
+**Maaf, halaman ini sudah tidak lagi aktif.**
+
+Silakan hubungi admin
